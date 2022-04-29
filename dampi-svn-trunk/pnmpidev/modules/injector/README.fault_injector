@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+                    Fault Injector for MPI Applications
+--------------------------------------------------------------------------------
+                         Ignacio Laguna Peralta
+                ilaguna@purdue.edu, lagunaperalt1@llnl.gov
+                        Last updated: 03-30-2009
+
+1. Description
+==============
+
+This Fault Injector (FI) is able to emulate common bugs in MPI applications by
+injecting faults dynamically (i.e., faults are injected at runtime rather than
+at compiling time by the use of PMPI wrappers).
+
+The type of faults that are currently supported are:
+(1) Data corruption faults:
+    - A value in a transmitted buffer is changed randomly
+    - A value in a transmitted buffer is increased or decreased
+    - Buffer overflow (n bytes are written beyond the boundaries of a
+      transmitted buffer).
+(2) Performance faults:
+    - Infinite loop
+    - Finite loop (i.e., process sleeps for n seconds)
+(3) Communication faults:
+    - Discard a message 
+    - Send n extra messages
+
+2. Directory structure
+======================
+
+The FI root directory is 'pnmpi-1.3/modules/comm' (as it has been created as a
+sub-module of PnMPI's 'comm' module).  The FI is composed of the
+'commsub-injector.cxx' file and all the files in the 'faultinjector' directory.
+
+- commsub-injector.cxx: contains the logic of the fault injector. It loads the
+  faults to be injected from a configuration file and triggers them at runtime.
+
+- faultinjector: directory that contains all modules of the FI.
+
+- faultinjector/include: FI header files directory
+
+- faultinjector/config: A sample configuration file is located in this
+  directory.
+
+
+3. Fault Injector Modules
+=========================
+
+- loadconfig.c: loads the configuration file for an experiment
+
+- datacorruption.c: functions to inject data corruption faults
+
+- performance.c: functions to inject performance faults
+
+- communication.c: functions to inject communication faults
+
+- randapi.c: random number generation utility functions
+
+- getfaultyprocess.c: utility executable that provides with the process where
+  faults will be injected for an experiment. This is done by looking for the
+  parameter 'faulty_process' in the configuration file.
+
+- getrandomnumber.c: utility executable to generate random numbers (this is used
+  when starting the FI if a faulty process has not been set in the configuration
+  file).
+
+3. How to compile it
+====================
+
+3.1 Prerequisites
+-----------------
+
+The FI uses the libconfig library (http://www.hyperrealm.com/libconfig/) for
+loading the configuration parameters from a file. This allows users to specify
+parameters of an experiment in a structured way.
+
+At this point, libconfig cannot be used as a static or shared library with
+PnMPI, therefore libconfig's object files have to be generated and linked with
+the FI separately.  To do this, follow the following:
+
+    1. Download libconfig tar.gz file (version 1.3.1 works correctly),
+    and uncompress it.
+
+    2. Compile the following source code files with the -fPIC flag to
+    enable position independent code: grammar.c, libconfig.c, scanner.c. (mpicc
+    can be used to do this.)
+
+    3. Copy the corresponding .o object files to a particular directory.
+
+    4. Change the LIBCONFIG_SRC variable with the previous directory in
+    the libconfig.common file. (This file is located in the FI root
+    directory.)
+
+    5. Change the LIBCONFIG_H variable in the libconfig.common file with
+    the 'include' directory pathname that is located in the directory where
+    libconfig where uncompressed. This will ensure that the FI Makefile
+    finds the libconfig's header files.
+
+3.2 Compiling it
+----------------
+
+Execute 'make'.
+
+4. Fault Injector configuration file
+====================================
+
+FI's parameters are defined in a configuration file. A sample configuration file
+can be found in 'faultinjector/config/faultinjector.cfg'. 
+
+A configuration file looks like:
+
+    experiment:
+    {
+        title = "Experiment title.."
+        ...
+        injection1:
+        {
+            fault_type1 = ...
+            ...
+        }
+        injection2:
+        {
+            ...
+        }
+        ...
+    }   
+
+A configuration file can only contain one experiment definition. 
+
+At this point, the FI only supports one injection definition per file, so a
+configuration file should only contain the 'injection1' definition (in the
+future it will support multiple injection's definitions that can be separated by
+a particular amount of time or events).
+
+An injection definition can contain multiple faults to be injected. Faults are
+injected sequentially and only one time. Therefore, if two faults are defined,
+the second one will be injected only after the first one is injected.
+
+For more details, see the configuration sample file.
+
+5. How to run it
+================
+
+5.1 Prerequisites
+-----------------
+
+1. To run the FI, the application has to be compiled and run with PnMPI.  Follow
+the PnMPI README file to do this.
+
+2. Make sure that the 'module commsub-injector' parameter is included in the
+.pnmpi-conf file. Recall that the FI is a sub-module of PnMPI's 'comm' module.
+
+3. Set the environment variable FI_CONFIG_FILE with the pathname of the FI
+configuration file.  (This can be done with bash command before calling 'srun'
+or in the moab script file if using the msub command.  The
+/pnmpi-1.3/demo/run_experiment.sh file provides an example of how to do this.)
+
+5.2 Running it
+--------------
+
+If the FI has been installed and configured correctly, it should outputs the
+following at the beginning of the program:
+
+*** Faulty process: 0 ***
+Loading Fault Injector config file:
+[/home/laguna/pnmpi-1.3/modules/comm/faultinjector/config/
+faultinjector.cfg]...ok.
+Getting injection params...Done!
+
+The first line specifies the process where faults are injected. The other lines
+indicates if the configuration file was found and if all parameters were
+recognized.
+
+6. Additional comments
+======================
+Currently the FI does not support full error checking when loading the
+configuration file. Users should follow the indications in the sample
+configuration file when defining FI's parameters.
+
+

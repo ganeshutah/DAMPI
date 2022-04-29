@@ -1,0 +1,8 @@
+diffusion.c : deterministic computations
+diffusion2.c : original file
+diffusion2_nd.c : my modifications involving the usage of Probe + Recv
+diffusion2_scaledown.c : changed parameters to experiment with ISP
+diffusion2_d.res : final o/p of diffusion2.c
+diffusion2_nd.res : final o/o of diffusion2_nd.c
+
+

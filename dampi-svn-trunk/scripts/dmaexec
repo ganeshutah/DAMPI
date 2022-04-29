@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export EXEC_NAME=$3
+#for ((i=0;i<$2;i++)); do
+    rm -rf ${3}.__alt_matching
+    rm -rf ${3}.__sched_decision
+#done
+mpiexec $@

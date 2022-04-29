@@ -1,0 +1,172 @@
+10
+
+dir
+13684
+svn://proof.cs.utah.edu/DAMPI/trunk/tests/NPB3.3/NPB3.3-MPI
+svn://proof.cs.utah.edu
+
+
+
+2010-02-11T06:42:02.224387Z
+2294
+avo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f26f91df-4c49-0410-b835-8340b77052b9
+
+LU
+dir
+
+SP
+dir
+
+common
+dir
+
+CG
+dir
+
+README
+file
+
+
+
+
+2014-01-17T01:35:23.479841Z
+2d028089bd50b52b322d40f1920f42cc
+2010-02-11T06:42:02.224387Z
+2294
+avo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1754
+
+MPI_dummy
+dir
+
+README.install
+file
+
+
+
+
+2014-01-17T01:35:23.482841Z
+8206c29e3b37413c2289aa0184e22ec0
+2010-02-11T06:42:02.224387Z
+2294
+avo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6895
+
+MG
+dir
+
+EP
+dir
+
+config
+dir
+
+BT
+dir
+
+DT
+dir
+
+bin
+dir
+
+FT
+dir
+
+IS
+dir
+
+Makefile
+file
+
+
+
+
+2014-01-17T01:35:23.496840Z
+8e679b5b830427480a94ad4e1a2f3d3d
+2010-02-11T06:42:02.224387Z
+2294
+avo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1456
+
+sys
+dir
+

@@ -1,0 +1,720 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <mpi.h>
+#include <pnmpimod.h>
+#include <status.h>
+#include <requests.h>
+#include "pb_mod.h"
+
+#define PBDRIVER_CHECK
+#define PIGGYBACK_COLLECTIVES
+/*#define DEBUG_LEVEL_0*/
+
+#define PNMPI_MODULE_PBD "pbdriver"
+
+/*#define PB_PATTERN 0x42434445*/
+#define PB_PATTERN (curr_epoch)
+
+#ifdef PBDRIVER_CHECK
+#ifndef PBDRIVER_SET
+#define PBDRIVER_SET
+#endif
+#endif
+
+#ifdef PBDRIVER_SET
+#define PBSET                                   \
+  if (run_set) {                                \
+    ((int*)pbdata)[0]=curr_epoch;               \
+    pb_set(pb_size,pbdata);}
+int run_set=1;
+char *pbdata;
+#endif
+
+
+#ifdef PBDRIVER_CHECK
+#define PBCHECKARRAY(res,status,count,num) {                            \
+    if (res==MPI_SUCCESS)                                               \
+      { if ((STATUS_STORAGE_ARRAY(status,*pb_offset,*TotalStatusExtension,int,count,num)!=PB_PATTERN) || (0) ) \
+          printf("Received wrong pattern %08x\n",                       \
+                 STATUS_STORAGE_ARRAY(status,*pb_offset,*TotalStatusExtension,int,count,num)); \
+      } }
+#define PBCHECK(res,status) PBCHECKARRAY(res,status,1,0)
+#define PBRECVARRAY(res,status,count,num) STATUS_STORAGE_ARRAY(status,*pb_offset,*TotalStatusExtension,int,count,num)
+#define PBRECV(res,status) PBRECVARRAY(res,status,1,0)
+int run_check=1;
+#endif
+
+
+PNMPIMOD_Piggyback_t       pb_set;
+PNMPIMOD_Piggyback_Size_t  pb_setsize;
+static int *pb_offset;
+static int pb_size=4;
+static int *TotalStatusExtension;
+static int *StatusOffsetInRequest;
+int myrank;
+int curr_epoch = 0;
+
+#define COMM_REQ_FROM_STATUS(status) REQ_FROM_STATUS(status,(*StatusOffsetInRequest))
+#define COMM_REQ_FROM_STATUSARRAY(status,count,num) REQ_FROM_STATUSARRAY(status,(*StatusOffsetInRequest),*TotalStatusExtension,count,num)
+
+
+int PBBROADCAST(int root, MPI_Comm comm)
+{
+  int err, incoming_epoch;
+  void* buffer;
+  if (myrank == root)
+    buffer = (void*) &curr_epoch;
+  else
+    buffer = (void*) &incoming_epoch;
+
+  err = PMPI_Bcast(buffer, 1, MPI_INT, root, comm);
+  if (err == MPI_SUCCESS) {
+    /* receiving piggyback info from some process */
+    if (myrank != root) {
+      if (curr_epoch < incoming_epoch)
+        curr_epoch = incoming_epoch;
+#ifdef DEBUG_LEVEL_0
+      fprintf(stderr, "Receiving piggyback data %d\n", incoming_epoch);
+#endif
+    } 
+#ifdef DEBUG_LEVEL_0
+    else fprintf(stderr, "Broadcasting piggyback data %d\n", curr_epoch);
+#endif
+  }
+  return err;
+}
+
+int PBALLREDUCE(MPI_Comm comm) 
+{
+  int err, incoming_epoch;
+  err = PMPI_Allreduce(&curr_epoch, &incoming_epoch, 1, MPI_INT, MPI_MAX, comm);
+  if (err == MPI_SUCCESS) {
+    if (curr_epoch < incoming_epoch)
+      curr_epoch = incoming_epoch;
+  }
+  return err;
+}
+
+int PBREDUCE(int root, MPI_Comm comm)
+{
+  int err, incoming_epoch;
+
+  err = PMPI_Reduce(&curr_epoch, &incoming_epoch, 1, 
+                    MPI_INT, MPI_MAX, root, comm);
+  if (err == MPI_SUCCESS) {
+    /* receiving piggyback info from some process */
+    if (myrank == root) {
+#ifdef DEBUG_LEVEL_0
+      fprintf(stderr, "Reduce: Receiving piggyback data\n");
+#endif
+      if (curr_epoch < incoming_epoch)
+        curr_epoch = incoming_epoch;
+    }
+#ifdef DEBUG_LEVEL_0 
+    else fprintf(stderr, "Reduce: Sending piggyback data\n");
+#endif
+  }
+  return err;
+}
+
+int PBSCAN(MPI_Comm comm)
+{
+  int err, incoming_epoch;
+  err = PMPI_Scan(&curr_epoch, &incoming_epoch, 1, 
+                  MPI_INT, MPI_MAX, comm);
+  if (err == MPI_SUCCESS) {
+    if (curr_epoch < incoming_epoch)
+      curr_epoch = incoming_epoch;
+  }
+  return err;
+}
+
+/*.......................................................*/
+/* Registration */
+
+int PNMPI_RegistrationPoint()
+{
+  int err;
+
+  /* register this module and its services */
+
+  err=PNMPI_Service_RegisterModule(PNMPI_MODULE_PBD);
+  if (err!=PNMPI_SUCCESS)
+    return MPI_ERROR_PNMPI;
+
+  return err;
+}
+
+
+/*.......................................................*/
+/* Init */
+
+
+int MPI_Init(int *argc, char ***argv)
+{
+  int err;
+  PNMPI_modHandle_t handle_pb,handle_pbd,handle_status,handle_req;
+  PNMPI_Service_descriptor_t serv;
+  PNMPI_Global_descriptor_t global;
+  char *vlevel_s;
+
+  /* query pb module */
+
+  err=PNMPI_Service_GetModuleByName(PNMPI_MODULE_PB,&handle_pb);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+
+  err=PNMPI_Service_GetServiceByName(handle_pb,"piggyback","ip",&serv);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+  pb_set=(PNMPIMOD_Piggyback_t) ((void*)serv.fct);
+
+  err=PNMPI_Service_GetServiceByName(handle_pb,"piggyback-size","i",&serv);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+  pb_setsize=(PNMPIMOD_Piggyback_Size_t) ((void*)serv.fct);
+
+  err=PNMPI_Service_GetGlobalByName(handle_pb,"piggyback-offset",'i',&global);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+  pb_offset=(global.addr.i);
+
+
+  /* query the status module */
+
+  err=PNMPI_Service_GetModuleByName(PNMPI_MODULE_STATUS,&handle_status);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+
+  err=PNMPI_Service_GetGlobalByName(handle_status,"total-status-extension",'i',&global);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+  TotalStatusExtension=(global.addr.i);
+
+
+  /* query the request module */
+
+  err=PNMPI_Service_GetModuleByName(PNMPI_MODULE_REQUEST,&handle_req);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+
+  err=PNMPI_Service_GetGlobalByName(handle_req,"status-offset",'i',&global);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+  StatusOffsetInRequest=(global.addr.i);
+
+
+  /* query own module */
+
+  err=PNMPI_Service_GetModuleByName(PNMPI_MODULE_PBD,&handle_pbd);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+
+  err=PNMPI_Service_GetArgument(handle_pbd,"size",&vlevel_s);
+  if (err!=PNMPI_SUCCESS)
+    {
+      if (err==PNMPI_NOARG)
+        pb_size=4;
+      else
+        return err;
+    }
+  else
+    {
+      pb_size=atoi(vlevel_s);
+    }
+
+  err=PNMPI_Service_GetArgument(handle_pbd,"set",&vlevel_s);
+  if (err!=PNMPI_SUCCESS)
+    {
+      if (err==PNMPI_NOARG)
+        run_set=1;
+      else
+        return err;
+    }
+  else
+    {
+      run_set=atoi(vlevel_s);
+    }
+
+  err=PNMPI_Service_GetArgument(handle_pbd,"check",&vlevel_s);
+  if (err!=PNMPI_SUCCESS)
+    {
+      if (err==PNMPI_NOARG)
+        run_check=1;
+      else
+        return err;
+    }
+  else
+    {
+      run_check=atoi(vlevel_s);
+    }
+
+  err=pb_setsize(pb_size);
+  if (err!=PNMPI_SUCCESS)
+    return err;
+
+  pbdata=malloc(pb_size);
+  if (pbdata==NULL) return MPI_ERROR_MEM;
+
+  printf("Piggyback driver enabled with size %i (set %i, check %i)\n",
+         pb_size,run_set,run_check);
+
+  err = PMPI_Init(argc,argv);
+  PMPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+  return err;
+}
+
+
+/*.......................................................*/
+/* setting PB if enabled */
+
+#ifdef PBDRIVER_SET
+
+int MPI_Send(void* buf, int num, MPI_Datatype dtype, int node, 
+             int tag, MPI_Comm comm)
+{
+  int res;
+  PBSET;
+  res=PMPI_Send(buf,num,dtype,node,tag,comm);
+  return res;
+}
+
+int MPI_Bsend(void* buf, int num, MPI_Datatype dtype, int node, 
+              int tag, MPI_Comm comm)
+{
+  int res;
+  PBSET;
+  res=PMPI_Bsend(buf,num,dtype,node,tag,comm);
+  return res;
+}
+
+int MPI_Ssend(void* buf, int num, MPI_Datatype dtype, int node, 
+              int tag, MPI_Comm comm)
+{
+  int res;
+  PBSET;
+  res=PMPI_Ssend(buf,num,dtype,node,tag,comm);
+  return res;
+}
+
+int MPI_Rsend(void* buf, int num, MPI_Datatype dtype, int node, 
+              int tag, MPI_Comm comm)
+{
+  int res;
+  PBSET;
+  res=PMPI_Rsend(buf,num,dtype,node,tag,comm);
+  return res;
+}
+
+int MPI_Isend(void *buf, int count, MPI_Datatype datatype, int dest, int tag, MPI_Comm comm, MPI_Request *request)
+{
+  int err;
+  PBSET;
+  err=PMPI_Isend(buf,count,datatype,dest,tag,comm,request);
+  return err;
+}
+
+int MPI_Ibsend(void *buf, int count, MPI_Datatype datatype, int dest, int tag, MPI_Comm comm, MPI_Request *request)
+{
+  int err;
+  PBSET;
+  err=PMPI_Ibsend(buf,count,datatype,dest,tag,comm,request);
+  return err;
+}
+
+int MPI_Issend(void *buf, int count, MPI_Datatype datatype, int dest, int tag, MPI_Comm comm, MPI_Request *request)
+{
+  int err;
+  PBSET;
+  err=PMPI_Issend(buf,count,datatype,dest,tag,comm,request);
+  return err;
+}
+
+int MPI_Irsend(void *buf, int count, MPI_Datatype datatype, int dest, int tag, MPI_Comm comm, MPI_Request *request)
+{
+  int err;
+  PBSET;
+  err=PMPI_Irsend(buf,count,datatype,dest,tag,comm,request);
+  return err;
+}
+
+#endif
+
+
+/*.......................................................*/
+/* Checks if enabled */
+
+#ifdef PBDRIVER_CHECK
+
+int MPI_Recv(void* buf, int num, MPI_Datatype dtype, int node,
+             int tag, MPI_Comm comm, MPI_Status *status)
+{
+  int err, incoming_epoch;
+  if (node == MPI_ANY_SOURCE) 
+    curr_epoch++;
+
+  err=PMPI_Recv(buf,num,dtype,node,tag,comm,status);
+  if (run_check==0) return err;
+  /* PBCHECK(err,status); */
+  incoming_epoch = PBRECV(err,status);
+#ifdef DEBUG_LEVEL_0
+  fprintf(stderr, "Receiving piggyback %d\n", incoming_epoch);
+#endif
+  return err;
+}
+
+
+int MPI_Sendrecv(void *sendbuf, int sendcount, MPI_Datatype sendtype, int dest, int sendtag, 
+                 void *recvbuf, int recvcount, MPI_Datatype recvtype, int source, int recvtag,
+                 MPI_Comm comm, MPI_Status *status)
+{
+  int err, incoming_epoch;
+  err=PMPI_Sendrecv(sendbuf,sendcount,sendtype,dest,sendtag,
+                    recvbuf,recvcount,recvtype,source,recvtag,comm,status);
+  if (run_check==0) return err;
+  /* PBCHECK(err,status); */
+  if (incoming_epoch < PBRECV(err,status))
+    incoming_epoch = PBRECV(err,status);
+  return err;
+}
+
+int MPI_Sendrecv_replace(void *buf, int count, MPI_Datatype datatype, int dest, int sendtag, int source, int recvtag, 
+                         MPI_Comm comm, MPI_Status *status)
+{
+  int err,incoming_epoch;
+  err=PMPI_Sendrecv_replace(buf,count,datatype,sendtag,dest,recvtag,dest,comm,status);
+  /* PBCHECK(err,status); */
+  if (incoming_epoch < PBRECV(err,status))
+    incoming_epoch = PBRECV(err,status);
+  return err;
+}
+
+
+int MPI_Wait(MPI_Request *request, MPI_Status *status)
+{
+  int err, incoming_epoch;
+  err=PMPI_Wait(request,status);
+  if (run_check==0) return err;
+  if (COMM_REQ_FROM_STATUS(status).inreq!=MPI_REQUEST_NULL)  
+    {
+      if (COMM_REQ_FROM_STATUS(status).type==PNMPIMOD_REQUESTS_RECV)
+        {
+
+          /* 	  PBCHECK(err,status); */
+          if (incoming_epoch < PBRECV(err,status))
+            incoming_epoch = PBRECV(err,status);
+        }
+    }
+  return err;
+}
+
+
+int MPI_Waitany(int count, MPI_Request *array_of_requests, int *index, MPI_Status *status)
+{
+  int err, incoming_epoch;
+  err=PMPI_Waitany(count,array_of_requests,index,status);
+  if (run_check==0) return err;
+  if (COMM_REQ_FROM_STATUS(status).inreq!=MPI_REQUEST_NULL)  
+    {
+      if (COMM_REQ_FROM_STATUS(status).type==PNMPIMOD_REQUESTS_RECV)
+        {
+          /* PBCHECK(err,status); */
+          if (incoming_epoch < PBRECV(err,status))
+            incoming_epoch = PBRECV(err,status);
+        }
+    }
+  return err;
+}
+
+int MPI_Waitsome(int count, MPI_Request *array_of_requests, int *outcount, int *array_of_indices, MPI_Status *array_of_statuses)
+{
+  int err,i,incoming_epoch;
+  err=PMPI_Waitsome(count,array_of_requests,outcount,array_of_indices,array_of_statuses);
+  if (run_check==0) return err;
+  for (i=0; i<*outcount; i++)
+    {
+      if (COMM_REQ_FROM_STATUSARRAY(array_of_statuses,count,i).inreq!=MPI_REQUEST_NULL)  
+        {
+          if (COMM_REQ_FROM_STATUSARRAY(array_of_statuses,count,i).type==PNMPIMOD_REQUESTS_RECV)
+            {
+              if (incoming_epoch < PBRECVARRAY(err,array_of_statuses,count,i))
+                incoming_epoch = PBRECVARRAY(err,array_of_statuses,count,i);
+
+            }
+        }
+    }
+  return err;  
+}
+
+
+int MPI_Waitall(int count, MPI_Request *array_of_requests, MPI_Status *array_of_statuses)
+{
+  int err,i,incoming_epoch;
+  err=PMPI_Waitall(count,array_of_requests,array_of_statuses);
+  if (run_check==0) return err;
+  for (i=0; i<count; i++)
+    {
+      if (COMM_REQ_FROM_STATUSARRAY(array_of_statuses,count,i).inreq!=MPI_REQUEST_NULL)  
+        {
+          if (COMM_REQ_FROM_STATUSARRAY(array_of_statuses,count,i).type==PNMPIMOD_REQUESTS_RECV)
+            {
+              if (incoming_epoch < PBRECVARRAY(err,array_of_statuses,count,i))
+                incoming_epoch = PBRECVARRAY(err,array_of_statuses,count,i);
+            }
+        }
+    }
+  return err;
+}
+
+
+int MPI_Test(MPI_Request *request, int *flag, MPI_Status *status)
+{
+  int err, incoming_epoch;
+  err=PMPI_Test(request, flag, status);
+  if (run_check==0) return err;
+  if ((*flag) && (COMM_REQ_FROM_STATUS(status).inreq!=MPI_REQUEST_NULL))
+    {
+      if (COMM_REQ_FROM_STATUS(status).type==PNMPIMOD_REQUESTS_RECV)
+        {
+          /* PBCHECK(err,status); */
+          if (incoming_epoch < PBRECV(err,status))
+            incoming_epoch = PBRECV(err,status);
+        }
+    }
+  return err;
+}
+
+int MPI_Testany(int count, MPI_Request *array_of_requests, int *index, int *flag, MPI_Status *status)
+{
+  int err, incoming_epoch;
+  err=PMPI_Testany(count,array_of_requests,index,flag,status);
+  if (run_check==0) return err;
+  if ((*flag) && (COMM_REQ_FROM_STATUS(status).inreq!=MPI_REQUEST_NULL))
+    {
+      if (COMM_REQ_FROM_STATUS(status).type==PNMPIMOD_REQUESTS_RECV)
+        {
+          /* 	  PBCHECK(err,status); */
+          if (incoming_epoch < PBRECV(err,status))
+            incoming_epoch = PBRECV(err,status);
+
+        }
+    }
+  return err;  
+}
+
+int MPI_Testsome(int count, MPI_Request *array_of_requests, int *outcount, int *array_of_indices, MPI_Status *array_of_statuses)
+{
+  int err,i,incoming_epoch;
+  err=PMPI_Testsome(count,array_of_requests,outcount,array_of_indices,array_of_statuses);
+  if (run_check==0) return err;
+  for (i=0; i<*outcount; i++)
+    {
+      if (COMM_REQ_FROM_STATUSARRAY(array_of_statuses,count,i).inreq!=MPI_REQUEST_NULL)  
+        {
+          if (COMM_REQ_FROM_STATUSARRAY(array_of_statuses,count,i).type==PNMPIMOD_REQUESTS_RECV)
+            {
+              if (incoming_epoch < PBRECVARRAY(err,array_of_statuses,count,i))
+                incoming_epoch = PBRECVARRAY(err,array_of_statuses,count,i);
+            }
+        }
+    }
+  return err;  
+}
+
+int MPI_Testall(int count, MPI_Request *array_of_requests, int *flag, MPI_Status *array_of_statuses)
+{
+  int err,i,incoming_epoch;
+  err=PMPI_Testall(count, array_of_requests, flag, array_of_statuses);
+  if (run_check==0) return err;
+  if (*flag) 
+    {
+      for (i=0; i<count; i++)
+        {
+          if (COMM_REQ_FROM_STATUSARRAY(array_of_statuses,count,i).inreq!=MPI_REQUEST_NULL)  
+            {
+              if (COMM_REQ_FROM_STATUSARRAY(array_of_statuses,count,i).type==PNMPIMOD_REQUESTS_RECV)
+                {
+                  if (incoming_epoch < PBRECVARRAY(err,array_of_statuses,count,i))
+                    incoming_epoch = PBRECVARRAY(err,array_of_statuses,count,i);
+                }
+            }
+        }
+    }
+  return err;
+}
+
+
+#endif
+
+#ifdef PIGGYBACK_COLLECTIVES
+/*.......................................................*/
+/* Collectives */
+
+/*.......................................................*/
+/* - ONE TO ALL - */
+int MPI_Bcast(void* buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm)
+{
+  int err = PBBROADCAST(root, comm);
+
+  if (err==MPI_SUCCESS)
+    err=PMPI_Bcast(buffer, count, datatype, root, comm);
+
+  return err;
+}
+
+int MPI_Scatter(void* sendbuf, int sendcnt, MPI_Datatype sendtype, 
+                void* recvbuf, int recvcnt, MPI_Datatype recvtype,
+                int root, MPI_Comm comm)
+{
+  int err = PBBROADCAST(root, comm);
+
+  if (err==MPI_SUCCESS)
+    err=PMPI_Scatter(sendbuf, sendcnt, sendtype,
+                     recvbuf, recvcnt, recvtype, 
+                     root, comm);
+
+  return err;
+}
+
+int MPI_Scatterv(void* sendbuf, int* sendcnts, int* displs, MPI_Datatype sendtype, 
+                 void* recvbuf, int recvcnt, MPI_Datatype recvtype,
+                 int root, MPI_Comm comm)
+{
+  int err = PBBROADCAST(root, comm);
+
+  if (err==MPI_SUCCESS)
+    err=PMPI_Scatterv(sendbuf, sendcnts, displs, sendtype,
+                      recvbuf, recvcnt, recvtype, 
+                      root, comm);
+
+  return err;
+}
+
+/*.......................................................*/
+/* ALL TO ONE */
+int MPI_Gather(void* sendbuf, int sendcnt, MPI_Datatype sendtype,
+               void* recvbuf, int recvcnt, MPI_Datatype recvtype,
+               int root, MPI_Comm comm)
+{
+  int err = PBREDUCE(root, comm);
+  if (err==MPI_SUCCESS)
+    err=PMPI_Gather(sendbuf, sendcnt, sendtype,
+                    recvbuf, recvcnt, recvtype, 
+                    root, comm);
+
+  return err;    
+}
+
+int MPI_Gatherv(void* sendbuf, int sendcnt, MPI_Datatype sendtype,
+                void* recvbuf, int* recvcnts, int* displs, 
+                MPI_Datatype recvtype, int root, MPI_Comm comm)
+{
+  int err = PBREDUCE(root, comm);
+  if (err == MPI_SUCCESS)
+    err=PMPI_Gatherv(sendbuf, sendcnt, sendtype,
+                     recvbuf, recvcnts, displs, recvtype, 
+                     root, comm);
+  return err;
+}
+    
+int MPI_Reduce(void* sendbuf, void* recvbuf, int count, 
+               MPI_Datatype datatype, MPI_Op op, int root,
+               MPI_Comm comm)
+{
+  int err = PBREDUCE(root, comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Reduce(sendbuf, recvbuf, count,
+                      datatype, op, root, comm);
+
+  return err;
+}
+/*.......................................................*/
+/* ALL TO ALL */
+int MPI_Allgather(void *sendbuf, int sendcnt, MPI_Datatype sendtype,
+                  void *recvbuf, int recvcnt, MPI_Datatype recvtype, 
+                  MPI_Comm comm)
+{
+  int err = PBALLREDUCE(comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Allgather(sendbuf, sendcnt, sendtype,
+                         recvbuf, recvcnt, recvtype, comm);
+  return err;
+}
+
+int MPI_Allgatherv(void *sendbuf, int sendcnt, MPI_Datatype sendtype, 
+                   void *recvbuf, int *recvcnts, int *displs, 
+                   MPI_Datatype recvtype, MPI_Comm comm)
+{
+  int err = PBALLREDUCE(comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Allgatherv(sendbuf, sendcnt, sendtype,
+                          recvbuf, recvcnts, displs, 
+                          recvtype, comm);
+  return err;
+}
+
+int MPI_Alltoall(void *sendbuf, int sendcnt, MPI_Datatype sendtype, 
+                 void *recvbuf, int recvcnt, MPI_Datatype recvtype, 
+                 MPI_Comm comm)
+{
+  int err = PBALLREDUCE(comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Alltoall(sendbuf, sendcnt, sendtype,
+                        recvbuf, recvcnt, recvtype, comm);
+  return err;
+}
+
+int MPI_Alltoallv(void *sendbuf, int *sendcnts, int *sdispls, MPI_Datatype sendtype, 
+                  void *recvbuf, int *recvcnts, int *rdispls, MPI_Datatype recvtype, 
+                  MPI_Comm comm)
+{
+  int err = PBALLREDUCE(comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Alltoallv(sendbuf, sendcnts, sdispls, sendtype,
+                         recvbuf, recvcnts, rdispls, recvtype, 
+                         comm);
+  return err;
+}
+
+int MPI_Allreduce(void *sendbuf, void *recvbuf, int count, 
+                  MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
+{
+  int err = PBALLREDUCE(comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Allreduce(sendbuf, recvbuf, count, datatype,
+                         op, comm);
+  return err;
+}
+
+int MPI_Reduce_scatter(void *sendbuf, void *recvbuf, int *recvcnts, 
+                       MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
+{
+  int err = PBALLREDUCE(comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Reduce_scatter(sendbuf, recvbuf, recvcnts, datatype,
+                              op, comm);
+  return err;
+}
+
+/* BARRIER */
+int MPI_Barrier(MPI_Comm comm)
+{
+  int err = PBALLREDUCE(comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Barrier(comm);
+  return err;
+}
+
+/* SCAN */
+int MPI_Scan(void* sendbuf, void* recvbuf, int count,
+             MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
+{
+  int err = PBSCAN(comm);
+  if (err == MPI_SUCCESS)
+    err = PMPI_Scan(sendbuf, recvbuf, count, datatype, op, comm);
+  return err;
+}
+#endif /* PIGGYBACK_COLLECTIVES*/
+/*.......................................................*/
+/* The End. */

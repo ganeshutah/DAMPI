@@ -1,0 +1,34 @@
+
+# Which compiler to use
+CC = mpicc
+#CC = ../../launcher ispcc
+
+
+# What optimization level to use
+OPTFLAGS = -O0 -g
+
+# Include directories for the compiler
+INCDIR = -I/opt/local/include
+
+# What options to be used by the compiler
+COPTIONS = 
+
+# Which loader to use
+LD = mpicc
+#LD = ../../launcher ispcc
+
+# In which directories to look for any additional libraries
+LIBDIR = -L/opt/local/lib -L/usr/lib
+
+# What additional libraries to link the programs with (eg., -lmpi)
+#XTRALIBS = -lefence
+#XTRALIBS = -ldmalloc
+
+# What archiving to use
+AR = ar rv
+
+# What to use for indexing the archive
+#RANLIB = ranlib
+RANLIB = ar -ts
+
+VERNUM = 

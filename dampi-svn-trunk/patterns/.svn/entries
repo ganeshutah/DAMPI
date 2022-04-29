@@ -1,0 +1,43 @@
+10
+
+dir
+13684
+svn://proof.cs.utah.edu/DAMPI/trunk/patterns
+svn://proof.cs.utah.edu
+
+
+
+2010-06-18T00:05:15.052460Z
+3358
+avo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f26f91df-4c49-0410-b835-8340b77052b9
+
+EmbarrassinglyParallel
+dir
+
+DivideConquer
+dir
+
+PipelineProcessing
+dir
+
+SeparableDependencies
+dir
+
+GeometricDecomposition
+dir
+

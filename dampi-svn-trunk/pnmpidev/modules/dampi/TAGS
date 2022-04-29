@@ -1,0 +1,842 @@
+
+Makefile,565
+MOD 3,45
+HEADER 8,196
+CFLAGS +=CFLAGS +10,216
+CCFLAGS +=CCFLAGS +11,252
+all:all13,290
+pb_dt.o:pb_dt.o15,311
+.SUFFIXES:.SUFFIXES17,322
+.o.so:.o.so19,344
+.c.o:.c.o22,384
+.cpp.o:.cpp.o25,417
+.cxx.o:.cxx.o28,452
+pb_datatype1.o:pb_datatype1.o31,487
+pb_datatype2.o:pb_datatype2.o35,588
+pb_twomsg1.o:pb_twomsg1.o39,689
+pb_twomsg2.o:pb_twomsg2.o43,784
+pb_pack1.o:pb_pack1.o47,879
+pb_pack2.o:pb_pack2.o51,968
+pb_copy1.o:pb_copy1.o55,1057
+pb_copy2.o:pb_copy2.o59,1146
+install:install64,1236
+clean:clean68,1430
+clobber:clobber71,1456
+
+pb_copy1.o,37
++bb21,21403
+.`ê@Y;@Y33,30518
+
+pb_copy1.so,31
++bb20,31370
+Ku=Ku52,40870
+
+pb_copy2.o,37
++bb21,21643
+.`÷@Y;@Y32,30752
+
+pb_copy2.so,31
++bb19,31370
+Ku=Ku50,40868
+
+pb_datatype1.o,27
+HcHc5,1379
++bb28,8638
+
+pb_datatype1.so,31
+ELFELF1,0
+Ku=Ku56,25508
+
+pb_datatype2.o,27
+HcHc5,1379
++bb28,8638
+
+pb_datatype2.so,31
+ELFELF1,0
+Ku=Ku59,25508
+
+pb_datatype.c,1645
+#define PNMPI_MAX_PIGGYBACK 13,166
+PNMPIMOD_Requests_MapRequest_t PNMPIMOD_requestmap;15,201
+static PNMPIMOD_Requests_RequestStorage_t req_add;16,253
+static PNMPIMOD_Status_RequestStorage_t status_add;18,305
+static int *TotalStatusExtension;TotalStatusExtension19,357
+static int request_offset;21,392
+static int piggyback_offset;22,419
+static int *StatusOffsetInRequest;StatusOffsetInRequest23,448
+static int piggyback_size;24,483
+static char pb_outbuffer[pb_outbuffer25,510
+#define DT_DECLARE(32,653
+#define DT_GENERALALLOC(36,713
+#define DT_GENERALALLOC(50,1266
+#define DT_OUTALLOC(65,1821
+#define DT_STATUSALLOC(66,1894
+#define DT_REQALLOC(67,2009
+#define PBCOPY(71,2179
+#define PBCOPYDEF(72,2228
+#define DT_FREE(74,2287
+#define PBPTR_STORAGE(76,2382
+#define COMM_REQ_FROM_STATUS(79,2480
+#define COMM_INFO_FROM_STATUS(80,2566
+#define COMM_REQ_FROM_STATUSARRAY(82,2665
+#define COMM_INFO_FROM_STATUSARRAY(83,2803
+int PNMPIMOD_Piggyback(94,3156
+int PNMPIMOD_Piggyback_Size(100,3259
+int PNMPI_RegistrationPoint(121,3660
+int MPI_Init(164,4718
+int MPI_Finalize(229,6358
+int MPI_Send(238,6514
+int MPI_Bsend(249,6796
+int MPI_Rsend(260,7080
+int MPI_Ssend(271,7364
+int MPI_Isend(286,7745
+int MPI_Ibsend(297,8059
+int MPI_Irsend(308,8375
+int MPI_Issend(319,8691
+int MPI_Recv(334,9106
+int MPI_Irecv(349,9529
+int MPI_Sendrecv(366,9990
+int MPI_Sendrecv_replace(385,10595
+int MPI_Wait(404,11159
+int MPI_Waitany(422,11620
+int MPI_Waitsome(440,12142
+#define PB_PATTERN 462,12972
+int MPI_Waitall(464,13003
+int MPI_Test(493,14102
+int MPI_Testany(511,14587
+int MPI_Testsome(529,15133
+int MPI_Testall(551,15963
+
+pbdriver.c.bak,1800
+#define PBDRIVER_CHECK10,142
+#define PIGGYBACK_COLLECTIVES11,165
+#define PNMPI_MODULE_PBD 14,222
+#define PB_PATTERN 17,293
+#define PBDRIVER_SET21,369
+#define PBSET 26,425
+int run_set=30,604
+char *pbdata;pbdata31,619
+#define PBCHECKARRAY(36,664
+#define PBCHECK(42,1106
+#define PBRECVARRAY(43,1163
+#define PBRECV(44,1281
+int run_check=45,1336
+PNMPIMOD_Piggyback_t       pb_set;49,1362
+PNMPIMOD_Piggyback_Size_t  pb_setsize;50,1397
+static int *pb_offset;pb_offset51,1436
+static int pb_size=52,1459
+static int *TotalStatusExtension;TotalStatusExtension53,1481
+static int *StatusOffsetInRequest;StatusOffsetInRequest54,1515
+int myrank;55,1550
+int curr_epoch 56,1562
+#define COMM_REQ_FROM_STATUS(58,1583
+#define COMM_REQ_FROM_STATUSARRAY(59,1669
+int PBBROADCAST(62,1809
+int PBALLREDUCE(88,2462
+int PBREDUCE(99,2725
+int PBSCAN(121,3288
+int PNMPI_RegistrationPoint(136,3639
+int MPI_Init(154,3930
+int MPI_Send(274,6673
+int MPI_Bsend(283,6859
+int MPI_Ssend(292,7048
+int MPI_Rsend(301,7237
+int MPI_Isend(310,7426
+int MPI_Ibsend(318,7640
+int MPI_Issend(326,7856
+int MPI_Irsend(334,8072
+int MPI_Recv(350,8405
+int MPI_Sendrecv(368,8866
+int MPI_Sendrecv_replace(382,9435
+int MPI_Wait(394,9860
+int MPI_Waitany(413,10331
+int MPI_Waitsome(430,10858
+int MPI_Waitall(451,11593
+int MPI_Test(471,12255
+int MPI_Testany(488,12750
+int MPI_Testsome(506,13310
+int MPI_Testall(525,14043
+int MPI_Bcast(556,14991
+int MPI_Scatter(566,15217
+int MPI_Scatterv(580,15608
+int MPI_Gather(596,16106
+int MPI_Gatherv(609,16490
+int MPI_Reduce(621,16906
+int MPI_Allgather(634,17304
+int MPI_Allgatherv(645,17665
+int MPI_Alltoall(657,18083
+int MPI_Alltoallv(668,18440
+int MPI_Allreduce(680,18880
+int MPI_Reduce_scatter(690,19179
+int MPI_Barrier(701,19519
+int MPI_Scan(710,19667
+
+pbdriver.cxx,1800
+#define PBDRIVER_CHECK10,142
+#define PIGGYBACK_COLLECTIVES11,165
+#define PNMPI_MODULE_PBD 14,222
+#define PB_PATTERN 17,293
+#define PBDRIVER_SET21,369
+#define PBSET 26,425
+int run_set=30,604
+char *pbdata;pbdata31,619
+#define PBCHECKARRAY(36,664
+#define PBCHECK(42,1106
+#define PBRECVARRAY(43,1163
+#define PBRECV(44,1281
+int run_check=45,1336
+PNMPIMOD_Piggyback_t       pb_set;49,1362
+PNMPIMOD_Piggyback_Size_t  pb_setsize;50,1397
+static int *pb_offset;pb_offset51,1436
+static int pb_size=52,1459
+static int *TotalStatusExtension;TotalStatusExtension53,1481
+static int *StatusOffsetInRequest;StatusOffsetInRequest54,1515
+int myrank;55,1550
+int curr_epoch 56,1562
+#define COMM_REQ_FROM_STATUS(58,1583
+#define COMM_REQ_FROM_STATUSARRAY(59,1669
+int PBBROADCAST(62,1809
+int PBALLREDUCE(88,2462
+int PBREDUCE(99,2725
+int PBSCAN(121,3288
+int PNMPI_RegistrationPoint(136,3639
+int MPI_Init(154,3930
+int MPI_Send(274,6681
+int MPI_Bsend(283,6867
+int MPI_Ssend(292,7056
+int MPI_Rsend(301,7245
+int MPI_Isend(310,7434
+int MPI_Ibsend(318,7648
+int MPI_Issend(326,7864
+int MPI_Irsend(334,8080
+int MPI_Recv(350,8413
+int MPI_Sendrecv(369,8897
+int MPI_Sendrecv_replace(383,9442
+int MPI_Wait(395,9844
+int MPI_Waitany(414,10291
+int MPI_Waitsome(431,10794
+int MPI_Waitall(452,11506
+int MPI_Test(472,12145
+int MPI_Testany(489,12616
+int MPI_Testsome(507,13152
+int MPI_Testall(526,13862
+int MPI_Bcast(557,14802
+int MPI_Scatter(567,15028
+int MPI_Scatterv(581,15419
+int MPI_Gather(597,15917
+int MPI_Gatherv(610,16301
+int MPI_Reduce(622,16717
+int MPI_Allgather(635,17115
+int MPI_Allgatherv(646,17476
+int MPI_Alltoall(658,17894
+int MPI_Alltoallv(669,18251
+int MPI_Allreduce(681,18691
+int MPI_Reduce_scatter(691,18990
+int MPI_Barrier(702,19330
+int MPI_Scan(711,19478
+
+pb_mod.h,202
+#define _PNMPI_MOD_PIGGYBACK5,67
+#define PNMPI_MODULE_PB 7,97
+typedef int (*PNMPIMOD_Piggyback_t)PNMPIMOD_Piggyback_t22,517
+typedef int (*PNMPIMOD_Piggyback_Size_t)PNMPIMOD_Piggyback_Size_t23,565
+
+pb_pack1.o,14
++bb22,10826
+
+pb_pack1.so,31
++bb21,23148
+Ku=Ku46,29760
+
+pb_pack2.o,36
++bb21,10650
+‰ztfzt32,16747
+
+pb_pack2.so,31
++bb19,23148
+Ku=Ku44,29760
+
+pb_twomsg1.o,25
+EÖ…Lã|@uÜHc@uÜH2,1392
+
+pb_twomsg1.so,25
+EÖ…Lã|@uÜHc@uÜH8,6704
+
+pb_twomsg2.o,113
+Éz˛z˛2,493
+ãyRö|JÈ œû.\ÑLæTæºt7ƒºt<ƒ÷;Ù-|ztf8ztf42,13850
+
+pb_twomsg2.so,128
+ELFELF1,0
+Éz˛z˛6,6061
+ãyRö|JÈ œû.\ÑLæTæºt7ƒºt<ƒ÷;Ù-|ztf8ztf55,24990
+
+piggyback.c,4774
+#define PB_DATATYPE16,263
+#define PB_DATATYPE20,311
+#define PB_TWOMSG24,357
+#define PB_TWOMSG28,401
+#define PB_PACK32,443
+#define PB_PACK36,483
+#define PB_COPY40,523
+#define PB_COPY44,563
+PNMPIMOD_Requests_MapRequest_t PNMPIMOD_requestmap;54,728
+static PNMPIMOD_Requests_RequestStorage_t req_add;55,780
+static PNMPIMOD_Status_RequestStorage_t status_add;57,832
+static int *TotalStatusExtension;TotalStatusExtension58,884
+static int request_offset;60,919
+static int request_offset_req;62,963
+static int request_offset_buf;64,1012
+static int request_offset_dt;65,1043
+static int request_offset_ct;66,1073
+static int request_offset_size;70,1132
+static int request_offset_pdt;71,1164
+static int request_offset_pbuf;72,1195
+static int request_offset_size;75,1249
+static int request_offset_pdt;76,1281
+static int request_offset_pbuf;77,1312
+PNMPIMOD_Datatype_getReference_t dt_get;78,1344
+PNMPIMOD_Datatype_delReference_t dt_del;79,1385
+PNMPIMOD_Datatype_getSize_t      dt_size;80,1426
+static int piggyback_offset;83,1476
+static int *StatusOffsetInRequest;StatusOffsetInRequest84,1505
+static int piggyback_size;85,1540
+static char *pb_outbuffer;pb_outbuffer86,1567
+#define PBCOPY(92,1699
+#define PBCOPYDEF(93,1748
+#define DT_FREE(95,1807
+#define PBPTR_STORAGE(97,1902
+#define COMM_REQ_FROM_STATUS(100,2000
+#define COMM_REQ_FROM_STATUSARRAY(101,2086
+#define DT_DECLARE(109,2363
+#define DT_DECLARE_NOPTR(110,2420
+#define ASYNC_COMPLETE(112,2469
+#define DT_GENERALALLOC(124,2933
+#define DT_GENERALALLOC(138,3490
+#define DT_OUTALLOC(153,4049
+#define DT_STATUSALLOC(154,4122
+#define DT_REQALLOC(155,4237
+#define DT_DECLARE(161,4432
+#define DT_DECLARE_NOPTR(162,4460
+#define DT_GENERALALLOC(163,4490
+#define DT_OUTALLOC(164,4529
+#define DT_STATUSALLOC(165,4561
+#define DT_REQALLOC(166,4599
+#define REQ_DECLARE(176,4783
+#define TM_DECLARE(177,4825
+#define PB_ALLOC(178,4860
+#define PBREQ_STORAGE(180,4973
+#define PBBUF_STORAGE(181,5079
+#define PBDT_STORAGE(182,5179
+#define PBCT_STORAGE(183,5284
+#define ASYNC_COMPLETE(188,5401
+#define ASYNC_COMPLETE(223,7846
+#define REQ_DECLARE(260,9270
+#define TM_DECLARE(261,9295
+#define PB_ALLOC(262,9319
+#define PBREQ_STORAGE(263,9341
+#define PBBUF_STORAGE(264,9373
+#define PBDT_STORAGE(265,9405
+#define PBCT_STORAGE(266,9436
+#define PACK_DECLARE(276,9626
+#define PACK_DECLARE_NOPOS(277,9689
+#define PACK_ERR_DECLARE(278,9747
+#define PACK_ERR_DECLARE_A(279,9782
+#define PBSZ_STORAGE(280,9819
+#define PBPDT_STORAGE(281,9917
+#define PBPBUF_STORAGE(282,10024
+#define PACK_START(284,10127
+#define PACKBUF_ALLOC(292,10356
+#define PACKBUF_ALLOC_STSZ(299,10576
+#define UNPACK_START(306,10807
+#define PACK_ALLOC_DATA(309,10842
+#define PACK_ALLOC_PB(313,10998
+#define PACK_UNPACK_DATA(317,11147
+#define PACK_UNPACK_PB(321,11302
+#define ASYNC_COMPLETE(326,11469
+#define ASYNC_COMPLETE(349,12565
+#define PACK_DECLARE(378,13791
+#define PACK_DECLARE_NOPOS(379,13854
+#define PACK_ERR_DECLARE(380,13912
+#define PACK_ERR_DECLARE_A(381,13940
+#define PBSZ_STORAGE(382,13977
+#define PBPDT_STORAGE(383,14075
+#define PBPBUF_STORAGE(384,14182
+#define PACK_START(386,14285
+#define PACKBUF_ALLOC(394,14510
+#define PACKBUF_ALLOC_STSZ(401,14724
+#define UNPACK_START(408,14949
+#define PACK_ALLOC_DATA(411,14984
+#define PACK_ALLOC_PB(426,15328
+#define PACK_UNPACK_DATA(429,15433
+#define PACK_UNPACK_PB(444,15778
+#define ASYNC_COMPLETE(448,15897
+#define ASYNC_COMPLETE(471,16993
+#define PB_PACK495,18124
+#define PB_PACK1497,18156
+#define PB_PACK2500,18196
+#define PBSIZE_STORAGE(509,18283
+#define PACK_START(511,18317
+#define UNPACK_START(512,18364
+#define PACKBUF_ALLOC(513,18389
+#define PACK_ALLOC_DATA(514,18439
+#define PACK_ALLOC_PB(515,18500
+#define PACK_UNPACK_DATA(516,18540
+#define PACK_UNPACK_PB(517,18602
+#define PACK_DECLARE(518,18649
+#define PACK_ERR_DECLARE(519,18683
+#define PACK_ERR_DECLARE_A(520,18710
+#define PACK_DECLARE_NOPOS(521,18739
+#define PBSZ_STORAGE(522,18776
+#define PBPDT_STORAGE(523,18808
+#define PBPBUF_STORAGE(524,18840
+int PNMPIMOD_Piggyback(537,19118
+int PNMPIMOD_Piggyback_Size(543,19221
+int PNMPI_RegistrationPoint(559,19534
+int MPI_Init(602,20574
+int MPI_Finalize(710,23499
+int MPI_Send(719,23655
+int MPI_Bsend(763,24816
+int MPI_Rsend(807,25983
+int MPI_Ssend(851,27150
+int MPI_Isend(899,28414
+int MPI_Ibsend(958,30104
+int MPI_Irsend(1014,31732
+int MPI_Issend(1070,33358
+int MPI_Recv(1130,35083
+int MPI_Irecv(1194,37131
+int MPI_Sendrecv(1256,38866
+int MPI_Sendrecv_replace(1340,41885
+int MPI_Wait(1415,44515
+int MPI_Waitany(1429,44767
+int MPI_Waitsome(1443,45080
+int MPI_Waitall(1465,45596
+int MPI_Test(1487,46079
+int MPI_Testany(1501,46360
+int MPI_Testsome(1515,46702
+int MPI_Testall(1536,47217
+
+piggybackpreprocessed.c,16094
+typedef long unsigned int size_t;37,906
+typedef unsigned char __u_char;46,1132
+typedef unsigned short int __u_short;47,1164
+typedef unsigned int __u_int;48,1202
+typedef unsigned long int __u_long;49,1232
+typedef signed char __int8_t;52,1270
+typedef unsigned char __uint8_t;53,1300
+typedef signed short int __int16_t;54,1333
+typedef unsigned short int __uint16_t;55,1369
+typedef signed int __int32_t;56,1408
+typedef unsigned int __uint32_t;57,1438
+typedef signed long int __int64_t;59,1472
+typedef unsigned long int __uint64_t;60,1507
+typedef long int __quad_t;68,1552
+typedef unsigned long int __u_quad_t;69,1579
+typedef unsigned long int __dev_t;75,1739
+typedef unsigned int __uid_t;76,1774
+typedef unsigned int __gid_t;77,1804
+typedef unsigned long int __ino_t;78,1834
+typedef unsigned long int __ino64_t;79,1869
+typedef unsigned int __mode_t;80,1906
+typedef unsigned long int __nlink_t;81,1937
+typedef long int __off_t;82,1974
+typedef long int __off64_t;83,2000
+typedef int __pid_t;84,2028
+typedef struct { int __val[2]; } __fsid_t;85,2049
+typedef long int __clock_t;86,2092
+typedef unsigned long int __rlim_t;87,2120
+typedef unsigned long int __rlim64_t;88,2156
+typedef unsigned int __id_t;89,2194
+typedef long int __time_t;90,2223
+typedef unsigned int __useconds_t;91,2250
+typedef long int __suseconds_t;92,2285
+typedef int __daddr_t;94,2318
+typedef long int __swblk_t;95,2341
+typedef int __key_t;96,2369
+typedef int __clockid_t;99,2392
+typedef void * __timer_t;102,2419
+typedef long int __blksize_t;105,2447
+typedef long int __blkcnt_t;110,2481
+typedef long int __blkcnt64_t;111,2510
+typedef unsigned long int __fsblkcnt_t;114,2543
+typedef unsigned long int __fsblkcnt64_t;115,2583
+typedef unsigned long int __fsfilcnt_t;118,2627
+typedef unsigned long int __fsfilcnt64_t;119,2667
+typedef long int __ssize_t;121,2710
+typedef __off64_t __loff_t;125,2741
+typedef __quad_t *__qaddr_t;__qaddr_t126,2769
+typedef char *__caddr_t;__caddr_t127,2798
+typedef long int __intptr_t;130,2825
+typedef unsigned int __socklen_t;133,2856
+typedef struct _IO_FILE FILE;140,2976
+typedef struct _IO_FILE __FILE;147,3043
+} __mbstate_t;173,3522
+} _G_fpos_t;180,3633
+} _G_fpos64_t;185,3705
+typedef int _G_int16_t 187,3756
+typedef int _G_int32_t 188,3816
+typedef unsigned int _G_uint16_t 189,3876
+typedef unsigned int _G_uint32_t 190,3946
+typedef __builtin_va_list __gnuc_va_list;195,4211
+typedef void _IO_lock_t;200,4389
+struct _IO_marker 206,4419
+enum __codecvt_result217,4546
+  __codecvt_ok,219,4570
+  __codecvt_partial,220,4586
+  __codecvt_error,221,4607
+  __codecvt_noconv222,4626
+struct _IO_FILE 225,4681
+typedef struct _IO_FILE _IO_FILE;281,5459
+typedef __ssize_t __io_read_fn 290,5685
+typedef __ssize_t __io_write_fn 298,5771
+typedef int __io_seek_fn 307,5866
+typedef int __io_close_fn 310,5938
+extern int _IO_feof 318,6244
+extern int _IO_ferror 319,6312
+extern void _IO_flockfile 327,6434
+extern void _IO_funlockfile 328,6504
+extern int _IO_ftrylockfile 329,6576
+extern void _IO_free_backup_area 341,7117
+typedef _G_fpos_t fpos_t;346,7262
+extern int remove 367,7507
+extern int rename 369,7584
+extern char *tmpnam tmpnam386,7753
+extern char *tmpnam_r tmpnam_r392,7822
+extern char *tempnam tempnam394,7921
+extern FILE *fdopen fdopen432,8561
+extern void setbuf 437,8683
+extern int setvbuf 441,8788
+extern void setbuffer 448,8926
+extern void setlinebuf 452,9057
+extern int sprintf 469,9295
+extern int vsprintf 484,9610
+extern int snprintf 491,9753
+extern int vsnprintf 495,9945
+extern int sscanf 513,10352
+extern void clearerr 681,12644
+extern int feof 683,12714
+extern int ferror 685,12780
+extern void clearerr_unlocked 690,12851
+extern int feof_unlocked 691,12929
+extern int ferror_unlocked 692,13003
+extern int fileno 717,13324
+extern int fileno_unlocked 722,13395
+extern char *ctermid ctermid736,13620
+extern void flockfile 738,13717
+extern int ftrylockfile 742,13790
+extern void funlockfile 745,13865
+typedef int wchar_t;753,14188
+  } div_t;764,14327
+  } ldiv_t;772,14397
+extern size_t __ctype_get_mb_cur_max 777,14446
+extern double atof 782,14526
+extern int atoi 785,14667
+extern long int atol 788,14805
+__extension__ extern long long int atoll 795,14952
+extern double strtod 802,15119
+extern long int strtol 809,15318
+extern unsigned long int strtoul 813,15490
+extern long long int strtoq 821,15692
+extern unsigned long long int strtouq 826,15888
+extern long long int strtoll 835,16101
+extern unsigned long long int strtoull 840,16299
+extern char *l64a l64a845,16523
+extern long int a64l 848,16590
+typedef __u_char u_char;862,16812
+typedef __u_short u_short;863,16837
+typedef __u_int u_int;864,16864
+typedef __u_long u_long;865,16887
+typedef __quad_t quad_t;866,16912
+typedef __u_quad_t u_quad_t;867,16937
+typedef __fsid_t fsid_t;868,16966
+typedef __loff_t loff_t;873,16995
+typedef __ino_t ino_t;877,17023
+typedef __dev_t dev_t;879,17082
+typedef __gid_t gid_t;884,17109
+typedef __mode_t mode_t;889,17136
+typedef __nlink_t nlink_t;894,17165
+typedef __uid_t uid_t;899,17196
+typedef __off_t off_t;905,17224
+typedef __pid_t pid_t;907,17284
+typedef __id_t id_t;912,17311
+typedef __ssize_t ssize_t;917,17336
+typedef __daddr_t daddr_t;923,17368
+typedef __caddr_t caddr_t;924,17395
+typedef __key_t key_t;930,17427
+typedef __time_t time_t;936,17552
+typedef __clockid_t clockid_t;941,17611
+typedef __timer_t timer_t;943,17674
+typedef unsigned long int ulong;951,17884
+typedef unsigned short int ushort;952,17917
+typedef unsigned int uint;953,17952
+typedef int int8_t 955,18016
+typedef int int16_t 956,18072
+typedef int int32_t 957,18129
+typedef int int64_t 958,18186
+typedef unsigned int u_int8_t 961,18245
+typedef unsigned int u_int16_t 962,18312
+typedef unsigned int u_int32_t 963,18380
+typedef unsigned int u_int64_t 964,18448
+typedef int register_t 966,18517
+typedef int __sig_atomic_t;983,19030
+  } __sigset_t;991,19153
+typedef __sigset_t sigset_t;996,19211
+struct timespec1004,19309
+struct timeval1013,19490
+typedef __suseconds_t suseconds_t;1021,19603
+typedef long int __fd_mask;1027,19643
+  } fd_set;1040,19794
+typedef __fd_mask fd_mask;1047,19812
+extern unsigned int gnu_dev_major 1070,20505
+extern unsigned int gnu_dev_minor 1073,20620
+extern unsigned long long int gnu_dev_makedev 1076,20735
+typedef __blkcnt_t blkcnt_t;1081,20950
+typedef __fsblkcnt_t fsblkcnt_t;1085,20982
+typedef __fsfilcnt_t fsfilcnt_t;1089,21018
+typedef unsigned long int pthread_t;1096,21308
+} pthread_attr_t;1103,21402
+typedef struct __pthread_internal_list1107,21423
+} __pthread_list_t;1111,21548
+  struct __pthread_mutex_s1115,21628
+} pthread_mutex_t;1133,21908
+} pthread_mutexattr_t;1139,21977
+} pthread_cond_t;1159,22390
+} pthread_condattr_t;1165,22458
+typedef unsigned int pthread_key_t;1169,22483
+typedef int pthread_once_t;1173,22522
+} pthread_rwlock_t;1201,22997
+} pthread_rwlockattr_t;1207,23072
+typedef volatile int pthread_spinlock_t;1213,23101
+} pthread_barrier_t;1222,23201
+} pthread_barrierattr_t;1228,23272
+extern long int random 1240,23381
+extern void srandom 1243,23444
+extern char *initstate initstate1249,23522
+extern char *setstate setstate1254,23675
+struct random_data1262,23788
+extern int random_r 1273,23952
+extern int srandom_r 1276,24117
+extern int initstate_r 1279,24258
+extern int setstate_r 1284,24469
+extern int rand 1293,24647
+extern void srand 1295,24702
+extern int rand_r 1300,24777
+extern double drand48 1308,24856
+extern double erand48 1309,24916
+extern long int lrand48 1312,25037
+extern long int nrand48 1313,25099
+extern long int mrand48 1317,25227
+extern long int jrand48 1318,25289
+extern void srand48 1322,25417
+extern unsigned short int *seed48 seed481323,25489
+extern void lcong48 1325,25627
+struct drand48_data1331,25749
+extern int drand48_r 1341,25937
+extern int erand48_r 1343,26106
+extern int lrand48_r 1348,26316
+extern int nrand48_r 1351,26492
+extern int mrand48_r 1357,26709
+extern int jrand48_r 1360,26885
+extern int srand48_r 1366,27102
+extern int seed48_r 1369,27246
+extern int lcong48_r 1372,27407
+extern void *malloc malloc1384,27581
+extern void *calloc calloc1386,27679
+extern void *realloc realloc1398,27807
+extern void free 1401,27935
+extern void cfree 1406,28001
+extern void *alloca alloca1421,28241
+extern void *valloc valloc1433,28354
+extern int posix_memalign 1438,28455
+extern void abort 1444,28609
+extern int atexit 1448,28699
+extern int on_exit 1454,28811
+extern void exit 1462,28964
+extern char *getenv getenv1467,29095
+extern char *__secure_getenv __secure_getenv1472,29208
+extern int putenv 1479,29336
+extern int setenv 1485,29441
+extern int unsetenv 1489,29592
+extern int clearenv 1496,29672
+extern char *mktemp mktemp1498,29764
+extern int mkstemp 1500,29903
+extern char *mkdtemp mkdtemp1502,30011
+extern char *realpath realpath1512,30237
+typedef int (*__compar_fn_t)__compar_fn_t1520,30369
+extern void *bsearch bsearch1525,30469
+extern void qsort 1531,30647
+extern int abs 1534,30812
+extern long int labs 1535,30897
+extern div_t div 1548,31005
+extern ldiv_t ldiv 1550,31114
+extern char *ecvt ecvt1554,31270
+extern char *fcvt fcvt1560,31446
+extern char *gcvt gcvt1566,31622
+extern char *qecvt qecvt1572,31759
+extern char *qfcvt qfcvt1575,31943
+extern char *qgcvt qgcvt1578,32127
+extern int ecvt_r 1584,32270
+extern int fcvt_r 1587,32487
+extern int qecvt_r 1591,32705
+extern int qfcvt_r 1595,32935
+extern int mblen 1606,33172
+extern int mbtowc 1609,33255
+extern int wctomb 1613,33382
+extern size_t mbstowcs 1617,33464
+extern size_t wcstombs 1620,33593
+extern int rpmatch 1631,33734
+extern int getloadavg 1635,33954
+extern void *memcpy memcpy1653,34311
+extern void *memmove memmove1658,34483
+extern void *memccpy memccpy1666,34631
+extern void *memset memset1674,34817
+extern int memcmp 1677,34937
+extern void *memchr memchr1681,35110
+extern char *strcpy strcpy1687,35305
+extern char *strncpy strncpy1690,35457
+extern char *strcat strcat1695,35631
+extern char *strncat strncat1698,35783
+extern int strcmp 1702,35952
+extern int strncmp 1705,36112
+extern int strcoll 1709,36286
+extern size_t strxfrm 1712,36447
+extern char *strdup strdup1717,36653
+extern char *strchr strchr1722,36828
+extern char *strrchr strrchr1725,36975
+extern size_t strcspn 1732,37160
+extern size_t strspn 1736,37328
+extern char *strpbrk strpbrk1739,37494
+extern char *strstr strstr1742,37660
+extern char *strtok strtok1747,37834
+extern char *__strtok_r __strtok_r1753,37985
+extern char *strtok_r strtok_r1758,38178
+extern size_t strlen 1764,38405
+extern char *strerror strerror1770,38580
+extern int strerror_r 1773,38683
+extern void __bzero 1775,38881
+extern void bcopy 1779,38993
+extern void bzero 1783,39134
+extern int bcmp 1786,39243
+extern char *index index1790,39414
+extern char *rindex rindex1794,39561
+extern int ffs 1799,39710
+extern int strcasecmp 1801,39828
+extern int strncasecmp 1805,39993
+extern char *strsep strsep1808,40203
+typedef int MPI_Datatype;1817,40492
+typedef int MPI_Comm;1819,40552
+typedef int MPI_Group;1824,40578
+typedef int MPI_Win;1828,40604
+typedef struct ADIOI_FileD *MPI_File;MPI_File1836,40632
+typedef int MPI_Op;1840,40673
+typedef enum MPIR_Topo_type 1842,40728
+typedef enum MPIR_Topo_type { MPI_GRAPH=1842,40728
+typedef enum MPIR_Topo_type { MPI_GRAPH=1, MPI_CART=1842,40728
+typedef enum MPIR_Topo_type { MPI_GRAPH=1, MPI_CART=2 } MPIR_Topo_type;1842,40728
+typedef void (MPI_Handler_function)1844,40835
+typedef int (MPI_Comm_copy_attr_function)1845,40899
+typedef int (MPI_Comm_delete_attr_function)1847,40995
+typedef int (MPI_Type_copy_attr_function)1848,41071
+typedef int (MPI_Type_delete_attr_function)1850,41171
+typedef int (MPI_Win_copy_attr_function)1851,41251
+typedef int (MPI_Win_delete_attr_function)1853,41344
+typedef void (MPI_Comm_errhandler_fn)1854,41418
+typedef void (MPI_File_errhandler_fn)1855,41481
+typedef void (MPI_Win_errhandler_fn)1856,41544
+typedef int MPI_Errhandler;1858,41640
+typedef int MPI_Request;1860,41703
+typedef void (MPI_User_function)1863,41730
+typedef int (MPI_Copy_function)1866,41808
+typedef int (MPI_Delete_function)1867,41890
+enum MPI_COMBINER_ENUM 1869,41994
+    MPI_COMBINER_NAMED 1870,42019
+    MPI_COMBINER_DUP 1871,42047
+    MPI_COMBINER_CONTIGUOUS 1872,42073
+    MPI_COMBINER_VECTOR 1873,42106
+    MPI_COMBINER_HVECTOR_INTEGER 1874,42135
+    MPI_COMBINER_HVECTOR 1875,42173
+    MPI_COMBINER_INDEXED 1876,42203
+    MPI_COMBINER_HINDEXED_INTEGER 1877,42233
+    MPI_COMBINER_HINDEXED 1878,42272
+    MPI_COMBINER_INDEXED_BLOCK 1879,42303
+    MPI_COMBINER_STRUCT_INTEGER 1880,42340
+    MPI_COMBINER_STRUCT 1881,42378
+    MPI_COMBINER_SUBARRAY 1882,42408
+    MPI_COMBINER_DARRAY 1883,42440
+    MPI_COMBINER_F90_REAL 1884,42470
+    MPI_COMBINER_F90_COMPLEX 1885,42502
+    MPI_COMBINER_F90_INTEGER 1886,42537
+    MPI_COMBINER_RESIZED 1887,42572
+typedef int MPI_Info;1891,42607
+typedef long MPI_Aint;1893,42664
+typedef int MPI_Fint;1894,42687
+typedef long long MPI_Offset;1896,42744
+typedef struct MPI_Status 1899,42776
+} MPI_Status;1906,42895
+typedef int (MPI_Grequest_cancel_function)1911,43059
+typedef int (MPI_Grequest_free_function)1912,43116
+typedef int (MPI_Grequest_query_function)1913,43166
+typedef int (MPI_Datarep_conversion_function)1915,43266
+typedef int (MPI_Datarep_extent_function)1917,43381
+typedef int (MPIX_Grequest_poll_function)2715,80134
+typedef int (MPIX_Grequest_wait_function)2716,80199
+typedef int MPIX_Grequest_class;2718,80279
+typedef int PNMPI_modHandle_t;2764,82035
+typedef int (*PNMPI_Service_Fct_t)PNMPI_Service_Fct_t2766,82067
+typedef int (*PNMPI_RegistrationPoint_t)PNMPI_RegistrationPoint_t2767,82110
+typedef struct PNMPI_Service_descriptor_d2769,82159
+} PNMPI_Service_descriptor_t;2774,82264
+typedef union PNMPI_Global_Addr_d2776,82295
+} PNMPI_Global_Addr_t;2786,82431
+typedef struct PNMPI_Global_descriptor_d2788,82455
+} PNMPI_Global_descriptor_t;2793,82555
+typedef int (*PNMPIMOD_Status_RequestStorage_t)PNMPIMOD_Status_RequestStorage_t3401,124432
+typedef struct PNMPIMOD_Requests_Parameters_d3405,124647
+} PNMPIMOD_Requests_Parameters_t;3419,124882
+typedef long MyReq_t;3422,124918
+typedef int (*PNMPIMOD_Requests_RequestStorage_t)PNMPIMOD_Requests_RequestStorage_t3424,124997
+typedef PNMPIMOD_Requests_Parameters_t* (*PNMPIMOD_Requests_MapRequest_t)PNMPIMOD_Requests_MapRequest_t3427,125102
+typedef int (*PNMPIMOD_Piggyback_t)PNMPIMOD_Piggyback_t3436,125397
+typedef int (*PNMPIMOD_Piggyback_Size_t)PNMPIMOD_Piggyback_Size_t3437,125445
+PNMPIMOD_Requests_MapRequest_t PNMPIMOD_requestmap;3440,125532
+static PNMPIMOD_Requests_RequestStorage_t req_add;3441,125584
+static PNMPIMOD_Status_RequestStorage_t status_add;3443,125636
+static int *TotalStatusExtension;TotalStatusExtension3444,125688
+static int request_offset;3446,125723
+static int request_offset_req;3448,125751
+static int request_offset_buf;3450,125783
+static int request_offset_dt;3451,125814
+static int request_offset_ct;3452,125844
+static int piggyback_offset;3454,125893
+static int *StatusOffsetInRequest;StatusOffsetInRequest3455,125922
+static int piggyback_size;3456,125957
+static char *pb_outbuffer;pb_outbuffer3457,125984
+int PNMPIMOD_Piggyback(3459,126031
+int PNMPIMOD_Piggyback_Size(3465,126125
+int PNMPI_RegistrationPoint(3473,126224
+int MPI_Init(3516,127046
+int MPI_Finalize(3588,128715
+int MPI_Send(3597,128773
+int MPI_Bsend(3611,129097
+int MPI_Rsend(3625,129423
+int MPI_Ssend(3639,129749
+int MPI_Isend(3657,130079
+int MPI_Ibsend(3677,130996
+int MPI_Irsend(3697,131917
+int MPI_Issend(3717,132838
+int MPI_Recv(3741,133763
+int MPI_Irecv(3762,134248
+int MPI_Sendrecv(3797,136145
+int MPI_Sendrecv_replace(3821,136879
+int MPI_Wait(3845,137522
+int MPI_Waitany(3859,140273
+int MPI_Waitsome(3873,143085
+int MPI_Waitall(3895,146364
+int MPI_Test(3917,149530
+int MPI_Testany(3931,152311
+int MPI_Testsome(3945,155151
+int MPI_Testall(3966,158429
+
+pbdriver.so,0
+
+compile.sh,0

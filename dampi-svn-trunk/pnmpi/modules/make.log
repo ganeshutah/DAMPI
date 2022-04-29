@@ -1,0 +1,3878 @@
+cd sample ; make  ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/sample'
+Makefile:25: warning: overriding commands for target `.c.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:22: warning: ignoring old commands for target `.c.o'
+for mymod in sample1.so sample2.so sample3.so sample4.so sample1f.so; do (/home/avo/research/pnmpi/pnmpi/patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod); done
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: PMPI_Send
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Send
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Recv
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: PMPI_Send
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Send
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/sample'
+/home/avo/research/pnmpi/pnmpi/modules
+cd empty ; make  ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/empty'
+Makefile:33: warning: overriding commands for target `.c.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:22: warning: ignoring old commands for target `.c.o'
+for mymod in empty.so; do (../../patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod); done
+Found Static PMPI Symbol: MPI_Barrier
+Found Static PMPI Symbol: MPI_File_get_group
+Found Static PMPI Symbol: MPI_Wtick
+Found Static PMPI Symbol: PMPI_File_write_at_all
+Found Static PMPI Symbol: MPI_Lookup_name
+Found Static PMPI Symbol: PMPI_Wtime
+Found Static PMPI Symbol: MPI_File_get_view
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_File_sync
+Found Static PMPI Symbol: MPI_File_get_amode
+Found Static PMPI Symbol: MPI_Open_port
+Found Static PMPI Symbol: MPI_Pack_external
+Found Static PMPI Symbol: PMPI_File_read_at_all_end
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: PMPI_Unpack_external
+Found Static PMPI Symbol: PMPI_Win_get_errhandler
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Type_contiguous
+Found Static PMPI Symbol: PMPI_Type_create_subarray
+Found Static PMPI Symbol: PMPI_Win_start
+Found Static PMPI Symbol: MPI_File_iwrite_at
+Found Static PMPI Symbol: MPI_Type_get_attr
+Found Static PMPI Symbol: PMPI_File_get_position_shared
+Found Static PMPI Symbol: PMPI_File_seek
+Found Static PMPI Symbol: MPI_Win_post
+Found Static PMPI Symbol: MPI_Iprobe
+Found Static PMPI Symbol: PMPI_Type_create_f90_complex
+Found Static PMPI Symbol: MPI_Status_set_elements
+Found Static PMPI Symbol: MPI_Comm_dup
+Found Static PMPI Symbol: MPI_Buffer_attach
+Found Static PMPI Symbol: MPI_Add_error_class
+Found Static PMPI Symbol: MPI_Type_extent
+Found Static PMPI Symbol: MPI_File_get_type_extent
+Found Static PMPI Symbol: PMPI_Cancel
+Found Static PMPI Symbol: PMPI_Buffer_attach
+Found Static PMPI Symbol: PMPI_Get_count
+Found Static PMPI Symbol: PMPI_Error_string
+Found Static PMPI Symbol: PMPI_Scatterv
+Found Static PMPI Symbol: PMPI_File_get_type_extent
+Found Static PMPI Symbol: MPI_Intercomm_create
+Found Static PMPI Symbol: PMPI_Win_test
+Found Static PMPI Symbol: PMPI_Type_lb
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: MPI_Comm_delete_attr
+Found Static PMPI Symbol: MPI_File_delete
+Found Static PMPI Symbol: PMPI_Barrier
+Found Static PMPI Symbol: MPI_Group_compare
+Found Static PMPI Symbol: MPI_Dims_create
+Found Static PMPI Symbol: MPI_File_write_all_begin
+Found Static PMPI Symbol: MPI_File_read_at_all_end
+Found Static PMPI Symbol: PMPI_Comm_spawn
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Get_count
+Found Static PMPI Symbol: MPI_Alltoall
+Found Static PMPI Symbol: MPI_Comm_remote_size
+Found Static PMPI Symbol: PMPI_Errhandler_free
+Found Static PMPI Symbol: PMPI_Comm_compare
+Found Static PMPI Symbol: PMPI_Comm_test_inter
+Found Static PMPI Symbol: MPI_Graph_neighbors
+Found Static PMPI Symbol: PMPI_Request_get_status
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: PMPI_Cart_create
+Found Static PMPI Symbol: MPI_Group_excl
+Found Static PMPI Symbol: PMPI_File_iread
+Found Static PMPI Symbol: MPI_Info_get_nkeys
+Found Static PMPI Symbol: PMPI_File_open
+Found Static PMPI Symbol: PMPI_File_delete
+Found Static PMPI Symbol: PMPI_Alltoallv
+Found Static PMPI Symbol: PMPI_Startall
+Found Static PMPI Symbol: MPI_File_write_ordered
+Found Static PMPI Symbol: MPI_Info_get
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: MPI_Put
+Found Static PMPI Symbol: MPI_Alltoallv
+Found Static PMPI Symbol: MPI_File_set_errhandler
+Found Static PMPI Symbol: MPI_Type_create_darray
+Found Static PMPI Symbol: PMPI_Unpack
+Found Static PMPI Symbol: PMPI_Type_dup
+Found Static PMPI Symbol: MPI_Info_free
+Found Static PMPI Symbol: MPI_Get
+Found Static PMPI Symbol: PMPI_Info_get_valuelen
+Found Static PMPI Symbol: PMPI_Request_free
+Found Static PMPI Symbol: MPI_Cart_sub
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: PMPI_Wtick
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: PMPI_Info_get_nthkey
+Found Static PMPI Symbol: PMPI_Win_get_group
+Found Static PMPI Symbol: PMPI_Type_indexed
+Found Static PMPI Symbol: MPI_Type_create_subarray
+Found Static PMPI Symbol: PMPI_Comm_spawn_multiple
+Found Static PMPI Symbol: MPI_File_read_all_begin
+Found Static PMPI Symbol: MPI_Comm_test_inter
+Found Static PMPI Symbol: PMPI_Ssend_init
+Found Static PMPI Symbol: MPI_File_read_ordered_begin
+Found Static PMPI Symbol: PMPI_Allgather
+Found Static PMPI Symbol: PMPI_Type_hvector
+Found Static PMPI Symbol: MPI_Type_create_hindexed
+Found Static PMPI Symbol: PMPI_Graph_neighbors
+Found Static PMPI Symbol: PMPI_File_iwrite
+Found Static PMPI Symbol: PMPI_Free_mem
+Found Static PMPI Symbol: MPI_Pack_external_size
+Found Static PMPI Symbol: MPI_Type_set_attr
+Found Static PMPI Symbol: PMPI_Type_size
+Found Static PMPI Symbol: PMPI_Scatter
+Found Static PMPI Symbol: PMPI_File_set_errhandler
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Group_rank
+Found Static PMPI Symbol: PMPI_Comm_set_name
+Found Static PMPI Symbol: MPI_Type_get_contents
+Found Static PMPI Symbol: PMPI_Buffer_detach
+Found Static PMPI Symbol: MPI_File_set_atomicity
+Found Static PMPI Symbol: PMPI_Intercomm_create
+Found Static PMPI Symbol: MPI_File_iwrite
+Found Static PMPI Symbol: PMPI_File_read_shared
+Found Static PMPI Symbol: PMPI_File_iwrite_at
+Found Static PMPI Symbol: PMPI_Errhandler_set
+Found Static PMPI Symbol: MPI_File_write_all_end
+Found Static PMPI Symbol: MPI_File_seek
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Win_create_keyval
+Found Static PMPI Symbol: MPI_Type_create_keyval
+Found Static PMPI Symbol: MPI_File_write_at_all_begin
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Cart_coords
+Found Static PMPI Symbol: MPI_File_read_at_all_begin
+Found Static PMPI Symbol: MPI_Comm_free_keyval
+Found Static PMPI Symbol: MPI_Get_version
+Found Static PMPI Symbol: PMPI_Type_get_attr
+Found Static PMPI Symbol: PMPI_Close_port
+Found Static PMPI Symbol: MPI_Win_set_name
+Found Static PMPI Symbol: PMPI_Comm_create_errhandler
+Found Static PMPI Symbol: MPI_Cart_shift
+Found Static PMPI Symbol: MPI_Initialized
+Found Static PMPI Symbol: PMPI_Query_thread
+Found Static PMPI Symbol: MPI_Allreduce
+Found Static PMPI Symbol: MPI_Op_create
+Found Static PMPI Symbol: MPI_File_write_at_all
+Found Static PMPI Symbol: MPI_File_get_atomicity
+Found Static PMPI Symbol: MPI_Attr_delete
+Found Static PMPI Symbol: MPI_File_read_ordered_end
+Found Static PMPI Symbol: MPI_File_open
+Found Static PMPI Symbol: MPI_Free_mem
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Info_dup
+Found Static PMPI Symbol: MPI_Cart_create
+Found Static PMPI Symbol: MPI_Type_hindexed
+Found Static PMPI Symbol: MPI_Win_unlock
+Found Static PMPI Symbol: PMPI_Comm_dup
+Found Static PMPI Symbol: MPI_Cart_coords
+Found Static PMPI Symbol: PMPI_Graph_map
+Found Static PMPI Symbol: PMPI_File_iwrite_shared
+Found Static PMPI Symbol: PMPI_Type_vector
+Found Static PMPI Symbol: MPI_Group_intersection
+Found Static PMPI Symbol: MPI_Type_contiguous
+Found Static PMPI Symbol: MPI_Type_dup
+Found Static PMPI Symbol: MPI_File_read_all
+Found Static PMPI Symbol: MPI_Group_size
+Found Static PMPI Symbol: MPI_Intercomm_merge
+Found Static PMPI Symbol: MPI_Comm_get_name
+Found Static PMPI Symbol: MPI_Type_vector
+Found Static PMPI Symbol: PMPI_File_read_all_end
+Found Static PMPI Symbol: PMPI_Type_match_size
+Found Static PMPI Symbol: MPI_Pack_size
+Found Static PMPI Symbol: PMPI_Open_port
+Found Static PMPI Symbol: PMPI_Win_set_attr
+Found Static PMPI Symbol: MPI_File_write_ordered_begin
+Found Static PMPI Symbol: PMPI_Win_fence
+Found Static PMPI Symbol: PMPI_Comm_set_errhandler
+Found Static PMPI Symbol: PMPI_Comm_remote_group
+Found Static PMPI Symbol: PMPI_File_set_atomicity
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Cartdim_get
+Found Static PMPI Symbol: MPI_Type_create_indexed_block
+Found Static PMPI Symbol: MPI_Grequest_complete
+Found Static PMPI Symbol: PMPI_File_close
+Found Static PMPI Symbol: MPI_Comm_create_errhandler
+Found Static PMPI Symbol: PMPI_Type_struct
+Found Static PMPI Symbol: MPI_Publish_name
+Found Static PMPI Symbol: MPI_Scatterv
+Found Static PMPI Symbol: MPI_Win_get_errhandler
+Found Static PMPI Symbol: MPI_Alloc_mem
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Probe
+Found Static PMPI Symbol: PMPI_Group_excl
+Found Static PMPI Symbol: PMPI_Type_set_name
+Found Static PMPI Symbol: MPI_Win_get_name
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Unpack_external
+Found Static PMPI Symbol: MPI_Errhandler_get
+Found Static PMPI Symbol: PMPI_Grequest_complete
+Found Static PMPI Symbol: MPI_Comm_disconnect
+Found Static PMPI Symbol: PMPI_Op_free
+Found Static PMPI Symbol: PMPI_File_get_atomicity
+Found Static PMPI Symbol: PMPI_Info_delete
+Found Static PMPI Symbol: PMPI_File_iread_at
+Found Static PMPI Symbol: PMPI_Type_create_f90_integer
+Found Static PMPI Symbol: PMPI_Add_error_class
+Found Static PMPI Symbol: PMPI_Type_delete_attr
+Found Static PMPI Symbol: MPI_Type_create_struct
+Found Static PMPI Symbol: MPI_File_iwrite_shared
+Found Static PMPI Symbol: PMPI_Attr_put
+Found Static PMPI Symbol: MPI_Get_processor_name
+Found Static PMPI Symbol: MPI_Exscan
+Found Static PMPI Symbol: PMPI_Accumulate
+Found Static PMPI Symbol: MPI_Allgather
+Found Static PMPI Symbol: PMPI_Rsend_init
+Found Static PMPI Symbol: PMPI_File_read_at_all
+Found Static PMPI Symbol: PMPI_File_get_info
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Type_create_hindexed
+Found Static PMPI Symbol: PMPI_Alltoallw
+Found Static PMPI Symbol: PMPI_File_write_ordered_end
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Keyval_free
+Found Static PMPI Symbol: MPI_Recv_init
+Found Static PMPI Symbol: PMPI_File_sync
+Found Static PMPI Symbol: PMPI_Abort
+Found Static PMPI Symbol: PMPI_Win_create_errhandler
+Found Static PMPI Symbol: MPI_File_read_at
+Found Static PMPI Symbol: MPI_File_read_ordered
+Found Static PMPI Symbol: PMPI_Group_size
+Found Static PMPI Symbol: PMPI_File_iread_shared
+Found Static PMPI Symbol: PMPI_Status_set_cancelled
+Found Static PMPI Symbol: MPI_File_read
+Found Static PMPI Symbol: PMPI_Type_create_indexed_block
+Found Static PMPI Symbol: MPI_Type_ub
+Found Static PMPI Symbol: MPI_Win_test
+Found Static PMPI Symbol: MPI_Comm_size
+Found Static PMPI Symbol: MPI_Init_thread
+Found Static PMPI Symbol: PMPI_Win_post
+Found Static PMPI Symbol: MPI_Type_get_true_extent
+Found Static PMPI Symbol: MPI_Cart_get
+Found Static PMPI Symbol: MPI_Win_set_attr
+Found Static PMPI Symbol: MPI_Op_free
+Found Static PMPI Symbol: MPI_Group_difference
+Found Static PMPI Symbol: MPI_Comm_get_attr
+Found Static PMPI Symbol: PMPI_Comm_get_attr
+Found Static PMPI Symbol: PMPI_Reduce
+Found Static PMPI Symbol: PMPI_Add_error_code
+Found Static PMPI Symbol: PMPI_Init_thread
+Found Static PMPI Symbol: MPI_Type_get_envelope
+Found Static PMPI Symbol: PMPI_Comm_call_errhandler
+Found Static PMPI Symbol: MPI_File_get_errhandler
+Found Static PMPI Symbol: PMPI_Finalized
+Found Static PMPI Symbol: PMPI_Group_range_incl
+Found Static PMPI Symbol: MPI_Comm_accept
+Found Static PMPI Symbol: PMPI_Cart_get
+Found Static PMPI Symbol: PMPI_Keyval_create
+Found Static PMPI Symbol: MPI_Graph_get
+Found Static PMPI Symbol: PMPI_Attr_delete
+Found Static PMPI Symbol: MPI_Type_hvector
+Found Static PMPI Symbol: MPI_Type_commit
+Found Static PMPI Symbol: MPI_Errhandler_create
+Found Static PMPI Symbol: PMPI_File_write_shared
+Found Static PMPI Symbol: PMPI_Test_cancelled
+Found Static PMPI Symbol: PMPI_Cart_rank
+Found Static PMPI Symbol: PMPI_Graph_create
+Found Static PMPI Symbol: PMPI_File_read_all_begin
+Found Static PMPI Symbol: MPI_File_iread_at
+Found Static PMPI Symbol: MPI_Comm_set_name
+Found Static PMPI Symbol: MPI_Error_class
+Found Static PMPI Symbol: PMPI_File_write_at_all_end
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_File_iread
+Found Static PMPI Symbol: PMPI_File_preallocate
+Found Static PMPI Symbol: PMPI_Type_create_darray
+Found Static PMPI Symbol: MPI_Error_string
+Found Static PMPI Symbol: PMPI_Recv_init
+Found Static PMPI Symbol: PMPI_File_read_at_all_begin
+Found Static PMPI Symbol: PMPI_Type_get_extent
+Found Static PMPI Symbol: PMPI_Allreduce
+Found Static PMPI Symbol: MPI_Keyval_create
+Found Static PMPI Symbol: PMPI_Publish_name
+Found Static PMPI Symbol: MPI_Comm_create
+Found Static PMPI Symbol: PMPI_Comm_disconnect
+Found Static PMPI Symbol: PMPI_Group_rank
+Found Static PMPI Symbol: MPI_File_create_errhandler
+Found Static PMPI Symbol: MPI_Start
+Found Static PMPI Symbol: MPI_Info_dup
+Found Static PMPI Symbol: MPI_File_set_info
+Found Static PMPI Symbol: MPI_Buffer_detach
+Found Static PMPI Symbol: MPI_File_read_shared
+Found Static PMPI Symbol: PMPI_File_write_at
+Found Static PMPI Symbol: PMPI_Type_get_contents
+Found Static PMPI Symbol: MPI_Type_size
+Found Static PMPI Symbol: PMPI_Alltoall
+Found Static PMPI Symbol: PMPI_Address
+Found Static PMPI Symbol: MPI_Query_thread
+Found Static PMPI Symbol: MPI_Abort
+Found Static PMPI Symbol: PMPI_Get_version
+Found Static PMPI Symbol: PMPI_Pack
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: PMPI_Get
+Found Static PMPI Symbol: MPI_Unpack
+Found Static PMPI Symbol: MPI_Type_free_keyval
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Gather
+Found Static PMPI Symbol: MPI_Probe
+Found Static PMPI Symbol: PMPI_Group_free
+Found Static PMPI Symbol: MPI_Win_wait
+Found Static PMPI Symbol: MPI_Alltoallw
+Found Static PMPI Symbol: MPI_Type_get_name
+Found Static PMPI Symbol: PMPI_Unpublish_name
+Found Static PMPI Symbol: MPI_File_read_at_all
+Found Static PMPI Symbol: PMPI_Type_ub
+Found Static PMPI Symbol: MPI_Comm_connect
+Found Static PMPI Symbol: PMPI_Win_unlock
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: PMPI_Comm_remote_size
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: MPI_Topo_test
+Found Static PMPI Symbol: MPI_Startall
+Found Static PMPI Symbol: MPI_Cart_map
+Found Static PMPI Symbol: PMPI_File_write_all_end
+Found Static PMPI Symbol: MPI_File_preallocate
+Found Static PMPI Symbol: PMPI_File_get_errhandler
+Found Static PMPI Symbol: PMPI_Type_create_hvector
+Found Static PMPI Symbol: PMPI_Send_init
+Found Static PMPI Symbol: PMPI_Info_free
+Found Static PMPI Symbol: PMPI_File_read_all
+Found Static PMPI Symbol: PMPI_Start
+Found Static PMPI Symbol: MPI_Comm_compare
+Found Static PMPI Symbol: MPI_Graph_map
+Found Static PMPI Symbol: MPI_Comm_remote_group
+Found Static PMPI Symbol: MPI_File_iread_shared
+Found Static PMPI Symbol: MPI_Comm_spawn_multiple
+Found Static PMPI Symbol: PMPI_Type_create_keyval
+Found Static PMPI Symbol: PMPI_Add_error_string
+Found Static PMPI Symbol: PMPI_Error_class
+Found Static PMPI Symbol: MPI_Graphdims_get
+Found Static PMPI Symbol: PMPI_File_read_at
+Found Static PMPI Symbol: PMPI_Graph_neighbors_count
+Found Static PMPI Symbol: MPI_Type_get_extent
+Found Static PMPI Symbol: MPI_Type_delete_attr
+Found Static PMPI Symbol: PMPI_Scan
+Found Static PMPI Symbol: MPI_Test_cancelled
+Found Static PMPI Symbol: PMPI_Errhandler_create
+Found Static PMPI Symbol: MPI_File_close
+Found Static PMPI Symbol: PMPI_File_read_ordered
+Found Static PMPI Symbol: PMPI_Errhandler_get
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: PMPI_Win_create
+Found Static PMPI Symbol: MPI_Win_get_group
+Found Static PMPI Symbol: PMPI_Comm_connect
+Found Static PMPI Symbol: PMPI_Comm_accept
+Found Static PMPI Symbol: MPI_Register_datarep
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: PMPI_File_seek_shared
+Found Static PMPI Symbol: MPI_Comm_free
+Found Static PMPI Symbol: MPI_File_write_at
+Found Static PMPI Symbol: MPI_Errhandler_free
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: PMPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Win_wait
+Found Static PMPI Symbol: PMPI_Comm_get_errhandler
+Found Static PMPI Symbol: MPI_File_set_size
+Found Static PMPI Symbol: MPI_Comm_spawn
+Found Static PMPI Symbol: MPI_Group_translate_ranks
+Found Static PMPI Symbol: PMPI_Comm_group
+Found Static PMPI Symbol: PMPI_Comm_size
+Found Static PMPI Symbol: PMPI_Get_elements
+Found Static PMPI Symbol: PMPI_Type_commit
+Found Static PMPI Symbol: MPI_Finalized
+Found Static PMPI Symbol: MPI_Info_get_nthkey
+Found Static PMPI Symbol: MPI_Type_create_f90_real
+Found Static PMPI Symbol: MPI_File_write_shared
+Found Static PMPI Symbol: PMPI_Comm_create_keyval
+Found Static PMPI Symbol: PMPI_Win_complete
+Found Static PMPI Symbol: PMPI_Attr_get
+Found Static PMPI Symbol: PMPI_Info_get
+Found Static PMPI Symbol: MPI_Request_free
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: MPI_File_write
+Found Static PMPI Symbol: MPI_Type_free
+Found Static PMPI Symbol: MPI_Comm_rank
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Graph_create
+Found Static PMPI Symbol: PMPI_File_write
+Found Static PMPI Symbol: MPI_Bcast
+Found Static PMPI Symbol: MPI_File_write_ordered_end
+Found Static PMPI Symbol: PMPI_File_read
+Found Static PMPI Symbol: MPI_Reduce
+Found Static PMPI Symbol: PMPI_Bsend_init
+Found Static PMPI Symbol: MPI_File_get_info
+Found Static PMPI Symbol: PMPI_Pack_external_size
+Found Static PMPI Symbol: PMPI_File_write_ordered
+Found Static PMPI Symbol: PMPI_File_get_position
+Found Static PMPI Symbol: PMPI_Topo_test
+Found Static PMPI Symbol: PMPI_Cart_shift
+Found Static PMPI Symbol: PMPI_Alloc_mem
+Found Static PMPI Symbol: MPI_Comm_split
+Found Static PMPI Symbol: MPI_Get_elements
+Found Static PMPI Symbol: MPI_File_set_view
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Type_create_resized
+Found Static PMPI Symbol: PMPI_Type_create_f90_real
+Found Static PMPI Symbol: MPI_Win_complete
+Found Static PMPI Symbol: PMPI_Grequest_start
+Found Static PMPI Symbol: MPI_Win_get_attr
+Found Static PMPI Symbol: MPI_Win_free_keyval
+Found Static PMPI Symbol: MPI_Type_create_resized
+Found Static PMPI Symbol: MPI_Info_delete
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: MPI_Win_lock
+Found Static PMPI Symbol: PMPI_File_read_ordered_end
+Found Static PMPI Symbol: MPI_Request_get_status
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: PMPI_File_write_all_begin
+Found Static PMPI Symbol: MPI_Attr_get
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: MPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Scatter
+Found Static PMPI Symbol: PMPI_Win_delete_attr
+Found Static PMPI Symbol: PMPI_Gather
+Found Static PMPI Symbol: MPI_Comm_join
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: MPI_File_read_all_end
+Found Static PMPI Symbol: PMPI_Group_compare
+Found Static PMPI Symbol: MPI_Info_create
+Found Static PMPI Symbol: MPI_Get_address
+Found Static PMPI Symbol: PMPI_Comm_free
+Found Static PMPI Symbol: PMPI_Type_get_true_extent
+Found Static PMPI Symbol: MPI_File_seek_shared
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: PMPI_Dims_create
+Found Static PMPI Symbol: MPI_Close_port
+Found Static PMPI Symbol: PMPI_Intercomm_merge
+Found Static PMPI Symbol: PMPI_File_get_amode
+Found Static PMPI Symbol: MPI_Type_match_size
+Found Static PMPI Symbol: MPI_Type_indexed
+Found Static PMPI Symbol: PMPI_Get_address
+Found Static PMPI Symbol: PMPI_Comm_delete_attr
+Found Static PMPI Symbol: MPI_File_call_errhandler
+Found Static PMPI Symbol: MPI_Pack
+Found Static PMPI Symbol: MPI_Attr_put
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Add_error_string
+Found Static PMPI Symbol: PMPI_Group_intersection
+Found Static PMPI Symbol: MPI_File_get_position
+Found Static PMPI Symbol: PMPI_Lookup_name
+Found Static PMPI Symbol: PMPI_Comm_split
+Found Static PMPI Symbol: MPI_File_get_size
+Found Static PMPI Symbol: MPI_File_write_all
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Comm_join
+Found Static PMPI Symbol: PMPI_Group_range_excl
+Found Static PMPI Symbol: PMPI_File_get_byte_offset
+Found Static PMPI Symbol: MPI_Comm_group
+Found Static PMPI Symbol: MPI_File_get_byte_offset
+Found Static PMPI Symbol: PMPI_Type_get_name
+Found Static PMPI Symbol: MPI_Group_incl
+Found Static PMPI Symbol: MPI_Comm_get_parent
+Found Static PMPI Symbol: PMPI_Comm_get_parent
+Found Static PMPI Symbol: MPI_Errhandler_set
+Found Static PMPI Symbol: PMPI_File_set_size
+Found Static PMPI Symbol: MPI_Group_union
+Found Static PMPI Symbol: PMPI_Comm_get_name
+Found Static PMPI Symbol: PMPI_Info_set
+Found Static PMPI Symbol: PMPI_Info_create
+Found Static PMPI Symbol: MPI_Info_get_valuelen
+Found Static PMPI Symbol: MPI_Comm_call_errhandler
+Found Static PMPI Symbol: PMPI_Iprobe
+Found Static PMPI Symbol: PMPI_Win_set_errhandler
+Found Static PMPI Symbol: PMPI_Type_free
+Found Static PMPI Symbol: PMPI_Pack_external
+Found Static PMPI Symbol: PMPI_Type_create_struct
+Found Static PMPI Symbol: MPI_Comm_create_keyval
+Found Static PMPI Symbol: MPI_Send_init
+Found Static PMPI Symbol: MPI_Win_start
+Found Static PMPI Symbol: PMPI_Allgatherv
+Found Static PMPI Symbol: PMPI_File_create_errhandler
+Found Static PMPI Symbol: PMPI_Group_incl
+Found Static PMPI Symbol: PMPI_Win_get_attr
+Found Static PMPI Symbol: MPI_Win_free
+Found Static PMPI Symbol: MPI_File_get_position_shared
+Found Static PMPI Symbol: PMPI_Register_datarep
+Found Static PMPI Symbol: PMPI_Win_free
+Found Static PMPI Symbol: MPI_Wtime
+Found Static PMPI Symbol: PMPI_Get_processor_name
+Found Static PMPI Symbol: PMPI_Type_get_envelope
+Found Static PMPI Symbol: PMPI_Initialized
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: PMPI_Group_translate_ranks
+Found Static PMPI Symbol: MPI_Group_free
+Found Static PMPI Symbol: MPI_Cancel
+Found Static PMPI Symbol: MPI_Group_range_incl
+Found Static PMPI Symbol: PMPI_Group_difference
+Found Static PMPI Symbol: PMPI_Put
+Found Static PMPI Symbol: PMPI_File_call_errhandler
+Found Static PMPI Symbol: MPI_Graph_neighbors_count
+Found Static PMPI Symbol: PMPI_File_write_at_all_begin
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Type_hindexed
+Found Static PMPI Symbol: PMPI_Win_call_errhandler
+Found Static PMPI Symbol: PMPI_Win_free_keyval
+Found Static PMPI Symbol: MPI_Cart_rank
+Found Static PMPI Symbol: PMPI_Comm_create
+Found Static PMPI Symbol: PMPI_Graph_get
+Found Static PMPI Symbol: MPI_Bsend_init
+Found Static PMPI Symbol: PMPI_File_get_group
+Found Static PMPI Symbol: PMPI_File_read_ordered_begin
+Found Static PMPI Symbol: MPI_Win_create_errhandler
+Found Static PMPI Symbol: MPI_Keyval_free
+Found Static PMPI Symbol: PMPI_File_write_all
+Found Static PMPI Symbol: MPI_Type_lb
+Found Static PMPI Symbol: MPI_File_write_at_all_end
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Comm_set_attr
+Found Static PMPI Symbol: PMPI_Comm_free_keyval
+Found Static PMPI Symbol: PMPI_Graphdims_get
+Found Static PMPI Symbol: MPI_Scan
+Found Static PMPI Symbol: PMPI_Win_set_name
+Found Static PMPI Symbol: PMPI_Type_free_keyval
+Found Static PMPI Symbol: MPI_Comm_get_errhandler
+Found Static PMPI Symbol: MPI_Ssend_init
+Found Static PMPI Symbol: PMPI_File_get_size
+Found Static PMPI Symbol: MPI_Gatherv
+Found Static PMPI Symbol: PMPI_Cart_sub
+Found Static PMPI Symbol: MPI_Type_create_f90_integer
+Found Static PMPI Symbol: PMPI_File_write_ordered_begin
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend_init
+Found Static PMPI Symbol: PMPI_Op_create
+Found Static PMPI Symbol: MPI_Allgatherv
+Found Static PMPI Symbol: MPI_Type_set_name
+Found Static PMPI Symbol: PMPI_Group_union
+Found Static PMPI Symbol: PMPI_File_set_view
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Info_set
+Found Static PMPI Symbol: PMPI_Comm_rank
+Found Static PMPI Symbol: MPI_Type_create_f90_complex
+Found Static PMPI Symbol: MPI_Status_set_cancelled
+Found Static PMPI Symbol: PMPI_Exscan
+Found Static PMPI Symbol: MPI_Type_create_hvector
+Found Static PMPI Symbol: PMPI_Is_thread_main
+Found Static PMPI Symbol: PMPI_Info_get_nkeys
+Found Static PMPI Symbol: MPI_Win_call_errhandler
+Found Static PMPI Symbol: MPI_Win_set_errhandler
+Found Static PMPI Symbol: MPI_Comm_set_errhandler
+Found Static PMPI Symbol: PMPI_Win_get_name
+Found Static PMPI Symbol: PMPI_Win_lock
+Found Static PMPI Symbol: MPI_Testall
+Found Static PMPI Symbol: MPI_Win_create_keyval
+Found Static PMPI Symbol: MPI_Group_range_excl
+Found Static PMPI Symbol: MPI_Add_error_code
+Found Static PMPI Symbol: PMPI_File_set_info
+Found Static PMPI Symbol: MPI_Accumulate
+Found Static PMPI Symbol: MPI_Win_delete_attr
+Found Static PMPI Symbol: MPI_Address
+Found Static PMPI Symbol: MPI_Win_fence
+Found Static PMPI Symbol: PMPI_Bcast
+Found Static PMPI Symbol: PMPI_Cart_map
+Found Static PMPI Symbol: MPI_Unpublish_name
+Found Static PMPI Symbol: PMPI_Cartdim_get
+Found Static PMPI Symbol: PMPI_Comm_set_attr
+Found Static PMPI Symbol: MPI_Is_thread_main
+Found Static PMPI Symbol: PMPI_Type_extent
+Found Static PMPI Symbol: MPI_Win_create
+Found Static PMPI Symbol: MPI_Grequest_start
+Found Static PMPI Symbol: MPI_Type_struct
+Found Static PMPI Symbol: PMPI_Type_set_attr
+Found Static PMPI Symbol: PMPI_Gatherv
+Found Static PMPI Symbol: PMPI_File_get_view
+Found Static PMPI Symbol: PMPI_Pack_size
+Found Static PMPI Symbol: PMPI_Status_set_elements
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/empty'
+/home/avo/research/pnmpi/pnmpi/modules
+cd datatype ; make  ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/datatype'
+Makefile:18: warning: overriding commands for target `.c.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:22: warning: ignoring old commands for target `.c.o'
+Makefile:21: warning: overriding commands for target `.cxx.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:28: warning: ignoring old commands for target `.cxx.o'
+for mymod in datatype.so dtprint.so; do (../../patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod ); done
+Found Static PMPI Symbol: PMPI_Type_contiguous
+Found Static PMPI Symbol: PMPI_Type_create_subarray
+Found Static PMPI Symbol: MPI_Type_create_darray
+Found Static PMPI Symbol: PMPI_Type_indexed
+Found Static PMPI Symbol: MPI_Type_create_subarray
+Found Static PMPI Symbol: PMPI_Type_hvector
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: MPI_Type_hindexed
+Found Static PMPI Symbol: PMPI_Type_vector
+Found Static PMPI Symbol: MPI_Type_contiguous
+Found Static PMPI Symbol: MPI_Type_vector
+Found Static PMPI Symbol: PMPI_Type_struct
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Type_hvector
+Found Static PMPI Symbol: MPI_Type_commit
+Found Static PMPI Symbol: PMPI_Type_create_darray
+Found Static PMPI Symbol: PMPI_Type_commit
+Found Static PMPI Symbol: MPI_Type_free
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: MPI_Type_indexed
+Found Static PMPI Symbol: PMPI_Type_free
+Found Static PMPI Symbol: PMPI_Type_hindexed
+Found Static PMPI Symbol: PMPI_Comm_rank
+Found Static PMPI Symbol: MPI_Type_struct
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Send
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+for myheader in datatype.h; do ( cp $myheader /home/avo/research/pnmpi/pnmpi/include/$myheader ); done
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/datatype'
+/home/avo/research/pnmpi/pnmpi/modules
+cd status ; make  ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/status'
+Makefile:19: warning: overriding commands for target `.c.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:22: warning: ignoring old commands for target `.c.o'
+Makefile:22: warning: overriding commands for target `.cpp.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:25: warning: ignoring old commands for target `.cpp.o'
+for mymod in status.so; do (../../patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod ); done
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Iprobe
+Found Static PMPI Symbol: PMPI_Get_count
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Get_count
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Probe
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Probe
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Get_elements
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Get_elements
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Iprobe
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+for myheader in status.h; do ( cp $myheader /home/avo/research/pnmpi/pnmpi/include/$myheader ); done
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/status'
+/home/avo/research/pnmpi/pnmpi/modules
+cd requests ; make  ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/requests'
+Makefile:17: warning: overriding commands for target `.c.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:22: warning: ignoring old commands for target `.c.o'
+Makefile:20: warning: overriding commands for target `.cxx.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:28: warning: ignoring old commands for target `.cxx.o'
+for mymod in requests.so; do (../../patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod ); done
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: PMPI_Cancel
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: PMPI_Startall
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Request_free
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: PMPI_Ssend_init
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: PMPI_Rsend_init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: MPI_Recv_init
+Found Static PMPI Symbol: PMPI_Recv_init
+Found Static PMPI Symbol: MPI_Start
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: MPI_Startall
+Found Static PMPI Symbol: PMPI_Send_init
+Found Static PMPI Symbol: PMPI_Start
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: MPI_Request_free
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: PMPI_Bsend_init
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: MPI_Send_init
+Found Static PMPI Symbol: MPI_Cancel
+Found Static PMPI Symbol: MPI_Bsend_init
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend_init
+Found Static PMPI Symbol: MPI_Rsend_init
+Found Static PMPI Symbol: PMPI_Comm_rank
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+for myheader in requests.h; do ( cp $myheader /home/avo/research/pnmpi/pnmpi/include/$myheader ); done
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/requests'
+/home/avo/research/pnmpi/pnmpi/modules
+cd comm ; make  ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/comm'
+Makefile:26: warning: overriding commands for target `.c.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:22: warning: ignoring old commands for target `.c.o'
+Makefile:29: warning: overriding commands for target `.cxx.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:28: warning: ignoring old commands for target `.cxx.o'
+for mymod in commsub-print.so commsub-checksum.so commsub-empty.so; do (../../patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod ); done
+Found Static PMPI Symbol: MPI_Barrier
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Get_count
+Found Static PMPI Symbol: PMPI_Scatterv
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Barrier
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Alltoall
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: PMPI_Alltoallv
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: MPI_Alltoallv
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: PMPI_Allgather
+Found Static PMPI Symbol: PMPI_Scatter
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: MPI_Allreduce
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Scatterv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Allgather
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Reduce
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Allreduce
+Found Static PMPI Symbol: PMPI_Alltoall
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Gather
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Scan
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: PMPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Comm_size
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Bcast
+Found Static PMPI Symbol: MPI_Reduce
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: MPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Scatter
+Found Static PMPI Symbol: PMPI_Gather
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Allgatherv
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Scan
+Found Static PMPI Symbol: MPI_Gatherv
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: MPI_Allgatherv
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: PMPI_Comm_rank
+Found Static PMPI Symbol: MPI_Testall
+Found Static PMPI Symbol: PMPI_Bcast
+Found Static PMPI Symbol: PMPI_Type_extent
+Found Static PMPI Symbol: PMPI_Gatherv
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Barrier
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Get_count
+Found Static PMPI Symbol: PMPI_Scatterv
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Barrier
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Alltoall
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: PMPI_Alltoallv
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: MPI_Alltoallv
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: PMPI_Allgather
+Found Static PMPI Symbol: PMPI_Scatter
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: MPI_Allreduce
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Scatterv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Allgather
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Reduce
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Allreduce
+Found Static PMPI Symbol: PMPI_Alltoall
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Gather
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Scan
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: PMPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Comm_size
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Bcast
+Found Static PMPI Symbol: MPI_Reduce
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: MPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Scatter
+Found Static PMPI Symbol: PMPI_Gather
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Allgatherv
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Scan
+Found Static PMPI Symbol: MPI_Gatherv
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: MPI_Allgatherv
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: PMPI_Comm_rank
+Found Static PMPI Symbol: MPI_Testall
+Found Static PMPI Symbol: PMPI_Bcast
+Found Static PMPI Symbol: PMPI_Type_extent
+Found Static PMPI Symbol: PMPI_Gatherv
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Barrier
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Get_count
+Found Static PMPI Symbol: PMPI_Scatterv
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Barrier
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Alltoall
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: PMPI_Alltoallv
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: MPI_Alltoallv
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: PMPI_Allgather
+Found Static PMPI Symbol: PMPI_Scatter
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: MPI_Allreduce
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Scatterv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Allgather
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Reduce
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Allreduce
+Found Static PMPI Symbol: PMPI_Alltoall
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Gather
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Scan
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: PMPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Comm_size
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Bcast
+Found Static PMPI Symbol: MPI_Reduce
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: MPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Scatter
+Found Static PMPI Symbol: PMPI_Gather
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Allgatherv
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Scan
+Found Static PMPI Symbol: MPI_Gatherv
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: MPI_Allgatherv
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: PMPI_Comm_rank
+Found Static PMPI Symbol: MPI_Testall
+Found Static PMPI Symbol: PMPI_Bcast
+Found Static PMPI Symbol: PMPI_Type_extent
+Found Static PMPI Symbol: PMPI_Gatherv
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/comm'
+/home/avo/research/pnmpi/pnmpi/modules
+cd switch-matrix; make  ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/switch-matrix'
+for mymod in switch-matrix.so; do (../../patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod ); done
+Found Static PMPI Symbol: MPI_Barrier
+Found Static PMPI Symbol: PMPI_Graphdims_get_NewStack
+Found Static PMPI Symbol: PMPI_File_write_at_all_begin_NewStack
+Found Static PMPI Symbol: PMPI_File_set_view_NewStack
+Found Static PMPI Symbol: MPI_File_get_group
+Found Static PMPI Symbol: MPI_Wtick
+Found Static PMPI Symbol: PMPI_File_write_shared_NewStack
+Found Static PMPI Symbol: PMPI_Keyval_free_NewStack
+Found Static PMPI Symbol: MPI_Lookup_name
+Found Static PMPI Symbol: MPI_File_get_view
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_File_sync
+Found Static PMPI Symbol: MPI_File_get_amode
+Found Static PMPI Symbol: PMPI_Init_NewStack
+Found Static PMPI Symbol: PMPI_Win_create_errhandler_NewStack
+Found Static PMPI Symbol: MPI_Open_port
+Found Static PMPI Symbol: PMPI_Start_NewStack
+Found Static PMPI Symbol: MPI_Pack_external
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: PMPI_Bcast_NewStack
+Found Static PMPI Symbol: PMPI_Type_hindexed_NewStack
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Type_contiguous
+Found Static PMPI Symbol: PMPI_Get_count_NewStack
+Found Static PMPI Symbol: MPI_File_iwrite_at
+Found Static PMPI Symbol: MPI_Type_get_attr
+Found Static PMPI Symbol: PMPI_Info_create_NewStack
+Found Static PMPI Symbol: PMPI_Status_set_elements_NewStack
+Found Static PMPI Symbol: PMPI_File_write_all_end_NewStack
+Found Static PMPI Symbol: MPI_Win_post
+Found Static PMPI Symbol: MPI_Iprobe
+Found Static PMPI Symbol: PMPI_Type_create_f90_real_NewStack
+Found Static PMPI Symbol: MPI_Status_set_elements
+Found Static PMPI Symbol: MPI_Comm_dup
+Found Static PMPI Symbol: PMPI_File_write_all_NewStack
+Found Static PMPI Symbol: MPI_Buffer_attach
+Found Static PMPI Symbol: PMPI_Unpack_NewStack
+Found Static PMPI Symbol: MPI_Add_error_class
+Found Static PMPI Symbol: MPI_Type_extent
+Found Static PMPI Symbol: PMPI_Win_get_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Attr_delete_NewStack
+Found Static PMPI Symbol: MPI_File_get_type_extent
+Found Static PMPI Symbol: PMPI_Comm_dup_NewStack
+Found Static PMPI Symbol: PMPI_Free_mem_NewStack
+Found Static PMPI Symbol: PMPI_Get_count
+Found Static PMPI Symbol: PMPI_Cart_map_NewStack
+Found Static PMPI Symbol: PMPI_File_seek_NewStack
+Found Static PMPI Symbol: PMPI_Scatterv
+Found Static PMPI Symbol: MPI_Intercomm_create
+Found Static PMPI Symbol: PMPI_File_get_byte_offset_NewStack
+Found Static PMPI Symbol: PMPI_File_close_NewStack
+Found Static PMPI Symbol: PMPI_Graph_map_NewStack
+Found Static PMPI Symbol: PMPI_Put_NewStack
+Found Static PMPI Symbol: PMPI_File_read_at_all_begin_NewStack
+Found Static PMPI Symbol: MPI_Comm_delete_attr
+Found Static PMPI Symbol: MPI_File_delete
+Found Static PMPI Symbol: PMPI_Graph_create_NewStack
+Found Static PMPI Symbol: PMPI_File_iread_NewStack
+Found Static PMPI Symbol: PMPI_Barrier
+Found Static PMPI Symbol: MPI_Group_compare
+Found Static PMPI Symbol: PMPI_Info_free_NewStack
+Found Static PMPI Symbol: MPI_Dims_create
+Found Static PMPI Symbol: PMPI_Wtime_NewStack
+Found Static PMPI Symbol: MPI_File_write_all_begin
+Found Static PMPI Symbol: MPI_File_read_at_all_end
+Found Static PMPI Symbol: PMPI_Win_test_NewStack
+Found Static PMPI Symbol: PMPI_Recv_NewStack
+Found Static PMPI Symbol: PMPI_File_get_position_shared_NewStack
+Found Static PMPI Symbol: MPI_Get_count
+Found Static PMPI Symbol: PMPI_Comm_split_NewStack
+Found Static PMPI Symbol: MPI_Alltoall
+Found Static PMPI Symbol: MPI_Comm_remote_size
+Found Static PMPI Symbol: PMPI_Ssend_init_NewStack
+Found Static PMPI Symbol: PMPI_Cart_shift_NewStack
+Found Static PMPI Symbol: PMPI_Type_hvector_NewStack
+Found Static PMPI Symbol: MPI_Graph_neighbors
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: PMPI_File_read_ordered_end_NewStack
+Found Static PMPI Symbol: PMPI_Wtick_NewStack
+Found Static PMPI Symbol: MPI_Group_excl
+Found Static PMPI Symbol: PMPI_Pack_external_size_NewStack
+Found Static PMPI Symbol: MPI_Info_get_nkeys
+Found Static PMPI Symbol: PMPI_Allgatherv_NewStack
+Found Static PMPI Symbol: PMPI_Query_thread_NewStack
+Found Static PMPI Symbol: PMPI_Win_set_attr_NewStack
+Found Static PMPI Symbol: PMPI_Win_wait_NewStack
+Found Static PMPI Symbol: MPI_File_write_ordered
+Found Static PMPI Symbol: MPI_Info_get
+Found Static PMPI Symbol: PMPI_Cancel_NewStack
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_File_read_at_NewStack
+Found Static PMPI Symbol: PMPI_File_set_size_NewStack
+Found Static PMPI Symbol: MPI_Put
+Found Static PMPI Symbol: MPI_Alltoallv
+Found Static PMPI Symbol: PMPI_Comm_group_NewStack
+Found Static PMPI Symbol: MPI_File_set_errhandler
+Found Static PMPI Symbol: MPI_Type_create_darray
+Found Static PMPI Symbol: PMPI_Unpack
+Found Static PMPI Symbol: MPI_Info_free
+Found Static PMPI Symbol: MPI_Get
+Found Static PMPI Symbol: PMPI_Info_get_valuelen
+Found Static PMPI Symbol: MPI_Cart_sub
+Found Static PMPI Symbol: PMPI_Test_cancelled_NewStack
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: PMPI_Info_get_nthkey
+Found Static PMPI Symbol: PMPI_Type_indexed
+Found Static PMPI Symbol: MPI_Type_create_subarray
+Found Static PMPI Symbol: MPI_File_read_all_begin
+Found Static PMPI Symbol: PMPI_Dims_create_NewStack
+Found Static PMPI Symbol: MPI_Comm_test_inter
+Found Static PMPI Symbol: PMPI_Win_get_group_NewStack
+Found Static PMPI Symbol: MPI_File_read_ordered_begin
+Found Static PMPI Symbol: PMPI_Send_NewStack
+Found Static PMPI Symbol: PMPI_Alltoallv_NewStack
+Found Static PMPI Symbol: PMPI_Type_hvector
+Found Static PMPI Symbol: MPI_Type_create_hindexed
+Found Static PMPI Symbol: PMPI_Topo_test_NewStack
+Found Static PMPI Symbol: MPI_Pack_external_size
+Found Static PMPI Symbol: MPI_Type_set_attr
+Found Static PMPI Symbol: PMPI_Type_size
+Found Static PMPI Symbol: PMPI_Type_indexed_NewStack
+Found Static PMPI Symbol: PMPI_File_read_at_all_end_NewStack
+Found Static PMPI Symbol: PMPI_Type_get_envelope_NewStack
+Found Static PMPI Symbol: PMPI_Win_post_NewStack
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Group_rank
+Found Static PMPI Symbol: PMPI_Isend_NewStack
+Found Static PMPI Symbol: PMPI_Group_range_excl_NewStack
+Found Static PMPI Symbol: PMPI_Type_create_f90_integer_NewStack
+Found Static PMPI Symbol: PMPI_Comm_rank_NewStack
+Found Static PMPI Symbol: MPI_Type_get_contents
+Found Static PMPI Symbol: PMPI_File_write_at_all_end_NewStack
+Found Static PMPI Symbol: PMPI_Ibsend_NewStack
+Found Static PMPI Symbol: MPI_File_set_atomicity
+Found Static PMPI Symbol: PMPI_File_delete_NewStack
+Found Static PMPI Symbol: PMPI_File_preallocate_NewStack
+Found Static PMPI Symbol: PMPI_Comm_test_inter_NewStack
+Found Static PMPI Symbol: MPI_File_iwrite
+Found Static PMPI Symbol: PMPI_Info_dup_NewStack
+Found Static PMPI Symbol: MPI_File_write_all_end
+Found Static PMPI Symbol: PMPI_Get_processor_name_NewStack
+Found Static PMPI Symbol: MPI_File_seek
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Recv_init_NewStack
+Found Static PMPI Symbol: PMPI_Init_thread_NewStack
+Found Static PMPI Symbol: MPI_Type_create_keyval
+Found Static PMPI Symbol: MPI_File_write_at_all_begin
+Found Static PMPI Symbol: PMPI_Errhandler_set_NewStack
+Found Static PMPI Symbol: MPI_File_read_at_all_begin
+Found Static PMPI Symbol: MPI_Comm_free_keyval
+Found Static PMPI Symbol: PMPI_Info_get_nkeys_NewStack
+Found Static PMPI Symbol: PMPI_Test_NewStack
+Found Static PMPI Symbol: PMPI_Type_commit_NewStack
+Found Static PMPI Symbol: PMPI_Type_create_hindexed_NewStack
+Found Static PMPI Symbol: MPI_Get_version
+Found Static PMPI Symbol: PMPI_Comm_create_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Graph_neighbors_NewStack
+Found Static PMPI Symbol: MPI_Win_set_name
+Found Static PMPI Symbol: MPI_Cart_shift
+Found Static PMPI Symbol: MPI_Initialized
+Found Static PMPI Symbol: MPI_Allreduce
+Found Static PMPI Symbol: PMPI_Type_contiguous_NewStack
+Found Static PMPI Symbol: PMPI_File_get_amode_NewStack
+Found Static PMPI Symbol: MPI_Op_create
+Found Static PMPI Symbol: MPI_File_write_at_all
+Found Static PMPI Symbol: MPI_File_get_atomicity
+Found Static PMPI Symbol: MPI_Attr_delete
+Found Static PMPI Symbol: PMPI_Address_NewStack
+Found Static PMPI Symbol: MPI_File_read_ordered_end
+Found Static PMPI Symbol: MPI_File_open
+Found Static PMPI Symbol: MPI_Free_mem
+Found Static PMPI Symbol: PMPI_Type_set_name_NewStack
+Found Static PMPI Symbol: MPI_Cart_create
+Found Static PMPI Symbol: MPI_Type_hindexed
+Found Static PMPI Symbol: MPI_Win_unlock
+Found Static PMPI Symbol: MPI_Cart_coords
+Found Static PMPI Symbol: PMPI_Comm_join_NewStack
+Found Static PMPI Symbol: PMPI_Type_vector
+Found Static PMPI Symbol: MPI_Group_intersection
+Found Static PMPI Symbol: PMPI_Comm_spawn_NewStack
+Found Static PMPI Symbol: MPI_Type_contiguous
+Found Static PMPI Symbol: MPI_Type_dup
+Found Static PMPI Symbol: MPI_File_read_all
+Found Static PMPI Symbol: MPI_Group_size
+Found Static PMPI Symbol: PMPI_Win_delete_attr_NewStack
+Found Static PMPI Symbol: MPI_Intercomm_merge
+Found Static PMPI Symbol: MPI_Comm_get_name
+Found Static PMPI Symbol: MPI_Type_vector
+Found Static PMPI Symbol: PMPI_Comm_set_attr_NewStack
+Found Static PMPI Symbol: MPI_Pack_size
+Found Static PMPI Symbol: PMPI_File_write_at_all_NewStack
+Found Static PMPI Symbol: PMPI_Keyval_create_NewStack
+Found Static PMPI Symbol: PMPI_Sendrecv_NewStack
+Found Static PMPI Symbol: MPI_File_write_ordered_begin
+Found Static PMPI Symbol: PMPI_Rsend_NewStack
+Found Static PMPI Symbol: PMPI_Comm_remote_size_NewStack
+Found Static PMPI Symbol: PMPI_Comm_size_NewStack
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Cartdim_get
+Found Static PMPI Symbol: MPI_Type_create_indexed_block
+Found Static PMPI Symbol: PMPI_Buffer_attach_NewStack
+Found Static PMPI Symbol: PMPI_File_read_ordered_begin_NewStack
+Found Static PMPI Symbol: MPI_Grequest_complete
+Found Static PMPI Symbol: PMPI_Errhandler_get_NewStack
+Found Static PMPI Symbol: MPI_Comm_create_errhandler
+Found Static PMPI Symbol: PMPI_Type_struct
+Found Static PMPI Symbol: MPI_Publish_name
+Found Static PMPI Symbol: PMPI_Testsome_NewStack
+Found Static PMPI Symbol: MPI_Scatterv
+Found Static PMPI Symbol: MPI_Win_get_errhandler
+Found Static PMPI Symbol: MPI_Alloc_mem
+Found Static PMPI Symbol: PMPI_Comm_free_keyval_NewStack
+Found Static PMPI Symbol: PMPI_File_create_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Close_port_NewStack
+Found Static PMPI Symbol: MPI_Win_get_name
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Unpack_external
+Found Static PMPI Symbol: PMPI_File_get_size_NewStack
+Found Static PMPI Symbol: PMPI_Info_get_valuelen_NewStack
+Found Static PMPI Symbol: MPI_Errhandler_get
+Found Static PMPI Symbol: PMPI_File_read_shared_NewStack
+Found Static PMPI Symbol: MPI_Comm_disconnect
+Found Static PMPI Symbol: PMPI_File_get_group_NewStack
+Found Static PMPI Symbol: PMPI_Comm_delete_attr_NewStack
+Found Static PMPI Symbol: PMPI_Intercomm_create_NewStack
+Found Static PMPI Symbol: MPI_Type_create_struct
+Found Static PMPI Symbol: MPI_File_iwrite_shared
+Found Static PMPI Symbol: MPI_Get_processor_name
+Found Static PMPI Symbol: MPI_Exscan
+Found Static PMPI Symbol: MPI_Allgather
+Found Static PMPI Symbol: PMPI_Op_create_NewStack
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_File_read_all_NewStack
+Found Static PMPI Symbol: PMPI_Group_size_NewStack
+Found Static PMPI Symbol: MPI_Recv_init
+Found Static PMPI Symbol: MPI_File_read_at
+Found Static PMPI Symbol: MPI_File_read_ordered
+Found Static PMPI Symbol: PMPI_Wait_NewStack
+Found Static PMPI Symbol: MPI_File_read
+Found Static PMPI Symbol: PMPI_Win_create_NewStack
+Found Static PMPI Symbol: PMPI_Error_string_NewStack
+Found Static PMPI Symbol: MPI_Type_ub
+Found Static PMPI Symbol: MPI_Win_test
+Found Static PMPI Symbol: PMPI_Waitsome_NewStack
+Found Static PMPI Symbol: PMPI_Group_intersection_NewStack
+Found Static PMPI Symbol: PMPI_File_get_type_extent_NewStack
+Found Static PMPI Symbol: MPI_Comm_size
+Found Static PMPI Symbol: MPI_F_STATUSES_IGNORE
+Found Static PMPI Symbol: MPI_Init_thread
+Found Static PMPI Symbol: MPI_Type_get_true_extent
+Found Static PMPI Symbol: MPI_Cart_get
+Found Static PMPI Symbol: MPI_Win_set_attr
+Found Static PMPI Symbol: MPI_Op_free
+Found Static PMPI Symbol: PMPI_Attr_put_NewStack
+Found Static PMPI Symbol: MPI_Group_difference
+Found Static PMPI Symbol: MPI_Comm_get_attr
+Found Static PMPI Symbol: PMPI_Initialized_NewStack
+Found Static PMPI Symbol: PMPI_Reduce
+Found Static PMPI Symbol: PMPI_Init_thread
+Found Static PMPI Symbol: MPI_Type_get_envelope
+Found Static PMPI Symbol: PMPI_Comm_accept_NewStack
+Found Static PMPI Symbol: MPI_File_get_errhandler
+Found Static PMPI Symbol: PMPI_File_get_atomicity_NewStack
+Found Static PMPI Symbol: PMPI_Unpublish_name_NewStack
+Found Static PMPI Symbol: MPI_Comm_accept
+Found Static PMPI Symbol: PMPI_Win_get_attr_NewStack
+Found Static PMPI Symbol: PMPI_Cart_coords_NewStack
+Found Static PMPI Symbol: MPI_Graph_get
+Found Static PMPI Symbol: PMPI_Win_call_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Issend_NewStack
+Found Static PMPI Symbol: PMPI_Type_get_contents_NewStack
+Found Static PMPI Symbol: MPI_Type_hvector
+Found Static PMPI Symbol: MPI_Type_commit
+Found Static PMPI Symbol: MPI_Errhandler_create
+Found Static PMPI Symbol: PMPI_Get_NewStack
+Found Static PMPI Symbol: PMPI_Win_get_name_NewStack
+Found Static PMPI Symbol: PMPI_File_read_ordered_NewStack
+Found Static PMPI Symbol: PMPI_Testall_NewStack
+Found Static PMPI Symbol: MPI_File_iread_at
+Found Static PMPI Symbol: MPI_Comm_set_name
+Found Static PMPI Symbol: PMPI_File_write_at_NewStack
+Found Static PMPI Symbol: PMPI_Group_translate_ranks_NewStack
+Found Static PMPI Symbol: MPI_Error_class
+Found Static PMPI Symbol: MPI_File_iread
+Found Static PMPI Symbol: PMPI_Scan_NewStack
+Found Static PMPI Symbol: PMPI_Barrier_NewStack
+Found Static PMPI Symbol: MPI_Error_string
+Found Static PMPI Symbol: PMPI_Type_get_extent
+Found Static PMPI Symbol: PMPI_Allreduce
+Found Static PMPI Symbol: PMPI_Accumulate_NewStack
+Found Static PMPI Symbol: MPI_Keyval_create
+Found Static PMPI Symbol: MPI_Comm_create
+Found Static PMPI Symbol: PMPI_Send_init_NewStack
+Found Static PMPI Symbol: MPI_File_create_errhandler
+Found Static PMPI Symbol: MPI_Start
+Found Static PMPI Symbol: PMPI_Group_rank_NewStack
+Found Static PMPI Symbol: MPI_Info_dup
+Found Static PMPI Symbol: MPI_File_set_info
+Found Static PMPI Symbol: MPI_Buffer_detach
+Found Static PMPI Symbol: PMPI_Win_free_NewStack
+Found Static PMPI Symbol: PMPI_Get_address_NewStack
+Found Static PMPI Symbol: MPI_File_read_shared
+Found Static PMPI Symbol: PMPI_File_set_atomicity_NewStack
+Found Static PMPI Symbol: PMPI_Type_vector_NewStack
+Found Static PMPI Symbol: PMPI_Type_create_hvector_NewStack
+Found Static PMPI Symbol: MPI_Type_size
+Found Static PMPI Symbol: MPI_Query_thread
+Found Static PMPI Symbol: MPI_Abort
+Found Static PMPI Symbol: PMPI_Group_excl_NewStack
+Found Static PMPI Symbol: PMPI_Pack
+Found Static PMPI Symbol: MPI_Unpack
+Found Static PMPI Symbol: MPI_Type_free_keyval
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: PMPI_Testany_NewStack
+Found Static PMPI Symbol: MPI_Gather
+Found Static PMPI Symbol: MPI_Probe
+Found Static PMPI Symbol: PMPI_File_call_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Group_free
+Found Static PMPI Symbol: MPI_Win_wait
+Found Static PMPI Symbol: PMPI_Type_free_NewStack
+Found Static PMPI Symbol: PMPI_Errhandler_free_NewStack
+Found Static PMPI Symbol: MPI_Alltoallw
+Found Static PMPI Symbol: MPI_Type_get_name
+Found Static PMPI Symbol: PMPI_Waitany_NewStack
+Found Static PMPI Symbol: MPI_File_read_at_all
+Found Static PMPI Symbol: PMPI_Type_create_indexed_block_NewStack
+Found Static PMPI Symbol: MPI_Comm_connect
+Found Static PMPI Symbol: PMPI_File_read_at_all_NewStack
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Buffer_detach_NewStack
+Found Static PMPI Symbol: PMPI_Graph_get_NewStack
+Found Static PMPI Symbol: MPI_Topo_test
+Found Static PMPI Symbol: MPI_Startall
+Found Static PMPI Symbol: PMPI_Win_create_keyval_NewStack
+Found Static PMPI Symbol: MPI_Cart_map
+Found Static PMPI Symbol: PMPI_Alltoallw_NewStack
+Found Static PMPI Symbol: PMPI_Gatherv_NewStack
+Found Static PMPI Symbol: PMPI_Startall_NewStack
+Found Static PMPI Symbol: PMPI_Request_get_status_NewStack
+Found Static PMPI Symbol: MPI_File_preallocate
+Found Static PMPI Symbol: PMPI_Type_get_true_extent_NewStack
+Found Static PMPI Symbol: PMPI_Open_port_NewStack
+Found Static PMPI Symbol: PMPI_Pack_NewStack
+Found Static PMPI Symbol: PMPI_File_iwrite_at_NewStack
+Found Static PMPI Symbol: PMPI_Bsend_init_NewStack
+Found Static PMPI Symbol: PMPI_Add_error_code_NewStack
+Found Static PMPI Symbol: MPI_Comm_compare
+Found Static PMPI Symbol: PMPI_Group_union_NewStack
+Found Static PMPI Symbol: PMPI_Iprobe_NewStack
+Found Static PMPI Symbol: PMPI_Group_compare_NewStack
+Found Static PMPI Symbol: PMPI_Lookup_name_NewStack
+Found Static PMPI Symbol: MPI_Graph_map
+Found Static PMPI Symbol: MPI_Comm_remote_group
+Found Static PMPI Symbol: PMPI_Win_set_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Info_delete_NewStack
+Found Static PMPI Symbol: MPI_File_iread_shared
+Found Static PMPI Symbol: PMPI_File_write_NewStack
+Found Static PMPI Symbol: MPI_Comm_spawn_multiple
+Found Static PMPI Symbol: PMPI_Grequest_complete_NewStack
+Found Static PMPI Symbol: PMPI_Attr_get_NewStack
+Found Static PMPI Symbol: PMPI_Group_range_incl_NewStack
+Found Static PMPI Symbol: PMPI_Type_create_keyval_NewStack
+Found Static PMPI Symbol: MPI_Graphdims_get
+Found Static PMPI Symbol: PMPI_File_read_NewStack
+Found Static PMPI Symbol: MPI_Type_get_extent
+Found Static PMPI Symbol: PMPI_File_write_all_begin_NewStack
+Found Static PMPI Symbol: MPI_Type_delete_attr
+Found Static PMPI Symbol: MPI_F_ARGVS_NULL
+Found Static PMPI Symbol: MPI_Test_cancelled
+Found Static PMPI Symbol: PMPI_Comm_get_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Type_create_darray_NewStack
+Found Static PMPI Symbol: MPI_File_close
+Found Static PMPI Symbol: PMPI_Type_create_subarray_NewStack
+Found Static PMPI Symbol: PMPI_Win_set_name_NewStack
+Found Static PMPI Symbol: MPI_Win_get_group
+Found Static PMPI Symbol: PMPI_Finalize_NewStack
+Found Static PMPI Symbol: PMPI_Status_set_cancelled_NewStack
+Found Static PMPI Symbol: MPI_Register_datarep
+Found Static PMPI Symbol: PMPI_File_read_all_end_NewStack
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: PMPI_Type_match_size_NewStack
+Found Static PMPI Symbol: MPI_Comm_free
+Found Static PMPI Symbol: MPI_File_write_at
+Found Static PMPI Symbol: PMPI_File_sync_NewStack
+Found Static PMPI Symbol: MPI_Errhandler_free
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: PMPI_Reduce_scatter
+Found Static PMPI Symbol: PMPI_Type_delete_attr_NewStack
+Found Static PMPI Symbol: PMPI_Comm_compare_NewStack
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: MPI_File_set_size
+Found Static PMPI Symbol: MPI_Comm_spawn
+Found Static PMPI Symbol: MPI_Group_translate_ranks
+Found Static PMPI Symbol: PMPI_Comm_group
+Found Static PMPI Symbol: PMPI_Comm_size
+Found Static PMPI Symbol: PMPI_Type_commit
+Found Static PMPI Symbol: MPI_Finalized
+Found Static PMPI Symbol: PMPI_Get_version_NewStack
+Found Static PMPI Symbol: PMPI_Unpack_external_NewStack
+Found Static PMPI Symbol: PMPI_Win_fence_NewStack
+Found Static PMPI Symbol: MPI_Info_get_nthkey
+Found Static PMPI Symbol: MPI_Type_create_f90_real
+Found Static PMPI Symbol: MPI_File_write_shared
+Found Static PMPI Symbol: PMPI_Win_lock_NewStack
+Found Static PMPI Symbol: PMPI_Comm_spawn_multiple_NewStack
+Found Static PMPI Symbol: PMPI_Info_get
+Found Static PMPI Symbol: MPI_Request_free
+Found Static PMPI Symbol: MPI_File_write
+Found Static PMPI Symbol: PMPI_Type_lb_NewStack
+Found Static PMPI Symbol: MPI_Type_free
+Found Static PMPI Symbol: MPI_Comm_rank
+Found Static PMPI Symbol: PMPI_Cart_rank_NewStack
+Found Static PMPI Symbol: PMPI_Type_set_attr_NewStack
+Found Static PMPI Symbol: MPI_Graph_create
+Found Static PMPI Symbol: MPI_Bcast
+Found Static PMPI Symbol: PMPI_Type_get_attr_NewStack
+Found Static PMPI Symbol: PMPI_Cartdim_get_NewStack
+Found Static PMPI Symbol: MPI_File_write_ordered_end
+Found Static PMPI Symbol: MPI_Reduce
+Found Static PMPI Symbol: PMPI_Probe_NewStack
+Found Static PMPI Symbol: MPI_File_get_info
+Found Static PMPI Symbol: PMPI_Op_free_NewStack
+Found Static PMPI Symbol: PMPI_Info_get_NewStack
+Found Static PMPI Symbol: MPI_Comm_split
+Found Static PMPI Symbol: MPI_Get_elements
+Found Static PMPI Symbol: MPI_File_set_view
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: MPI_Win_complete
+Found Static PMPI Symbol: PMPI_Pack_external_NewStack
+Found Static PMPI Symbol: MPI_Win_get_attr
+Found Static PMPI Symbol: MPI_Win_free_keyval
+Found Static PMPI Symbol: PMPI_Win_unlock_NewStack
+Found Static PMPI Symbol: PMPI_Alloc_mem_NewStack
+Found Static PMPI Symbol: PMPI_Request_free_NewStack
+Found Static PMPI Symbol: MPI_Type_create_resized
+Found Static PMPI Symbol: MPI_Info_delete
+Found Static PMPI Symbol: PMPI_Is_thread_main_NewStack
+Found Static PMPI Symbol: PMPI_Comm_get_parent_NewStack
+Found Static PMPI Symbol: MPI_Win_lock
+Found Static PMPI Symbol: PMPI_Reduce_scatter_NewStack
+Found Static PMPI Symbol: MPI_Request_get_status
+Found Static PMPI Symbol: PMPI_Info_set_NewStack
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: PMPI_File_write_ordered_NewStack
+Found Static PMPI Symbol: MPI_Attr_get
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Error_class_NewStack
+Found Static PMPI Symbol: PMPI_Comm_get_name_NewStack
+Found Static PMPI Symbol: MPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Scatter
+Found Static PMPI Symbol: PMPI_Errhandler_create_NewStack
+Found Static PMPI Symbol: MPI_Comm_join
+Found Static PMPI Symbol: MPI_File_read_all_end
+Found Static PMPI Symbol: MPI_Info_create
+Found Static PMPI Symbol: MPI_Get_address
+Found Static PMPI Symbol: PMPI_Type_dup_NewStack
+Found Static PMPI Symbol: PMPI_Type_get_true_extent
+Found Static PMPI Symbol: MPI_File_seek_shared
+Found Static PMPI Symbol: PMPI_Intercomm_merge_NewStack
+Found Static PMPI Symbol: PMPI_Grequest_start_NewStack
+Found Static PMPI Symbol: PMPI_File_set_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_File_iread_at_NewStack
+Found Static PMPI Symbol: PMPI_File_iwrite_NewStack
+Found Static PMPI Symbol: PMPI_Irsend_NewStack
+Found Static PMPI Symbol: MPI_Close_port
+Found Static PMPI Symbol: MPI_Type_match_size
+Found Static PMPI Symbol: MPI_Type_indexed
+Found Static PMPI Symbol: PMPI_Group_difference_NewStack
+Found Static PMPI Symbol: MPI_File_call_errhandler
+Found Static PMPI Symbol: MPI_Pack
+Found Static PMPI Symbol: MPI_Attr_put
+Found Static PMPI Symbol: PMPI_Graph_neighbors_count_NewStack
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Add_error_string
+Found Static PMPI Symbol: PMPI_Win_free_keyval_NewStack
+Found Static PMPI Symbol: MPI_File_get_position
+Found Static PMPI Symbol: PMPI_Type_ub_NewStack
+Found Static PMPI Symbol: PMPI_File_get_position_NewStack
+Found Static PMPI Symbol: MPI_File_get_size
+Found Static PMPI Symbol: MPI_File_write_all
+Found Static PMPI Symbol: PMPI_File_set_info_NewStack
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: MPI_Comm_group
+Found Static PMPI Symbol: PMPI_Comm_set_errhandler_NewStack
+Found Static PMPI Symbol: MPI_File_get_byte_offset
+Found Static PMPI Symbol: PMPI_Comm_get_attr_NewStack
+Found Static PMPI Symbol: MPI_Group_incl
+Found Static PMPI Symbol: MPI_Comm_get_parent
+Found Static PMPI Symbol: PMPI_Add_error_class_NewStack
+Found Static PMPI Symbol: PMPI_Win_start_NewStack
+Found Static PMPI Symbol: MPI_Errhandler_set
+Found Static PMPI Symbol: PMPI_Type_get_name_NewStack
+Found Static PMPI Symbol: PMPI_Abort_NewStack
+Found Static PMPI Symbol: MPI_Group_union
+Found Static PMPI Symbol: PMPI_Sendrecv_replace_NewStack
+Found Static PMPI Symbol: PMPI_Pack_size_NewStack
+Found Static PMPI Symbol: PMPI_Alltoall_NewStack
+Found Static PMPI Symbol: MPI_Info_get_valuelen
+Found Static PMPI Symbol: MPI_Comm_call_errhandler
+Found Static PMPI Symbol: PMPI_File_get_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Add_error_string_NewStack
+Found Static PMPI Symbol: PMPI_Type_free
+Found Static PMPI Symbol: PMPI_Comm_set_name_NewStack
+Found Static PMPI Symbol: PMPI_Type_free_keyval_NewStack
+Found Static PMPI Symbol: MPI_Comm_create_keyval
+Found Static PMPI Symbol: MPI_Send_init
+Found Static PMPI Symbol: PMPI_Reduce_NewStack
+Found Static PMPI Symbol: PMPI_Type_extent_NewStack
+Found Static PMPI Symbol: MPI_Win_start
+Found Static PMPI Symbol: PMPI_Cart_create_NewStack
+Found Static PMPI Symbol: PMPI_Type_create_f90_complex_NewStack
+Found Static PMPI Symbol: PMPI_File_iread_shared_NewStack
+Found Static PMPI Symbol: PMPI_Ssend_NewStack
+Found Static PMPI Symbol: PMPI_Waitall_NewStack
+Found Static PMPI Symbol: MPI_Win_free
+Found Static PMPI Symbol: MPI_File_get_position_shared
+Found Static PMPI Symbol: MPI_Wtime
+Found Static PMPI Symbol: PMPI_Type_get_envelope
+Found Static PMPI Symbol: PMPI_Comm_call_errhandler_NewStack
+Found Static PMPI Symbol: PMPI_Allreduce_NewStack
+Found Static PMPI Symbol: PMPI_Publish_name_NewStack
+Found Static PMPI Symbol: PMPI_Group_translate_ranks
+Found Static PMPI Symbol: PMPI_Comm_create_NewStack
+Found Static PMPI Symbol: MPI_Group_free
+Found Static PMPI Symbol: MPI_Cancel
+Found Static PMPI Symbol: MPI_Group_range_incl
+Found Static PMPI Symbol: PMPI_Bsend_NewStack
+Found Static PMPI Symbol: PMPI_Group_free_NewStack
+Found Static PMPI Symbol: PMPI_File_write_ordered_begin_NewStack
+Found Static PMPI Symbol: MPI_Graph_neighbors_count
+Found Static PMPI Symbol: PMPI_Irecv_NewStack
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_File_get_view_NewStack
+Found Static PMPI Symbol: PMPI_Gather_NewStack
+Found Static PMPI Symbol: MPI_Cart_rank
+Found Static PMPI Symbol: PMPI_Scatterv_NewStack
+Found Static PMPI Symbol: MPI_Bsend_init
+Found Static PMPI Symbol: PMPI_Comm_remote_group_NewStack
+Found Static PMPI Symbol: MPI_Win_create_errhandler
+Found Static PMPI Symbol: MPI_Keyval_free
+Found Static PMPI Symbol: PMPI_Cart_sub_NewStack
+Found Static PMPI Symbol: MPI_Type_lb
+Found Static PMPI Symbol: PMPI_Comm_create_keyval_NewStack
+Found Static PMPI Symbol: MPI_File_write_at_all_end
+Found Static PMPI Symbol: MPI_F_ERRCODES_IGNORE
+Found Static PMPI Symbol: PMPI_Type_get_extent_NewStack
+Found Static PMPI Symbol: MPI_Comm_set_attr
+Found Static PMPI Symbol: PMPI_Type_create_resized_NewStack
+Found Static PMPI Symbol: MPI_Scan
+Found Static PMPI Symbol: MPI_Comm_get_errhandler
+Found Static PMPI Symbol: MPI_Ssend_init
+Found Static PMPI Symbol: MPI_Gatherv
+Found Static PMPI Symbol: PMPI_Scatter_NewStack
+Found Static PMPI Symbol: PMPI_Cart_get_NewStack
+Found Static PMPI Symbol: PMPI_Comm_connect_NewStack
+Found Static PMPI Symbol: MPI_Type_create_f90_integer
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend_init
+Found Static PMPI Symbol: PMPI_File_read_all_begin_NewStack
+Found Static PMPI Symbol: PMPI_Op_create
+Found Static PMPI Symbol: MPI_Allgatherv
+Found Static PMPI Symbol: MPI_Type_set_name
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: PMPI_Rsend_init_NewStack
+Found Static PMPI Symbol: MPI_Info_set
+Found Static PMPI Symbol: MPI_F_STATUS_IGNORE
+Found Static PMPI Symbol: PMPI_Comm_rank
+Found Static PMPI Symbol: MPI_Type_create_f90_complex
+Found Static PMPI Symbol: MPI_Status_set_cancelled
+Found Static PMPI Symbol: PMPI_Finalized_NewStack
+Found Static PMPI Symbol: PMPI_Type_size_NewStack
+Found Static PMPI Symbol: MPI_Type_create_hvector
+Found Static PMPI Symbol: PMPI_Info_get_nkeys
+Found Static PMPI Symbol: MPI_Win_call_errhandler
+Found Static PMPI Symbol: MPI_Win_set_errhandler
+Found Static PMPI Symbol: MPI_Comm_set_errhandler
+Found Static PMPI Symbol: PMPI_Info_get_nthkey_NewStack
+Found Static PMPI Symbol: PMPI_Exscan_NewStack
+Found Static PMPI Symbol: PMPI_Register_datarep_NewStack
+Found Static PMPI Symbol: PMPI_Comm_free_NewStack
+Found Static PMPI Symbol: PMPI_File_open_NewStack
+Found Static PMPI Symbol: MPI_Testall
+Found Static PMPI Symbol: MPI_Win_create_keyval
+Found Static PMPI Symbol: MPI_Group_range_excl
+Found Static PMPI Symbol: MPI_Add_error_code
+Found Static PMPI Symbol: PMPI_Get_elements_NewStack
+Found Static PMPI Symbol: MPI_Accumulate
+Found Static PMPI Symbol: MPI_Win_delete_attr
+Found Static PMPI Symbol: PMPI_Comm_disconnect_NewStack
+Found Static PMPI Symbol: MPI_Address
+Found Static PMPI Symbol: MPI_Win_fence
+Found Static PMPI Symbol: PMPI_Bcast
+Found Static PMPI Symbol: PMPI_File_get_info_NewStack
+Found Static PMPI Symbol: PMPI_File_write_ordered_end_NewStack
+Found Static PMPI Symbol: MPI_Unpublish_name
+Found Static PMPI Symbol: PMPI_File_iwrite_shared_NewStack
+Found Static PMPI Symbol: PMPI_File_seek_shared_NewStack
+Found Static PMPI Symbol: PMPI_Group_incl_NewStack
+Found Static PMPI Symbol: PMPI_Win_complete_NewStack
+Found Static PMPI Symbol: MPI_Is_thread_main
+Found Static PMPI Symbol: PMPI_Allgather_NewStack
+Found Static PMPI Symbol: PMPI_Type_extent
+Found Static PMPI Symbol: MPI_Win_create
+Found Static PMPI Symbol: PMPI_Type_struct_NewStack
+Found Static PMPI Symbol: MPI_Grequest_start
+Found Static PMPI Symbol: MPI_Type_struct
+Found Static PMPI Symbol: PMPI_Type_create_struct_NewStack
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/switch-matrix'
+/home/avo/research/pnmpi/pnmpi/modules
+cd virtual; make ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/virtual'
+for mymod in virtual.so; do (../../patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod ); done
+Found Static PMPI Symbol: MPI_Barrier
+Found Static PMPI Symbol: MPI_File_get_group
+Found Static PMPI Symbol: MPI_Wtick
+Found Static PMPI Symbol: PMPI_File_write_at_all
+Found Static PMPI Symbol: MPI_Lookup_name
+Found Static PMPI Symbol: PMPI_Wtime
+Found Static PMPI Symbol: MPI_File_get_view
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_File_sync
+Found Static PMPI Symbol: MPI_File_get_amode
+Found Static PMPI Symbol: MPI_Open_port
+Found Static PMPI Symbol: MPI_Pack_external
+Found Static PMPI Symbol: PMPI_File_read_at_all_end
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: PMPI_Unpack_external
+Found Static PMPI Symbol: PMPI_Win_get_errhandler
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Type_contiguous
+Found Static PMPI Symbol: PMPI_Type_create_subarray
+Found Static PMPI Symbol: PMPI_Win_start
+Found Static PMPI Symbol: MPI_File_iwrite_at
+Found Static PMPI Symbol: MPI_Type_get_attr
+Found Static PMPI Symbol: PMPI_File_get_position_shared
+Found Static PMPI Symbol: PMPI_File_seek
+Found Static PMPI Symbol: MPI_Win_post
+Found Static PMPI Symbol: MPI_Iprobe
+Found Static PMPI Symbol: PMPI_Type_create_f90_complex
+Found Static PMPI Symbol: MPI_Status_set_elements
+Found Static PMPI Symbol: MPI_Comm_dup
+Found Static PMPI Symbol: MPI_Buffer_attach
+Found Static PMPI Symbol: MPI_Add_error_class
+Found Static PMPI Symbol: MPI_Type_extent
+Found Static PMPI Symbol: MPI_File_get_type_extent
+Found Static PMPI Symbol: PMPI_Cancel
+Found Static PMPI Symbol: PMPI_Buffer_attach
+Found Static PMPI Symbol: PMPI_Get_count
+Found Static PMPI Symbol: PMPI_Error_string
+Found Static PMPI Symbol: PMPI_Scatterv
+Found Static PMPI Symbol: PMPI_File_get_type_extent
+Found Static PMPI Symbol: MPI_Intercomm_create
+Found Static PMPI Symbol: PMPI_Win_test
+Found Static PMPI Symbol: PMPI_Type_lb
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: MPI_Comm_delete_attr
+Found Static PMPI Symbol: MPI_File_delete
+Found Static PMPI Symbol: PMPI_Barrier
+Found Static PMPI Symbol: MPI_Group_compare
+Found Static PMPI Symbol: MPI_Dims_create
+Found Static PMPI Symbol: MPI_File_write_all_begin
+Found Static PMPI Symbol: MPI_File_read_at_all_end
+Found Static PMPI Symbol: PMPI_Comm_spawn
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Get_count
+Found Static PMPI Symbol: MPI_Alltoall
+Found Static PMPI Symbol: MPI_Comm_remote_size
+Found Static PMPI Symbol: PMPI_Errhandler_free
+Found Static PMPI Symbol: PMPI_Comm_compare
+Found Static PMPI Symbol: PMPI_Comm_test_inter
+Found Static PMPI Symbol: MPI_Graph_neighbors
+Found Static PMPI Symbol: PMPI_Request_get_status
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: PMPI_Cart_create
+Found Static PMPI Symbol: MPI_Group_excl
+Found Static PMPI Symbol: PMPI_File_iread
+Found Static PMPI Symbol: MPI_Info_get_nkeys
+Found Static PMPI Symbol: PMPI_File_open
+Found Static PMPI Symbol: PMPI_File_delete
+Found Static PMPI Symbol: PMPI_Alltoallv
+Found Static PMPI Symbol: PMPI_Startall
+Found Static PMPI Symbol: MPI_File_write_ordered
+Found Static PMPI Symbol: MPI_Info_get
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: MPI_Put
+Found Static PMPI Symbol: MPI_Alltoallv
+Found Static PMPI Symbol: MPI_File_set_errhandler
+Found Static PMPI Symbol: MPI_Type_create_darray
+Found Static PMPI Symbol: PMPI_Unpack
+Found Static PMPI Symbol: PMPI_Type_dup
+Found Static PMPI Symbol: MPI_Info_free
+Found Static PMPI Symbol: MPI_Get
+Found Static PMPI Symbol: PMPI_Info_get_valuelen
+Found Static PMPI Symbol: PMPI_Request_free
+Found Static PMPI Symbol: MPI_Cart_sub
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: PMPI_Wtick
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: PMPI_Info_get_nthkey
+Found Static PMPI Symbol: PMPI_Win_get_group
+Found Static PMPI Symbol: PMPI_Type_indexed
+Found Static PMPI Symbol: MPI_Type_create_subarray
+Found Static PMPI Symbol: PMPI_Comm_spawn_multiple
+Found Static PMPI Symbol: MPI_File_read_all_begin
+Found Static PMPI Symbol: MPI_Comm_test_inter
+Found Static PMPI Symbol: PMPI_Ssend_init
+Found Static PMPI Symbol: MPI_File_read_ordered_begin
+Found Static PMPI Symbol: PMPI_Allgather
+Found Static PMPI Symbol: PMPI_Type_hvector
+Found Static PMPI Symbol: MPI_Type_create_hindexed
+Found Static PMPI Symbol: PMPI_Graph_neighbors
+Found Static PMPI Symbol: PMPI_File_iwrite
+Found Static PMPI Symbol: PMPI_Free_mem
+Found Static PMPI Symbol: MPI_Pack_external_size
+Found Static PMPI Symbol: MPI_Type_set_attr
+Found Static PMPI Symbol: PMPI_Type_size
+Found Static PMPI Symbol: PMPI_Scatter
+Found Static PMPI Symbol: PMPI_File_set_errhandler
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Group_rank
+Found Static PMPI Symbol: PMPI_Comm_set_name
+Found Static PMPI Symbol: MPI_Type_get_contents
+Found Static PMPI Symbol: PMPI_Buffer_detach
+Found Static PMPI Symbol: MPI_File_set_atomicity
+Found Static PMPI Symbol: PMPI_Intercomm_create
+Found Static PMPI Symbol: MPI_File_iwrite
+Found Static PMPI Symbol: PMPI_File_read_shared
+Found Static PMPI Symbol: PMPI_File_iwrite_at
+Found Static PMPI Symbol: PMPI_Errhandler_set
+Found Static PMPI Symbol: MPI_File_write_all_end
+Found Static PMPI Symbol: MPI_File_seek
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Win_create_keyval
+Found Static PMPI Symbol: MPI_Type_create_keyval
+Found Static PMPI Symbol: MPI_File_write_at_all_begin
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Cart_coords
+Found Static PMPI Symbol: MPI_File_read_at_all_begin
+Found Static PMPI Symbol: MPI_Comm_free_keyval
+Found Static PMPI Symbol: MPI_Get_version
+Found Static PMPI Symbol: PMPI_Type_get_attr
+Found Static PMPI Symbol: PMPI_Close_port
+Found Static PMPI Symbol: MPI_Win_set_name
+Found Static PMPI Symbol: PMPI_Comm_create_errhandler
+Found Static PMPI Symbol: MPI_Cart_shift
+Found Static PMPI Symbol: MPI_Initialized
+Found Static PMPI Symbol: PMPI_Query_thread
+Found Static PMPI Symbol: MPI_Allreduce
+Found Static PMPI Symbol: MPI_Op_create
+Found Static PMPI Symbol: MPI_File_write_at_all
+Found Static PMPI Symbol: MPI_File_get_atomicity
+Found Static PMPI Symbol: MPI_Attr_delete
+Found Static PMPI Symbol: MPI_File_read_ordered_end
+Found Static PMPI Symbol: MPI_File_open
+Found Static PMPI Symbol: MPI_Free_mem
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Info_dup
+Found Static PMPI Symbol: MPI_Cart_create
+Found Static PMPI Symbol: MPI_Type_hindexed
+Found Static PMPI Symbol: MPI_Win_unlock
+Found Static PMPI Symbol: PMPI_Comm_dup
+Found Static PMPI Symbol: MPI_Cart_coords
+Found Static PMPI Symbol: PMPI_Graph_map
+Found Static PMPI Symbol: PMPI_File_iwrite_shared
+Found Static PMPI Symbol: PMPI_Type_vector
+Found Static PMPI Symbol: MPI_Group_intersection
+Found Static PMPI Symbol: MPI_Type_contiguous
+Found Static PMPI Symbol: MPI_Type_dup
+Found Static PMPI Symbol: MPI_File_read_all
+Found Static PMPI Symbol: MPI_Group_size
+Found Static PMPI Symbol: MPI_Intercomm_merge
+Found Static PMPI Symbol: MPI_Comm_get_name
+Found Static PMPI Symbol: MPI_Type_vector
+Found Static PMPI Symbol: PMPI_File_read_all_end
+Found Static PMPI Symbol: PMPI_Type_match_size
+Found Static PMPI Symbol: MPI_Pack_size
+Found Static PMPI Symbol: PMPI_Open_port
+Found Static PMPI Symbol: PMPI_Win_set_attr
+Found Static PMPI Symbol: MPI_File_write_ordered_begin
+Found Static PMPI Symbol: PMPI_Win_fence
+Found Static PMPI Symbol: PMPI_Comm_set_errhandler
+Found Static PMPI Symbol: PMPI_Comm_remote_group
+Found Static PMPI Symbol: PMPI_File_set_atomicity
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: MPI_Cartdim_get
+Found Static PMPI Symbol: MPI_Type_create_indexed_block
+Found Static PMPI Symbol: MPI_Grequest_complete
+Found Static PMPI Symbol: PMPI_File_close
+Found Static PMPI Symbol: MPI_Comm_create_errhandler
+Found Static PMPI Symbol: PMPI_Type_struct
+Found Static PMPI Symbol: MPI_Publish_name
+Found Static PMPI Symbol: MPI_Scatterv
+Found Static PMPI Symbol: MPI_Win_get_errhandler
+Found Static PMPI Symbol: MPI_Alloc_mem
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Probe
+Found Static PMPI Symbol: PMPI_Group_excl
+Found Static PMPI Symbol: PMPI_Type_set_name
+Found Static PMPI Symbol: MPI_Win_get_name
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Unpack_external
+Found Static PMPI Symbol: MPI_Errhandler_get
+Found Static PMPI Symbol: PMPI_Grequest_complete
+Found Static PMPI Symbol: MPI_Comm_disconnect
+Found Static PMPI Symbol: PMPI_Op_free
+Found Static PMPI Symbol: PMPI_File_get_atomicity
+Found Static PMPI Symbol: PMPI_Info_delete
+Found Static PMPI Symbol: PMPI_File_iread_at
+Found Static PMPI Symbol: PMPI_Type_create_f90_integer
+Found Static PMPI Symbol: PMPI_Add_error_class
+Found Static PMPI Symbol: PMPI_Type_delete_attr
+Found Static PMPI Symbol: MPI_Type_create_struct
+Found Static PMPI Symbol: MPI_File_iwrite_shared
+Found Static PMPI Symbol: PMPI_Attr_put
+Found Static PMPI Symbol: MPI_Get_processor_name
+Found Static PMPI Symbol: MPI_Exscan
+Found Static PMPI Symbol: PMPI_Accumulate
+Found Static PMPI Symbol: MPI_Allgather
+Found Static PMPI Symbol: PMPI_Rsend_init
+Found Static PMPI Symbol: PMPI_File_read_at_all
+Found Static PMPI Symbol: PMPI_File_get_info
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Type_create_hindexed
+Found Static PMPI Symbol: PMPI_Alltoallw
+Found Static PMPI Symbol: PMPI_File_write_ordered_end
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Keyval_free
+Found Static PMPI Symbol: MPI_Recv_init
+Found Static PMPI Symbol: PMPI_File_sync
+Found Static PMPI Symbol: PMPI_Abort
+Found Static PMPI Symbol: PMPI_Win_create_errhandler
+Found Static PMPI Symbol: MPI_File_read_at
+Found Static PMPI Symbol: MPI_File_read_ordered
+Found Static PMPI Symbol: PMPI_Group_size
+Found Static PMPI Symbol: PMPI_File_iread_shared
+Found Static PMPI Symbol: PMPI_Status_set_cancelled
+Found Static PMPI Symbol: MPI_File_read
+Found Static PMPI Symbol: PMPI_Type_create_indexed_block
+Found Static PMPI Symbol: MPI_Type_ub
+Found Static PMPI Symbol: MPI_Win_test
+Found Static PMPI Symbol: MPI_Comm_size
+Found Static PMPI Symbol: MPI_F_STATUSES_IGNORE
+Found Static PMPI Symbol: MPI_Init_thread
+Found Static PMPI Symbol: PMPI_Win_post
+Found Static PMPI Symbol: MPI_Type_get_true_extent
+Found Static PMPI Symbol: MPI_Cart_get
+Found Static PMPI Symbol: MPI_Win_set_attr
+Found Static PMPI Symbol: MPI_Op_free
+Found Static PMPI Symbol: MPI_Group_difference
+Found Static PMPI Symbol: MPI_Comm_get_attr
+Found Static PMPI Symbol: PMPI_Comm_get_attr
+Found Static PMPI Symbol: PMPI_Reduce
+Found Static PMPI Symbol: PMPI_Add_error_code
+Found Static PMPI Symbol: PMPI_Init_thread
+Found Static PMPI Symbol: MPI_Type_get_envelope
+Found Static PMPI Symbol: PMPI_Comm_call_errhandler
+Found Static PMPI Symbol: MPI_File_get_errhandler
+Found Static PMPI Symbol: PMPI_Finalized
+Found Static PMPI Symbol: PMPI_Group_range_incl
+Found Static PMPI Symbol: MPI_Comm_accept
+Found Static PMPI Symbol: PMPI_Cart_get
+Found Static PMPI Symbol: PMPI_Keyval_create
+Found Static PMPI Symbol: MPI_Graph_get
+Found Static PMPI Symbol: PMPI_Attr_delete
+Found Static PMPI Symbol: MPI_Type_hvector
+Found Static PMPI Symbol: MPI_Type_commit
+Found Static PMPI Symbol: MPI_Errhandler_create
+Found Static PMPI Symbol: PMPI_File_write_shared
+Found Static PMPI Symbol: PMPI_Test_cancelled
+Found Static PMPI Symbol: PMPI_Cart_rank
+Found Static PMPI Symbol: PMPI_Graph_create
+Found Static PMPI Symbol: PMPI_File_read_all_begin
+Found Static PMPI Symbol: MPI_File_iread_at
+Found Static PMPI Symbol: MPI_Comm_set_name
+Found Static PMPI Symbol: MPI_Error_class
+Found Static PMPI Symbol: PMPI_File_write_at_all_end
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_File_iread
+Found Static PMPI Symbol: PMPI_File_preallocate
+Found Static PMPI Symbol: PMPI_Type_create_darray
+Found Static PMPI Symbol: MPI_Error_string
+Found Static PMPI Symbol: PMPI_Recv_init
+Found Static PMPI Symbol: PMPI_File_read_at_all_begin
+Found Static PMPI Symbol: PMPI_Type_get_extent
+Found Static PMPI Symbol: PMPI_Allreduce
+Found Static PMPI Symbol: MPI_Keyval_create
+Found Static PMPI Symbol: PMPI_Publish_name
+Found Static PMPI Symbol: MPI_Comm_create
+Found Static PMPI Symbol: PMPI_Comm_disconnect
+Found Static PMPI Symbol: PMPI_Group_rank
+Found Static PMPI Symbol: MPI_File_create_errhandler
+Found Static PMPI Symbol: MPI_Start
+Found Static PMPI Symbol: MPI_Info_dup
+Found Static PMPI Symbol: MPI_File_set_info
+Found Static PMPI Symbol: MPI_Buffer_detach
+Found Static PMPI Symbol: MPI_File_read_shared
+Found Static PMPI Symbol: PMPI_File_write_at
+Found Static PMPI Symbol: PMPI_Type_get_contents
+Found Static PMPI Symbol: MPI_Type_size
+Found Static PMPI Symbol: PMPI_Alltoall
+Found Static PMPI Symbol: PMPI_Address
+Found Static PMPI Symbol: MPI_Query_thread
+Found Static PMPI Symbol: MPI_Abort
+Found Static PMPI Symbol: PMPI_Get_version
+Found Static PMPI Symbol: PMPI_Pack
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: PMPI_Get
+Found Static PMPI Symbol: MPI_Unpack
+Found Static PMPI Symbol: MPI_Type_free_keyval
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Gather
+Found Static PMPI Symbol: MPI_Probe
+Found Static PMPI Symbol: PMPI_Group_free
+Found Static PMPI Symbol: MPI_Win_wait
+Found Static PMPI Symbol: MPI_Alltoallw
+Found Static PMPI Symbol: MPI_Type_get_name
+Found Static PMPI Symbol: PMPI_Unpublish_name
+Found Static PMPI Symbol: MPI_File_read_at_all
+Found Static PMPI Symbol: PMPI_Type_ub
+Found Static PMPI Symbol: MPI_Comm_connect
+Found Static PMPI Symbol: PMPI_Win_unlock
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: PMPI_Comm_remote_size
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: MPI_Topo_test
+Found Static PMPI Symbol: MPI_Startall
+Found Static PMPI Symbol: MPI_Cart_map
+Found Static PMPI Symbol: PMPI_File_write_all_end
+Found Static PMPI Symbol: MPI_File_preallocate
+Found Static PMPI Symbol: PMPI_File_get_errhandler
+Found Static PMPI Symbol: PMPI_Type_create_hvector
+Found Static PMPI Symbol: PMPI_Send_init
+Found Static PMPI Symbol: PMPI_Info_free
+Found Static PMPI Symbol: PMPI_File_read_all
+Found Static PMPI Symbol: PMPI_Start
+Found Static PMPI Symbol: MPI_Comm_compare
+Found Static PMPI Symbol: MPI_Graph_map
+Found Static PMPI Symbol: MPI_Comm_remote_group
+Found Static PMPI Symbol: MPI_File_iread_shared
+Found Static PMPI Symbol: MPI_Comm_spawn_multiple
+Found Static PMPI Symbol: PMPI_Type_create_keyval
+Found Static PMPI Symbol: PMPI_Add_error_string
+Found Static PMPI Symbol: PMPI_Error_class
+Found Static PMPI Symbol: MPI_Graphdims_get
+Found Static PMPI Symbol: PMPI_File_read_at
+Found Static PMPI Symbol: PMPI_Graph_neighbors_count
+Found Static PMPI Symbol: MPI_Type_get_extent
+Found Static PMPI Symbol: MPI_Type_delete_attr
+Found Static PMPI Symbol: MPI_F_ARGVS_NULL
+Found Static PMPI Symbol: PMPI_Scan
+Found Static PMPI Symbol: MPI_Test_cancelled
+Found Static PMPI Symbol: PMPI_Errhandler_create
+Found Static PMPI Symbol: MPI_File_close
+Found Static PMPI Symbol: PMPI_File_read_ordered
+Found Static PMPI Symbol: PMPI_Errhandler_get
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: PMPI_Win_create
+Found Static PMPI Symbol: MPI_Win_get_group
+Found Static PMPI Symbol: PMPI_Comm_connect
+Found Static PMPI Symbol: PMPI_Comm_accept
+Found Static PMPI Symbol: MPI_Register_datarep
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: PMPI_File_seek_shared
+Found Static PMPI Symbol: MPI_Comm_free
+Found Static PMPI Symbol: MPI_File_write_at
+Found Static PMPI Symbol: MPI_Errhandler_free
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: PMPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Win_wait
+Found Static PMPI Symbol: PMPI_Comm_get_errhandler
+Found Static PMPI Symbol: MPI_File_set_size
+Found Static PMPI Symbol: MPI_Comm_spawn
+Found Static PMPI Symbol: MPI_Group_translate_ranks
+Found Static PMPI Symbol: PMPI_Comm_group
+Found Static PMPI Symbol: PMPI_Comm_size
+Found Static PMPI Symbol: PMPI_Get_elements
+Found Static PMPI Symbol: PMPI_Type_commit
+Found Static PMPI Symbol: MPI_Finalized
+Found Static PMPI Symbol: MPI_Info_get_nthkey
+Found Static PMPI Symbol: MPI_Type_create_f90_real
+Found Static PMPI Symbol: MPI_File_write_shared
+Found Static PMPI Symbol: PMPI_Comm_create_keyval
+Found Static PMPI Symbol: PMPI_Win_complete
+Found Static PMPI Symbol: PMPI_Attr_get
+Found Static PMPI Symbol: PMPI_Info_get
+Found Static PMPI Symbol: MPI_Request_free
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: MPI_File_write
+Found Static PMPI Symbol: MPI_Type_free
+Found Static PMPI Symbol: MPI_Comm_rank
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Graph_create
+Found Static PMPI Symbol: PMPI_File_write
+Found Static PMPI Symbol: MPI_Bcast
+Found Static PMPI Symbol: MPI_File_write_ordered_end
+Found Static PMPI Symbol: PMPI_File_read
+Found Static PMPI Symbol: MPI_Reduce
+Found Static PMPI Symbol: PMPI_Bsend_init
+Found Static PMPI Symbol: MPI_File_get_info
+Found Static PMPI Symbol: PMPI_Pack_external_size
+Found Static PMPI Symbol: PMPI_File_write_ordered
+Found Static PMPI Symbol: PMPI_File_get_position
+Found Static PMPI Symbol: PMPI_Topo_test
+Found Static PMPI Symbol: PMPI_Cart_shift
+Found Static PMPI Symbol: PMPI_Alloc_mem
+Found Static PMPI Symbol: MPI_Comm_split
+Found Static PMPI Symbol: MPI_Get_elements
+Found Static PMPI Symbol: MPI_File_set_view
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Type_create_resized
+Found Static PMPI Symbol: PMPI_Type_create_f90_real
+Found Static PMPI Symbol: MPI_Win_complete
+Found Static PMPI Symbol: PMPI_Grequest_start
+Found Static PMPI Symbol: MPI_Win_get_attr
+Found Static PMPI Symbol: MPI_Win_free_keyval
+Found Static PMPI Symbol: MPI_Type_create_resized
+Found Static PMPI Symbol: MPI_Info_delete
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: MPI_Win_lock
+Found Static PMPI Symbol: PMPI_File_read_ordered_end
+Found Static PMPI Symbol: MPI_Request_get_status
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: PMPI_File_write_all_begin
+Found Static PMPI Symbol: MPI_Attr_get
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: MPI_Reduce_scatter
+Found Static PMPI Symbol: MPI_Scatter
+Found Static PMPI Symbol: PMPI_Win_delete_attr
+Found Static PMPI Symbol: PMPI_Gather
+Found Static PMPI Symbol: MPI_Comm_join
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: MPI_File_read_all_end
+Found Static PMPI Symbol: PMPI_Group_compare
+Found Static PMPI Symbol: MPI_Info_create
+Found Static PMPI Symbol: MPI_Get_address
+Found Static PMPI Symbol: PMPI_Comm_free
+Found Static PMPI Symbol: PMPI_Type_get_true_extent
+Found Static PMPI Symbol: MPI_File_seek_shared
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: PMPI_Dims_create
+Found Static PMPI Symbol: MPI_Close_port
+Found Static PMPI Symbol: PMPI_Intercomm_merge
+Found Static PMPI Symbol: PMPI_File_get_amode
+Found Static PMPI Symbol: MPI_Type_match_size
+Found Static PMPI Symbol: MPI_Type_indexed
+Found Static PMPI Symbol: PMPI_Get_address
+Found Static PMPI Symbol: PMPI_Comm_delete_attr
+Found Static PMPI Symbol: MPI_File_call_errhandler
+Found Static PMPI Symbol: MPI_Pack
+Found Static PMPI Symbol: MPI_Attr_put
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Add_error_string
+Found Static PMPI Symbol: PMPI_Group_intersection
+Found Static PMPI Symbol: MPI_File_get_position
+Found Static PMPI Symbol: PMPI_Lookup_name
+Found Static PMPI Symbol: PMPI_Comm_split
+Found Static PMPI Symbol: MPI_File_get_size
+Found Static PMPI Symbol: MPI_File_write_all
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Comm_join
+Found Static PMPI Symbol: PMPI_Group_range_excl
+Found Static PMPI Symbol: PMPI_File_get_byte_offset
+Found Static PMPI Symbol: MPI_Comm_group
+Found Static PMPI Symbol: MPI_File_get_byte_offset
+Found Static PMPI Symbol: PMPI_Type_get_name
+Found Static PMPI Symbol: MPI_Group_incl
+Found Static PMPI Symbol: MPI_Comm_get_parent
+Found Static PMPI Symbol: PMPI_Comm_get_parent
+Found Static PMPI Symbol: MPI_Errhandler_set
+Found Static PMPI Symbol: PMPI_File_set_size
+Found Static PMPI Symbol: MPI_Group_union
+Found Static PMPI Symbol: PMPI_Comm_get_name
+Found Static PMPI Symbol: PMPI_Info_set
+Found Static PMPI Symbol: PMPI_Info_create
+Found Static PMPI Symbol: MPI_Info_get_valuelen
+Found Static PMPI Symbol: MPI_Comm_call_errhandler
+Found Static PMPI Symbol: PMPI_Iprobe
+Found Static PMPI Symbol: PMPI_Win_set_errhandler
+Found Static PMPI Symbol: PMPI_Type_free
+Found Static PMPI Symbol: PMPI_Pack_external
+Found Static PMPI Symbol: PMPI_Type_create_struct
+Found Static PMPI Symbol: MPI_Comm_create_keyval
+Found Static PMPI Symbol: MPI_Send_init
+Found Static PMPI Symbol: MPI_Win_start
+Found Static PMPI Symbol: PMPI_Allgatherv
+Found Static PMPI Symbol: PMPI_File_create_errhandler
+Found Static PMPI Symbol: PMPI_Group_incl
+Found Static PMPI Symbol: PMPI_Win_get_attr
+Found Static PMPI Symbol: MPI_Win_free
+Found Static PMPI Symbol: MPI_File_get_position_shared
+Found Static PMPI Symbol: PMPI_Register_datarep
+Found Static PMPI Symbol: PMPI_Win_free
+Found Static PMPI Symbol: MPI_Wtime
+Found Static PMPI Symbol: PMPI_Get_processor_name
+Found Static PMPI Symbol: PMPI_Type_get_envelope
+Found Static PMPI Symbol: PMPI_Initialized
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: PMPI_Group_translate_ranks
+Found Static PMPI Symbol: MPI_Group_free
+Found Static PMPI Symbol: MPI_Cancel
+Found Static PMPI Symbol: MPI_Group_range_incl
+Found Static PMPI Symbol: PMPI_Group_difference
+Found Static PMPI Symbol: PMPI_Put
+Found Static PMPI Symbol: PMPI_File_call_errhandler
+Found Static PMPI Symbol: MPI_Graph_neighbors_count
+Found Static PMPI Symbol: PMPI_File_write_at_all_begin
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Type_hindexed
+Found Static PMPI Symbol: PMPI_Win_call_errhandler
+Found Static PMPI Symbol: PMPI_Win_free_keyval
+Found Static PMPI Symbol: MPI_Cart_rank
+Found Static PMPI Symbol: PMPI_Comm_create
+Found Static PMPI Symbol: PMPI_Graph_get
+Found Static PMPI Symbol: MPI_Bsend_init
+Found Static PMPI Symbol: PMPI_File_get_group
+Found Static PMPI Symbol: PMPI_File_read_ordered_begin
+Found Static PMPI Symbol: MPI_Win_create_errhandler
+Found Static PMPI Symbol: MPI_Keyval_free
+Found Static PMPI Symbol: PMPI_File_write_all
+Found Static PMPI Symbol: MPI_Type_lb
+Found Static PMPI Symbol: MPI_File_write_at_all_end
+Found Static PMPI Symbol: MPI_F_ERRCODES_IGNORE
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Comm_set_attr
+Found Static PMPI Symbol: PMPI_Comm_free_keyval
+Found Static PMPI Symbol: PMPI_Graphdims_get
+Found Static PMPI Symbol: MPI_Scan
+Found Static PMPI Symbol: PMPI_Win_set_name
+Found Static PMPI Symbol: PMPI_Type_free_keyval
+Found Static PMPI Symbol: MPI_Comm_get_errhandler
+Found Static PMPI Symbol: MPI_Ssend_init
+Found Static PMPI Symbol: PMPI_File_get_size
+Found Static PMPI Symbol: MPI_Gatherv
+Found Static PMPI Symbol: PMPI_Cart_sub
+Found Static PMPI Symbol: MPI_Type_create_f90_integer
+Found Static PMPI Symbol: PMPI_File_write_ordered_begin
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend_init
+Found Static PMPI Symbol: PMPI_Op_create
+Found Static PMPI Symbol: MPI_Allgatherv
+Found Static PMPI Symbol: MPI_Type_set_name
+Found Static PMPI Symbol: PMPI_Group_union
+Found Static PMPI Symbol: PMPI_File_set_view
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Info_set
+Found Static PMPI Symbol: MPI_F_STATUS_IGNORE
+Found Static PMPI Symbol: PMPI_Comm_rank
+Found Static PMPI Symbol: MPI_Type_create_f90_complex
+Found Static PMPI Symbol: MPI_Status_set_cancelled
+Found Static PMPI Symbol: PMPI_Exscan
+Found Static PMPI Symbol: MPI_Type_create_hvector
+Found Static PMPI Symbol: PMPI_Is_thread_main
+Found Static PMPI Symbol: PMPI_Info_get_nkeys
+Found Static PMPI Symbol: MPI_Win_call_errhandler
+Found Static PMPI Symbol: MPI_Win_set_errhandler
+Found Static PMPI Symbol: MPI_Comm_set_errhandler
+Found Static PMPI Symbol: PMPI_Win_get_name
+Found Static PMPI Symbol: PMPI_Win_lock
+Found Static PMPI Symbol: MPI_Testall
+Found Static PMPI Symbol: MPI_Win_create_keyval
+Found Static PMPI Symbol: MPI_Group_range_excl
+Found Static PMPI Symbol: MPI_Add_error_code
+Found Static PMPI Symbol: PMPI_File_set_info
+Found Static PMPI Symbol: MPI_Accumulate
+Found Static PMPI Symbol: MPI_Win_delete_attr
+Found Static PMPI Symbol: MPI_Address
+Found Static PMPI Symbol: MPI_Win_fence
+Found Static PMPI Symbol: PMPI_Bcast
+Found Static PMPI Symbol: PMPI_Cart_map
+Found Static PMPI Symbol: MPI_Unpublish_name
+Found Static PMPI Symbol: PMPI_Cartdim_get
+Found Static PMPI Symbol: PMPI_Comm_set_attr
+Found Static PMPI Symbol: MPI_Is_thread_main
+Found Static PMPI Symbol: PMPI_Type_extent
+Found Static PMPI Symbol: MPI_Win_create
+Found Static PMPI Symbol: MPI_Grequest_start
+Found Static PMPI Symbol: MPI_Type_struct
+Found Static PMPI Symbol: PMPI_Type_set_attr
+Found Static PMPI Symbol: PMPI_Gatherv
+Found Static PMPI Symbol: PMPI_File_get_view
+Found Static PMPI Symbol: PMPI_Pack_size
+Found Static PMPI Symbol: PMPI_Status_set_elements
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/virtual'
+/home/avo/research/pnmpi/pnmpi/modules
+cd timelapse ; make  ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/timelapse'
+Makefile:19: warning: overriding commands for target `.c.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:22: warning: ignoring old commands for target `.c.o'
+Makefile:22: warning: overriding commands for target `.cpp.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:25: warning: ignoring old commands for target `.cpp.o'
+for mymod in timelapse.so; do (../../patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod ); done
+Found Static PMPI Symbol: PMPI_Wtime
+Found Static PMPI Symbol: PMPI_Wtime_NewStack
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Wtime
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+for myheader in timelapse.h; do ( cp $myheader /home/avo/research/pnmpi/pnmpi/include/$myheader ); done
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/timelapse'
+/home/avo/research/pnmpi/pnmpi/modules
+cd piggyback ; make ; cd -
+make[1]: Entering directory `/home/avo/research/pnmpi/pnmpi/modules/piggyback'
+Makefile:23: warning: overriding commands for target `.c.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:22: warning: ignoring old commands for target `.c.o'
+Makefile:26: warning: overriding commands for target `.cpp.o'
+/home/avo/research/pnmpi/pnmpi/common/Makefile.common:25: warning: ignoring old commands for target `.cpp.o'
+for mymod in pbdriver.so pb_datatype1.so pb_datatype2.so pb_twomsg1.so pb_twomsg2.so pb_pack1.so pb_pack2.so pb_copy1.so pb_copy2.so; do (/home/avo/research/pnmpi/pnmpi/patch/patch $mymod /home/avo/research/pnmpi/pnmpi/lib/linux64_ubuntu/$mymod ); done
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: MPI_Type_commit
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: MPI_Type_free
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found Static PMPI Symbol: MPI_Address
+Found Static PMPI Symbol: MPI_Type_struct
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: MPI_Type_commit
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: MPI_Type_free
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found Static PMPI Symbol: MPI_Address
+Found Static PMPI Symbol: MPI_Type_struct
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Get_count
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Type_size
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Unpack
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Pack
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Get_count
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Type_size
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Unpack
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Pack
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Get_count
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Type_size
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found Static PMPI Symbol: MPI_Ibsend
+Found Static PMPI Symbol: MPI_Waitall
+Found Static PMPI Symbol: MPI_Send
+Found Static PMPI Symbol: PMPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testsome
+Found Static PMPI Symbol: PMPI_Sendrecv
+Found Static PMPI Symbol: MPI_Get_count
+Found Static PMPI Symbol: MPI_Issend
+Found Static PMPI Symbol: MPI_Waitany
+Found Static PMPI Symbol: PMPI_Waitall
+Found Static PMPI Symbol: MPI_Irecv
+Found Static PMPI Symbol: MPI_Isend
+Found Static PMPI Symbol: MPI_Init
+Found Static PMPI Symbol: PMPI_Bsend
+Found Static PMPI Symbol: PMPI_Ibsend
+Found Static PMPI Symbol: PMPI_Recv
+Found Static PMPI Symbol: PMPI_Issend
+Found Static PMPI Symbol: PMPI_Init
+Found Static PMPI Symbol: MPI_Testany
+Found Static PMPI Symbol: PMPI_Irsend
+Found Static PMPI Symbol: PMPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Type_size
+Found Static PMPI Symbol: PMPI_Waitany
+Found Static PMPI Symbol: MPI_Test
+Found Static PMPI Symbol: MPI_Bsend
+Found Static PMPI Symbol: MPI_Wait
+Found Static PMPI Symbol: PMPI_Testall
+Found Static PMPI Symbol: MPI_Recv
+Found Static PMPI Symbol: MPI_Sendrecv
+Found Static PMPI Symbol: MPI_Waitsome
+Found Static PMPI Symbol: PMPI_Testany
+Found Static PMPI Symbol: PMPI_Irecv
+Found Static PMPI Symbol: MPI_Irsend
+Found Static PMPI Symbol: PMPI_Isend
+Found Static PMPI Symbol: PMPI_Finalize
+Found Static PMPI Symbol: MPI_Finalize
+Found Static PMPI Symbol: PMPI_Test
+Found Static PMPI Symbol: PMPI_Rsend
+Found Static PMPI Symbol: MPI_Sendrecv_replace
+Found Static PMPI Symbol: MPI_Testsome
+Found Static PMPI Symbol: PMPI_Ssend
+Found Static PMPI Symbol: MPI_Rsend
+Found Static PMPI Symbol: PMPI_Wait
+Found Static PMPI Symbol: MPI_Ssend
+Found Static PMPI Symbol: PMPI_Send
+Found Static PMPI Symbol: MPI_Testall
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+Found dynamic PNMPI symbol
+for myheader in pb_mod.h ; do ( cp $myheader /home/avo/research/pnmpi/pnmpi/include/$myheader ); done
+make[1]: Leaving directory `/home/avo/research/pnmpi/pnmpi/modules/piggyback'
+/home/avo/research/pnmpi/pnmpi/modules

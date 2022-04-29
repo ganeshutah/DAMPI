@@ -1,0 +1,2 @@
+#/usr/bin/sh
+../../scheduler/isp 2000 4 ./ptest localhost

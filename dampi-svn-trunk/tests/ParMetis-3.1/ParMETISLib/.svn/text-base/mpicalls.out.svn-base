@@ -1,0 +1,478 @@
+akwayfm.c:    MPI_Bcast((void *)pperm, nparts, IDX_DATATYPE, 0, ctrl->comm);
+akwayfm.c:      MPI_Allreduce((void *)lnpwgts, (void *)pgnpwgts, nparts*ncon, MPI_FLOAT, MPI_SUM, ctrl->comm);
+akwayfm.c:        MPI_Irecv((void *)(rupdate+sendptr[i]), sendptr[i+1]-sendptr[i], IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->rreq+i);
+akwayfm.c:        MPI_Isend((void *)(supdate+j), k-j, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+akwayfm.c:      MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses);
+akwayfm.c:        MPI_Get_count(ctrl->statuses+i, IDX_DATATYPE, nupds_pe+i);
+akwayfm.c:      MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+akwayfm.c:      MPI_Allreduce((void *)lnpwgts, (void *)gnpwgts, nparts*ncon, MPI_FLOAT, MPI_SUM, ctrl->comm);
+Binary file akwayfm.o matches
+ametis.c:  int *options, int *edgecut, idxtype *part, MPI_Comm *comm)
+ametis.c:  MPI_Comm_size(*comm, &npes);
+ametis.c:  MPI_Comm_rank(*comm, &mype);
+ametis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ametis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ametis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+Binary file ametis.o matches
+backcompat.c:       idxtype *part, MPI_Comm *comm)
+backcompat.c:		               idxtype *part, int *options, MPI_Comm comm)
+backcompat.c:  MPI_Comm_size(comm, &npes);
+backcompat.c:       int *options, int *edgecut, idxtype *part, MPI_Comm *comm)
+backcompat.c:void ParMETIS_PartGeom(idxtype *vtxdist, int *ndims, float *xyz, idxtype *part, MPI_Comm *comm)
+backcompat.c:  float *xyz, int *options, int *edgecut, idxtype *part, MPI_Comm *comm)
+backcompat.c:  MPI_Comm_size(*comm, &npes);
+backcompat.c:                int ndims, float *xyz, idxtype *part, int *options, MPI_Comm comm)
+backcompat.c:  MPI_Comm_size(comm, &npes);
+backcompat.c:                int ndims, float *xyz, idxtype *part, int *options, MPI_Comm comm)
+backcompat.c:               idxtype *part, int *options, MPI_Comm comm)
+backcompat.c:       int *edgecut, idxtype *part, MPI_Comm *comm)
+backcompat.c:  MPI_Comm_size(*comm, &nparts);
+backcompat.c:               idxtype *part, int *options, MPI_Comm comm)
+backcompat.c:       int *edgecut, idxtype *part, MPI_Comm *comm)
+backcompat.c:  MPI_Comm_size(*comm, &nparts);
+backcompat.c:               idxtype *part, int *options, MPI_Comm comm)
+backcompat.c:       int *edgecut, idxtype *part, MPI_Comm *comm)
+backcompat.c:  MPI_Comm_size(*comm, &nparts);
+backcompat.c:               idxtype *part, int *options, MPI_Comm comm)
+backcompat.c:       int *edgecut, idxtype *part, MPI_Comm *comm)
+backcompat.c:  MPI_Comm_size(*comm, &nparts);
+backcompat.c:       int *edgecut, idxtype *part, MPI_Comm *comm)
+backcompat.c:  MPI_Comm_size(*comm, &nparts);
+backcompat.c:  int *options, idxtype *order, idxtype *sizes, MPI_Comm *comm)
+Binary file backcompat.o matches
+balancemylink.c:MPI_Comm_rank(MPI_COMM_WORLD, &mype);
+Binary file balancemylink.o matches
+coarsen.c:  MPI_Allgather((void *)(cvtxdist+npes), 1, IDX_DATATYPE, (void *)cvtxdist, 1, IDX_DATATYPE, ctrl->comm);
+coarsen.c:      MPI_Irecv((void *)(rsizes+i), 1, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->rreq+i);
+coarsen.c:      MPI_Isend((void *)(ssizes+i), 1, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+coarsen.c:      MPI_Wait(ctrl->rreq+i, &ctrl->status);
+coarsen.c:      MPI_Wait(ctrl->sreq+i, &ctrl->status);
+coarsen.c:      MPI_Irecv((void *)(rgraph+l), (4+ncon)*(rlens[i+1]-rlens[i])+2*rsizes[i], IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->rreq+i);
+coarsen.c:      MPI_Isend((void *)(sgraph+l), ll-l, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+coarsen.c:      MPI_Wait(ctrl->rreq+i, &ctrl->status);
+coarsen.c:      MPI_Wait(ctrl->sreq+i, &ctrl->status);
+Binary file coarsen.o matches
+comm.c:    MPI_Irecv((void *)(recvvector+recvptr[i]), recvptr[i+1]-recvptr[i], IDX_DATATYPE, 
+comm.c:    MPI_Isend((void *)(sendvector+sendptr[i]), sendptr[i+1]-sendptr[i], IDX_DATATYPE, 
+comm.c:  MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses); 
+comm.c:  MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses); 
+comm.c:    MPI_Irecv((void *)(recvpairs+recvptr[i]), 2*(recvptr[i+1]-recvptr[i]), IDX_DATATYPE, 
+comm.c:      MPI_Isend((void *)(sendpairs+sendptr[i]), 2*(psendptr[i]-sendptr[i]), IDX_DATATYPE, 
+comm.c:      MPI_Isend((void *)(sendpairs), 0, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+comm.c:    MPI_Wait(ctrl->rreq+i, &(ctrl->status));
+comm.c:    MPI_Get_count(&ctrl->status, IDX_DATATYPE, &n);
+comm.c:  MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+comm.c:  MPI_Allreduce((void *)&value, (void *)&max, 1, MPI_INT, MPI_MAX, ctrl->comm);
+comm.c:  MPI_Allreduce((void *)&value, (void *)&max, 1, MPI_DOUBLE, MPI_MAX, ctrl->comm);
+comm.c:  MPI_Allreduce((void *)&value, (void *)&min, 1, MPI_INT, MPI_MIN, ctrl->comm);
+comm.c:  MPI_Allreduce((void *)&value, (void *)&sum, 1, MPI_INT, MPI_SUM, ctrl->comm);
+comm.c:  MPI_Allreduce((void *)&value, (void *)&max, 1, MPI_FLOAT, MPI_MAX, ctrl->comm);
+comm.c:  MPI_Allreduce((void *)&value, (void *)&min, 1, MPI_FLOAT, MPI_MIN, ctrl->comm);
+comm.c:  MPI_Allreduce((void *)&value, (void *)&sum, 1, MPI_FLOAT, MPI_SUM, ctrl->comm);
+Binary file comm.o matches
+debug.c:    MPI_Barrier(ctrl->comm);
+debug.c:    MPI_Barrier(ctrl->comm);
+debug.c:    MPI_Barrier(ctrl->comm);
+debug.c:  MPI_Barrier(ctrl->comm);
+debug.c:    MPI_Barrier(ctrl->comm);
+debug.c:  MPI_Barrier(ctrl->comm);
+debug.c:    MPI_Barrier(ctrl->comm);
+debug.c:  MPI_Barrier(ctrl->comm);
+debug.c:    MPI_Barrier(ctrl->comm);
+debug.c:  MPI_Barrier(ctrl->comm);
+debug.c:    MPI_Barrier(ctrl->comm);
+Binary file debug.o matches
+diffutil.c:  MPI_Allreduce((void *)lstart, (void *)gstart, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+diffutil.c:  MPI_Allreduce((void *)lleft, (void *)gleft, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+diffutil.c:  MPI_Allreduce((void *)lend, (void *)gend, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+Binary file diffutil.o matches
+frename.c:	 int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	(idxtype *vtxdist, int *ndims, float *xyz, idxtype *part, MPI_Comm *comm),
+frename.c:	 int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 idxtype **xadj, idxtype **adjncy, MPI_Comm *comm),
+frename.c:	 float *ubvec, int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 idxtype *order, idxtype *sizes, MPI_Comm *comm),
+frename.c:	 int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 MPI_Comm *comm),
+frename.c:	 int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	(idxtype *vtxdist, int *ndims, float *xyz, idxtype *part, MPI_Comm *comm),
+frename.c:	 idxtype *part, MPI_Comm *comm),
+frename.c:	 int *wgtflag, int *numflag, int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 int *wgtflag, int *numflag, int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 int *wgtflag, int *numflag, int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 int *wgtflag, int *numflag, int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 int *wgtflag, int *numflag, int *options, int *edgecut, idxtype *part, MPI_Comm *comm),
+frename.c:	 idxtype *order, idxtype *sizes, MPI_Comm *comm),
+frename.c:	 idxtype *order, idxtype *sizes, MPI_Comm *comm),
+frename.c:	 idxtype *part, int *options, MPI_Comm comm),
+frename.c:         int ndims, float *xyz, idxtype *part, int *options, MPI_Comm comm),
+frename.c:         int ndims, float *xyz, idxtype *part, int *options, MPI_Comm comm),
+frename.c:         idxtype *part, int *options, MPI_Comm comm),
+frename.c:	 idxtype *part, int *options, MPI_Comm comm),
+frename.c:	 idxtype *part, int *options, MPI_Comm comm),
+frename.c:         idxtype *part, int *options, MPI_Comm comm),
+gkmetis.c:	      int *options, int *edgecut, idxtype *part, MPI_Comm *comm)
+gkmetis.c:  MPI_Comm_size(*comm, &npes);
+gkmetis.c:  MPI_Comm_rank(*comm, &mype);
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+gkmetis.c:      MPI_Finalize();
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+gkmetis.c:void ParMETIS_V3_PartGeom(idxtype *vtxdist, int *ndims, float *xyz, idxtype *part, MPI_Comm *comm)
+gkmetis.c:  MPI_Comm_size(*comm, &npes);
+gkmetis.c:  MPI_Comm_rank(*comm, &mype);
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+gkmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+Binary file gkmetis.o matches
+grsetup.c:      MPI_Finalize();
+grsetup.c:void SetUpCtrl(CtrlType *ctrl, int nparts, int dbglvl, MPI_Comm comm)
+grsetup.c:  MPI_Comm_dup(comm, &(ctrl->gcomm));
+grsetup.c:  MPI_Comm_rank(ctrl->gcomm, &ctrl->mype);
+grsetup.c:  MPI_Comm_size(ctrl->gcomm, &ctrl->npes);
+grsetup.c:  MPI_Allreduce((void *)lpvtxs, (void *)gpvtxs, ctrl->nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+Binary file grsetup.o matches
+initbalance.c:  MPI_Status status;
+initbalance.c:  MPI_Comm ipcomm, srcomm;
+initbalance.c:    MPI_Allgatherv((void *)graph->home, graph->nvtxs, IDX_DATATYPE,
+initbalance.c:  MPI_Comm_split(ctrl->gcomm, sr, 0, &ipcomm);
+initbalance.c:  MPI_Comm_rank(ipcomm, &mype);
+initbalance.c:  MPI_Comm_size(ipcomm, &npes);
+initbalance.c:    MPI_Comm_split(ipcomm, mype % ngroups, 0, &srcomm);
+initbalance.c:    MPI_Comm_rank(srcomm, &srmype);
+initbalance.c:    MPI_Comm_size(srcomm, &srnpes);
+initbalance.c:    MPI_Allreduce((void *)lwhere, (void *)part, nvtxs, IDX_DATATYPE, MPI_SUM, srcomm);
+initbalance.c:    MPI_Allreduce((void *)&edgecut, (void *)&max_cut, 1, MPI_INT, MPI_MAX, ipcomm);
+initbalance.c:    MPI_Allreduce((void *)&lbsum, (void *)&min_lbsum, 1, MPI_FLOAT, MPI_MIN, ipcomm);
+initbalance.c:    MPI_Allreduce((void *)&lpecost, (void *)&gpecost, 1, MPI_FLOAT_INT, MPI_MINLOC, ipcomm);
+initbalance.c:      MPI_Send((void *)part, nvtxs, IDX_DATATYPE, sr_pe, 1, ctrl->comm);
+initbalance.c:      MPI_Recv((void *)part, nvtxs, IDX_DATATYPE, gpecost.rank, 1, ctrl->comm, &status);
+initbalance.c:    MPI_Comm_free(&srcomm);
+initbalance.c:    /* The next stmt is required to balance out the sr MPI_Comm_split */
+initbalance.c:    MPI_Comm_split(ipcomm, MPI_UNDEFINED, 0, &srcomm);
+initbalance.c:      MPI_Allreduce((void *)&rating, (void *)&max_rating, 1, MPI_FLOAT, MPI_MAX, ipcomm);
+initbalance.c:      MPI_Allreduce((void *)&lbsum, (void *)&min_lbsum, 1, MPI_FLOAT, MPI_MIN, ipcomm);
+initbalance.c:      MPI_Allreduce((void *)&lpecost, (void *)&gpecost, 1, MPI_FLOAT_INT, MPI_MINLOC, ipcomm);
+initbalance.c:        MPI_Send((void *)part, nvtxs, IDX_DATATYPE, gd_pe, 1, ctrl->comm);
+initbalance.c:        MPI_Recv((void *)part, nvtxs, IDX_DATATYPE, gpecost.rank, 1, ctrl->comm, &status);
+initbalance.c:        MPI_Send((void *)buffer, 2, MPI_FLOAT, sr_pe, 1, ctrl->comm);
+initbalance.c:        MPI_Recv((void *)buffer, 2, MPI_FLOAT, gd_pe, 1, ctrl->comm, &status);
+initbalance.c:    MPI_Bcast((void *)&who_wins, 1, MPI_INT, sr_pe, ctrl->comm);
+initbalance.c:  MPI_Bcast((void *)part, nvtxs, IDX_DATATYPE, who_wins, ctrl->comm);
+initbalance.c:  MPI_Comm_free(&ipcomm);
+initbalance.c:  MPI_Allgather((void *)(&mysize), 1, MPI_INT, (void *)rcounts, 1, MPI_INT, ctrl->comm);
+initbalance.c:  MPI_Allgatherv((void *)mygraph, mysize, IDX_DATATYPE, (void *)ggraph, rcounts, rdispls, IDX_DATATYPE, ctrl->comm);
+Binary file initbalance.o matches
+initmsection.c:  MPI_Comm newcomm, labelcomm;
+initmsection.c:  MPI_Comm_split(ctrl->comm, mypart, 0, &newcomm);
+initmsection.c:  MPI_Comm_rank(newcomm, lpecut+1);
+initmsection.c:  MPI_Allreduce(lpecut, gpecut, 1, MPI_2INT, MPI_MINLOC, newcomm);
+initmsection.c:    MPI_Send((void *)agraph->where, agraph->nvtxs, IDX_DATATYPE, 0, 1, newcomm);
+initmsection.c:    MPI_Recv((void *)agraph->where, agraph->nvtxs, IDX_DATATYPE, gpecut[1], 1, newcomm, &ctrl->status);
+initmsection.c:  MPI_Comm_split(ctrl->comm, lpecut[1], 0, &labelcomm);
+initmsection.c:    MPI_Reduce((void *)gwhere, (void *)agraph->where, graph->gnvtxs, IDX_DATATYPE, MPI_SUM, 0, labelcomm);
+initmsection.c:  MPI_Scatterv((void *)agraph->where, sendcounts, displs, IDX_DATATYPE, 
+initmsection.c:  MPI_Comm_free(&newcomm);
+initmsection.c:  MPI_Comm_free(&labelcomm);
+initmsection.c:  MPI_Allgather((void *)(&mysize), 1, MPI_INT, (void *)recvcounts, 1, MPI_INT, ctrl->comm);
+initmsection.c:  MPI_Allgatherv((void *)mygraph, mysize, IDX_DATATYPE, (void *)ggraph, recvcounts, displs, IDX_DATATYPE, ctrl->comm);
+Binary file initmsection.o matches
+initpart.c:  MPI_Comm ipcomm;
+initpart.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+initpart.c:  MPI_Comm_split(ctrl->gcomm, ctrl->mype % ngroups, 0, &ipcomm);
+initpart.c:  MPI_Comm_rank(ipcomm, &mype);
+initpart.c:  MPI_Comm_size(ipcomm, &npes);
+initpart.c:  MPI_Allreduce((void *)gwhere0, (void *)gwhere1, gnvtxs, IDX_DATATYPE, MPI_SUM, ipcomm);
+initpart.c:    MPI_Allreduce((void *)&edgecut, (void *)&max_cut, 1, MPI_INT, MPI_MAX, ctrl->gcomm);
+initpart.c:    MPI_Allreduce((void *)&lbsum, (void *)&min_lbsum, 1, MPI_FLOAT, MPI_MIN, ctrl->gcomm);
+initpart.c:    MPI_Comm_rank(ctrl->gcomm, &(lpesum.rank));
+initpart.c:    MPI_Allreduce((void *)&lpesum, (void *)&gpesum, 1, MPI_FLOAT_INT, MPI_MINLOC, ctrl->gcomm);
+initpart.c:    MPI_Bcast((void *)gwhere1, gnvtxs, IDX_DATATYPE, gpesum.rank, ctrl->gcomm);
+initpart.c:  MPI_Comm_free(&ipcomm);
+initpart.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+Binary file initpart.o matches
+kmetis.c:	      MPI_Comm *comm)
+kmetis.c:  MPI_Comm_size(*comm, &npes);
+kmetis.c:  MPI_Comm_rank(*comm, &mype);
+kmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+kmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+kmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+Binary file kmetis.o matches
+kwaybalance.c:    MPI_Bcast((void *)pperm, nparts, IDX_DATATYPE, 0, ctrl->comm);
+kwaybalance.c:        MPI_Irecv((void *)(rupdate+sendptr[i]), sendptr[i+1]-sendptr[i], IDX_DATATYPE,
+kwaybalance.c:        MPI_Isend((void *)(supdate+j), k-j, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+kwaybalance.c:      MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses);
+kwaybalance.c:        MPI_Get_count(ctrl->statuses+i, IDX_DATATYPE, nupds_pe+i);
+kwaybalance.c:      MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+kwaybalance.c:      MPI_Allreduce((void *)lnpwgts, (void *)gnpwgts, nparts*ncon,
+kwaybalance.c:      MPI_FLOAT, MPI_SUM, ctrl->comm);
+Binary file kwaybalance.o matches
+kwayfm.c:    MPI_Bcast((void *)pperm, nparts, IDX_DATATYPE, 0, ctrl->comm);
+kwayfm.c:      MPI_Allreduce((void *)lnpwgts, (void *)pgnpwgts, nparts*ncon,
+kwayfm.c:      MPI_FLOAT, MPI_SUM, ctrl->comm);
+kwayfm.c:        MPI_Irecv((void *)(rupdate+sendptr[i]), sendptr[i+1]-sendptr[i], IDX_DATATYPE,
+kwayfm.c:        MPI_Isend((void *)(supdate+j), k-j, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+kwayfm.c:      MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses);
+kwayfm.c:        MPI_Get_count(ctrl->statuses+i, IDX_DATATYPE, nupds_pe+i);
+kwayfm.c:      MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+kwayfm.c:      MPI_Allreduce((void *)lnpwgts, (void *)gnpwgts, nparts*ncon,
+kwayfm.c:      MPI_FLOAT, MPI_SUM, ctrl->comm);
+Binary file kwayfm.o matches
+kwayrefine.c:        MPI_Irecv((void *)(scand+slens[i]), 2*(slens[i+1]-slens[i]), IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->rreq+i);
+kwayrefine.c:        MPI_Isend((void *)(rcand+rlens[i]), 2*(rlens[i+1]-rlens[i]), IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+kwayrefine.c:        MPI_Wait(ctrl->sreq+i, &ctrl->status);
+kwayrefine.c:        MPI_Wait(ctrl->rreq+i, &ctrl->status);
+kwayrefine.c:  MPI_Allreduce((void *)lnpwgts, (void *)gnpwgts, ctrl->nparts*ncon, MPI_FLOAT, MPI_SUM, ctrl->comm);
+Binary file kwayrefine.o matches
+lmatch.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+lmatch.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+lmatch.c:  MPI_Allgather((void *)(cvtxdist+npes), 1, IDX_DATATYPE, (void *)cvtxdist, 1, IDX_DATATYPE, ctrl->comm);
+Binary file lmatch.o matches
+macros.h:#define starttimer(tmr) (tmr -= MPI_Wtime())
+macros.h:#define stoptimer(tmr) (tmr += MPI_Wtime())
+match.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+match.c:      MPI_Irecv((void *)(match_granted+recvptr[i]), 2*(recvptr[i+1]-recvptr[i]), IDX_DATATYPE,
+match.c:      MPI_Isend((void *)(match_requests+j), 2*(k-j), IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+match.c:    MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses);
+match.c:      MPI_Get_count(ctrl->statuses+i, IDX_DATATYPE, nreqs_pe+i);
+match.c:    MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+match.c:      MPI_Irecv((void *)(match_requests+sendptr[i]), 2*(sendptr[i+1]-sendptr[i]), IDX_DATATYPE,
+match.c:      MPI_Isend((void *)(match_granted+recvptr[i]), 2*nreqs_pe[i], IDX_DATATYPE, 
+match.c:    MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses);
+match.c:      MPI_Get_count(ctrl->statuses+i, IDX_DATATYPE, nreqs_pe+i);
+match.c:    MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+match.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+match.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+Binary file match.o matches
+mdiffusion.c:      MPI_Allgatherv((void *)&sbuffer[rdispl[mype]], rcount[mype], IDX_DATATYPE, (void *)rbuffer, rcount, rdispl, IDX_DATATYPE, ctrl->comm);
+mdiffusion.c:      MPI_Allreduce((void *)visited, (void *)gvisited, matrix.nnzs,
+mdiffusion.c:      IDX_DATATYPE, MPI_MAX, ctrl->comm);
+Binary file mdiffusion.o matches
+memory.c:  MPI_Comm_free(&(ctrl->gcomm));
+Binary file memory.o matches
+mesh.c:		 idxtype **adjncy, MPI_Comm *comm)
+mesh.c:  MPI_Barrier(*comm);
+mesh.c:  MPI_Alltoall((void *)scounts, 1, MPI_INT, (void *)rcounts, 1, MPI_INT, *comm);
+mesh.c:  MPI_Alltoallv((void *)nodelist, scounts, sdispl, IDX_DATATYPE, (void *)recvbuffer, 
+mesh.c:  MPI_Alltoall((void *)scounts, 1, MPI_INT, (void *)rcounts, 1, MPI_INT, *comm);
+mesh.c:  MPI_Alltoallv((void *)sbuffer, scounts, sdispl, IDX_DATATYPE, (void *)rbuffer, 
+Binary file mesh.o matches
+mmetis.c:		 MPI_Comm *comm)
+mmetis.c:  MPI_Barrier(ctrl.comm);
+mmetis.c:  MPI_Barrier(ctrl.comm);
+mmetis.c:  MPI_Barrier(ctrl.comm);
+Binary file mmetis.o matches
+move.c:  MPI_Scan((void *)lpwgts, (void *)gpwgts, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+move.c:  MPI_Allreduce((void *)lpwgts, (void *)mvtxdist, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+move.c:  MPI_Alltoall((void *)sinfo, 2, IDX_DATATYPE, (void *)rinfo, 2, IDX_DATATYPE, ctrl->comm);
+move.c:      MPI_Irecv((void *)(rgraph+gpwgts[i]), gpwgts[i+1]-gpwgts[i], IDX_DATATYPE, i, 1, ctrl->comm, ctrl->rreq+i);
+move.c:      MPI_Isend((void *)(sgraph+lpwgts[i]), lpwgts[i+1]-lpwgts[i], IDX_DATATYPE, i, 1, ctrl->comm, ctrl->sreq+i);
+move.c:      MPI_Wait(ctrl->sreq+i, &ctrl->status);
+move.c:      MPI_Wait(ctrl->rreq+i, &ctrl->status); 
+move.c:  MPI_Alltoall((void *)rinfo, 1, IDX_DATATYPE, (void *)sinfo, 1, IDX_DATATYPE, ctrl->comm);
+move.c:      MPI_Irecv((void *)(auxinfo+rinfo[i]), rinfo[i+1]-rinfo[i], IDX_DATATYPE, i, 1, ctrl->comm, ctrl->rreq+i);
+move.c:      MPI_Isend((void *)(minfo+sinfo[i]), sinfo[i+1]-sinfo[i], IDX_DATATYPE, i, 1, ctrl->comm, ctrl->sreq+i);
+move.c:      MPI_Wait(ctrl->rreq+i, &ctrl->status);
+move.c:      MPI_Wait(ctrl->sreq+i, &ctrl->status);
+move.c:  MPI_Scan((void *)lpwgts, (void *)gpwgts, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+move.c:  MPI_Allreduce((void *)lpwgts, (void *)mvtxdist, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+Binary file move.o matches
+msetup.c:  idxtype *elmwgt, int *wgtflag, MPI_Comm *comm)
+msetup.c:  MPI_Comm_size(*comm, &npes);
+msetup.c:  MPI_Comm_rank(*comm, &mype);
+msetup.c:  MPI_Allreduce((void *)&minnode, (void *)&gminnode, 1, MPI_INT, MPI_MIN, *comm);
+msetup.c:  MPI_Allreduce((void *)&maxnode, (void *)&gmaxnode, 1, MPI_INT, MPI_MAX, *comm);
+node_refine.c:  MPI_Allreduce((void *)lpwgts, (void *)gpwgts, 2*nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+node_refine.c:        MPI_Irecv((void *)(rupdate+sendptr[i]), sendptr[i+1]-sendptr[i], IDX_DATATYPE,
+node_refine.c:        MPI_Isend((void *)(supdate+j), k-j, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+node_refine.c:      MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses);
+node_refine.c:        MPI_Get_count(ctrl->statuses+i, IDX_DATATYPE, nupds_pe+i);
+node_refine.c:      MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+node_refine.c:      MPI_Allreduce((void *)lpwgts, (void *)gpwgts, 2*nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+node_refine.c:  MPI_Barrier(ctrl->comm);
+Binary file node_refine.o matches
+ometis.c:              int *options, idxtype *order, idxtype *sizes, MPI_Comm *comm)
+ometis.c:  MPI_Comm_size(*comm, &npes);
+ometis.c:  MPI_Comm_rank(*comm, &mype);
+ometis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ometis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ometis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ometis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ometis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ometis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ometis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+ometis.c:                idxtype *order, idxtype *sizes, int *options, MPI_Comm comm)
+Binary file ometis.o matches
+order.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+order.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+order.c:  MPI_Scan((void *)lpwgts, (void *)sizescan, 2*nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+order.c:  MPI_Allreduce((void *)lpwgts, (void *)gpwgts, 2*nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+order.c:    MPI_Barrier(ctrl->comm);
+order.c:  MPI_Allgather((void *)(cvtxdist+npes), 1, IDX_DATATYPE, (void *)cvtxdist, 1, IDX_DATATYPE, ctrl->comm);
+Binary file order.o matches
+proto.h:		 int *ioptions, idxtype *part, MPI_Comm *comm);
+proto.h:void SetUpCtrl(CtrlType *ctrl, int, int, MPI_Comm);
+proto.h:void ParallelReadGraph(GraphType *, char *, MPI_Comm);
+proto.h:void ReadTestGraph(GraphType *, char *, MPI_Comm);
+proto.h:float *ReadTestCoordinates(GraphType *, char *, int, MPI_Comm);
+proto.h:void Moc_SerialReadGraph(GraphType *, char *, int *, MPI_Comm);
+proto.h:void AdaptGraph(GraphType *, int, MPI_Comm);
+proto.h:void AdaptGraph2(GraphType *, int, MPI_Comm);
+proto.h:void Mc_AdaptGraph(GraphType *, idxtype *, int, int, MPI_Comm);
+proto.h:void TestParMetis(char *, MPI_Comm);
+proto.h:void TestParMetis_V3(char *, MPI_Comm);
+proto.h:int ComputeRealCut(idxtype *, idxtype *, char *, MPI_Comm);
+proto.h:int ComputeRealCut2(idxtype *, idxtype *, idxtype *, idxtype *, char *, MPI_Comm);
+proto.h:void TestMoveGraph(GraphType *, GraphType *, idxtype *, MPI_Comm);
+proto.h:void mienIO(MeshType *, char *, int, int, MPI_Comm);
+proto.h:void ParallelReadMesh(MeshType *, char *, MPI_Comm);
+pspases.c:                int *options, idxtype *order, idxtype *sizes, MPI_Comm *comm)
+pspases.c:  MPI_Comm_size(*comm, &npes);
+pspases.c:  MPI_Comm_rank(*comm, &mype);
+pspases.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+pspases.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+pspases.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+pspases.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+pspases.c:  MPI_Bcast((void *)sizes, 2*npes, IDX_DATATYPE, 0, ctrl.gcomm);
+pspases.c:  MPI_Scatterv((void *)iperm, sendcount, displs, IDX_DATATYPE, (void *)order, vtxdist[mype+1]-vtxdist[mype], IDX_DATATYPE, 0, ctrl.gcomm);
+pspases.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+pspases.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+pspases.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+pspases.c:  MPI_Gatherv((void *)xadj, nvtxs, IDX_DATATYPE, axadj, recvcounts, displs, IDX_DATATYPE, 0, ctrl->comm);
+pspases.c:  MPI_Allgather((void *)(&nedges), 1, MPI_INT, (void *)recvcounts, 1, MPI_INT, ctrl->comm);
+pspases.c:  MPI_Gatherv((void *)adjncy, nedges, IDX_DATATYPE, aadjncy, recvcounts, displs, IDX_DATATYPE, 0, ctrl->comm);
+Binary file pspases.o matches
+redomylink.c:MPI_Comm_rank(MPI_COMM_WORLD, &mype);
+Binary file redomylink.o matches
+remap.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+remap.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+remap.c:    MPI_Allgather((void *)&send, 2, IDX_DATATYPE, (void *)recv, 2, IDX_DATATYPE, ctrl->comm); 
+Binary file remap.o matches
+rmetis.c:	      idxtype *part, MPI_Comm *comm)
+rmetis.c:  MPI_Comm_size(*comm, &npes);
+rmetis.c:  MPI_Comm_rank(*comm, &mype);
+rmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+rmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+rmetis.c:  IFSET(ctrl.dbglvl, DBG_TIME, MPI_Barrier(ctrl.gcomm));
+Binary file rmetis.o matches
+selectq.c:MPI_Comm_rank(MPI_COMM_WORLD, &mype);
+Binary file selectq.o matches
+serial.c:MPI_Comm_rank(MPI_COMM_WORLD, &mype);
+serial.c:MPI_Comm_rank(MPI_COMM_WORLD, &mype);
+serial.c:MPI_Comm_rank(MPI_COMM_WORLD, &mype);
+serial.c:MPI_Comm_rank(MPI_COMM_WORLD, &mype);
+Binary file serial.o matches
+setup.c:  IFSET(ctrl->dbglvl, DBG_TIME, MPI_Barrier(ctrl->comm));
+setup.c:  MPI_Alltoall((void *)recvrequests, 2, IDX_DATATYPE, (void *)sendrequests, 2, IDX_DATATYPE, ctrl->comm);
+setup.c:    MPI_Irecv((void *)(sendind+sendptr[i]), sendptr[i+1]-sendptr[i], IDX_DATATYPE, 
+setup.c:    MPI_Isend((void *)(recvind+recvptr[i]), recvptr[i+1]-recvptr[i], IDX_DATATYPE,
+setup.c:  MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses);
+setup.c:  MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+Binary file setup.o matches
+stat.c:  MPI_Allreduce((void *)(lnpwgts), (void *)(gnpwgts), nparts*ncon, MPI_FLOAT, MPI_SUM, ctrl->comm);
+stat.c:  MPI_Allreduce((void *)(lminvwgts), (void *)(gminvwgts), ncon, MPI_FLOAT, MPI_MIN, ctrl->comm);
+stat.c:    MPI_Barrier(ctrl->comm);
+stat.c:  MPI_Barrier(ctrl->comm);
+stat.c:  MPI_Reduce((void *)connect, (void *)gconnect, nparts*nparts, IDX_DATATYPE, MPI_MAX, 0, ctrl->comm);
+stat.c:  MPI_Reduce((void *)border, (void *)gborder, nparts, IDX_DATATYPE, MPI_SUM, 0, ctrl->comm);
+stat.c:  MPI_Reduce((void *)from, (void *)gfrom, nparts, IDX_DATATYPE, MPI_SUM, 0, ctrl->comm);
+stat.c:  MPI_Reduce((void *)to, (void *)gto, nparts, IDX_DATATYPE, MPI_SUM, 0, ctrl->comm);
+stat.c:  MPI_Reduce((void *)gain, (void *)ggain, 20, IDX_DATATYPE, MPI_SUM, 0, ctrl->comm);
+Binary file stat.o matches
+struct.h:#define IDX_DATATYPE	MPI_INT
+struct.h:#define IDX_DATATYPE	MPI_SHORT
+struct.h:  MPI_Comm gcomm;
+struct.h:  MPI_Comm comm;		/* MPI Communicator */
+struct.h:  MPI_Request sreq[MAX_PES], 
+struct.h:  MPI_Status statuses[MAX_PES];
+struct.h:  MPI_Status status;
+sync:akwayfm.c:    MPI_Bcast((void *)pperm, nparts, IDX_DATATYPE, 0, ctrl->comm);
+sync:akwayfm.c:      MPI_Allreduce((void *)lnpwgts, (void *)pgnpwgts, nparts*ncon, MPI_FLOAT, MPI_SUM, ctrl->comm);
+sync:akwayfm.c:        MPI_Irecv((void *)(rupdate+sendptr[i]), sendptr[i+1]-sendptr[i], IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->rreq+i);
+sync:akwayfm.c:        MPI_Isend((void *)(supdate+j), k-j, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+sync:akwayfm.c:      MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses);
+sync:akwayfm.c:        MPI_Get_count(ctrl->statuses+i, IDX_DATATYPE, nupds_pe+i);
+sync:akwayfm.c:      MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+sync:akwayfm.c:      MPI_Allreduce((void *)lnpwgts, (void *)gnpwgts, nparts*ncon, MPI_FLOAT, MPI_SUM, ctrl->comm);
+sync:coarsen.c:  MPI_Allgather((void *)(cvtxdist+npes), 1, IDX_DATATYPE, (void *)cvtxdist, 1, IDX_DATATYPE, ctrl->comm);
+sync:coarsen.c:      MPI_Irecv((void *)(rsizes+i), 1, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->rreq+i);
+sync:coarsen.c:      MPI_Isend((void *)(ssizes+i), 1, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+sync:coarsen.c:      MPI_Wait(ctrl->rreq+i, &ctrl->status);
+sync:coarsen.c:      MPI_Wait(ctrl->sreq+i, &ctrl->status);
+sync:coarsen.c:      MPI_Irecv((void *)(rgraph+l), (4+ncon)*(rlens[i+1]-rlens[i])+2*rsizes[i], IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->rreq+i);
+sync:coarsen.c:      MPI_Isend((void *)(sgraph+l), ll-l, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+sync:coarsen.c:      MPI_Wait(ctrl->rreq+i, &ctrl->status);
+sync:coarsen.c:      MPI_Wait(ctrl->sreq+i, &ctrl->status);
+sync:comm.c:  MPI_Waitall(nnbrs, ctrl->rreq, ctrl->statuses); 
+sync:comm.c:  MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses); 
+sync:comm.c:      MPI_Isend((void *)(sendpairs), 0, IDX_DATATYPE, peind[i], 1, ctrl->comm, ctrl->sreq+i);
+sync:comm.c:    MPI_Wait(ctrl->rreq+i, &(ctrl->status));
+sync:comm.c:    MPI_Get_count(&ctrl->status, IDX_DATATYPE, &n);
+sync:comm.c:  MPI_Waitall(nnbrs, ctrl->sreq, ctrl->statuses);
+sync:comm.c:  MPI_Allreduce((void *)&value, (void *)&max, 1, MPI_INT, MPI_MAX, ctrl->comm);
+sync:comm.c:  MPI_Allreduce((void *)&value, (void *)&max, 1, MPI_DOUBLE, MPI_MAX, ctrl->comm);
+sync:comm.c:  MPI_Allreduce((void *)&value, (void *)&min, 1, MPI_INT, MPI_MIN, ctrl->comm);
+sync:comm.c:  MPI_Allreduce((void *)&value, (void *)&sum, 1, MPI_INT, MPI_SUM, ctrl->comm);
+sync:comm.c:  MPI_Allreduce((void *)&value, (void *)&max, 1, MPI_FLOAT, MPI_MAX, ctrl->comm);
+sync:comm.c:  MPI_Allreduce((void *)&value, (void *)&min, 1, MPI_FLOAT, MPI_MIN, ctrl->comm);
+sync:comm.c:  MPI_Allreduce((void *)&value, (void *)&sum, 1, MPI_FLOAT, MPI_SUM, ctrl->comm);
+sync:debug.c:    MPI_Barrier(ctrl->comm);
+sync:debug.c:    MPI_Barrier(ctrl->comm);
+sync:debug.c:    MPI_Barrier(ctrl->comm);
+sync:debug.c:  MPI_Barrier(ctrl->comm);
+sync:debug.c:    MPI_Barrier(ctrl->comm);
+sync:debug.c:  MPI_Barrier(ctrl->comm);
+sync:debug.c:    MPI_Barrier(ctrl->comm);
+sync:debug.c:  MPI_Barrier(ctrl->comm);
+sync:debug.c:    MPI_Barrier(ctrl->comm);
+sync:debug.c:  MPI_Barrier(ctrl->comm);
+sync:debug.c:    MPI_Barrier(ctrl->comm);
+sync:diffutil.c:  MPI_Allreduce((void *)lstart, (void *)gstart, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+sync:diffutil.c:  MPI_Allreduce((void *)lleft, (void *)gleft, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+sync:diffutil.c:  MPI_Allreduce((void *)lend, (void *)gend, nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+sync:grsetup.c:  MPI_Comm_dup(comm, &(ctrl->gcomm));
+sync:grsetup.c:  MPI_Comm_rank(ctrl->gcomm, &ctrl->mype);
+sync:grsetup.c:  MPI_Comm_size(ctrl->gcomm, &ctrl->npes);
+sync:grsetup.c:  MPI_Allreduce((void *)lpvtxs, (void *)gpvtxs, ctrl->nparts, IDX_DATATYPE, MPI_SUM, ctrl->comm);
+sync:initbalance.c:  MPI_Comm_split(ctrl->gcomm, sr, 0, &ipcomm);
+sync:initbalance.c:      MPI_Send((void *)part, nvtxs, IDX_DATATYPE, sr_pe, 1, ctrl->comm);
+sync:initbalance.c:      MPI_Recv((void *)part, nvtxs, IDX_DATATYPE, gpecost.rank, 1, ctrl->comm, &status);
+sync:initbalance.c:        MPI_Send((void *)part, nvtxs, IDX_DATATYPE, gd_pe, 1, ctrl->comm);
+sync:initbalance.c:        MPI_Recv((void *)part, nvtxs, IDX_DATATYPE, gpecost.rank, 1, ctrl->comm, &status);
+sync:initbalance.c:        MPI_Send((void *)buffer, 2, MPI_FLOAT, sr_pe, 1, ctrl->comm);
+sync:initbalance.c:        MPI_Recv((void *)buffer, 2, MPI_FLOAT, gd_pe, 1, ctrl->comm, &status);
+sync:initbalance.c:    MPI_Bcast((void *)&who_wins, 1, MPI_INT, sr_pe, ctrl->comm);
+sync:initbalance.c:  MPI_Bcast((void *)part, nvtxs, IDX_DATATYPE, who_wins, ctrl->comm);
+timer.c:  MPI_Reduce((void *)&tsec, (void *)&sum, 1, MPI_DOUBLE, MPI_SUM, 0, ctrl->comm);
+timer.c:  MPI_Reduce((void *)&tsec, (void *)&max, 1, MPI_DOUBLE, MPI_MAX, 0, ctrl->comm);
+Binary file timer.o matches
+util.c:  MPI_Barrier(ctrl->comm);
+Binary file util.o matches
+weird.c:  MPI_Comm_size(ctrl->comm, &npes);
+weird.c:  MPI_Comm_rank(ctrl->comm, &mype);
+weird.c:  MPI_Allreduce(lpecut, gpecut, 1, MPI_2INT, MPI_MINLOC, ctrl->comm);
+weird.c:    MPI_Send((void *)mypart, agraph->nvtxs, IDX_DATATYPE, 0, 1, ctrl->comm);
+weird.c:    MPI_Recv((void *)mypart, agraph->nvtxs, IDX_DATATYPE, gpecut[1], 1, ctrl->comm, &ctrl->status);
+weird.c:  MPI_Scatterv((void *)mypart, sendcounts, displs, IDX_DATATYPE,
+weird.c:  MPI_Allreduce((void *)lnpwgts, (void *)gnpwgts, nparts*ncon, MPI_FLOAT, MPI_SUM, ctrl->comm);
+weird.c:		 int *ioptions, idxtype *part, MPI_Comm *comm)
+weird.c:    MPI_Allreduce((void *)&doiabort, (void *)&doweabort, 1, MPI_INT, MPI_MAX, *comm);
+Binary file weird.o matches
+xyzpart.c:  MPI_Allreduce((void *)min, (void *)gmin, ndims, MPI_FLOAT, MPI_MIN, ctrl->comm);
+xyzpart.c:  MPI_Allreduce((void *)max, (void *)gmax, ndims, MPI_FLOAT, MPI_MAX, ctrl->comm);
+xyzpart.c:  MPI_Allgather((void *)mypicks, 2*(npes-1), IDX_DATATYPE, (void *)allpicks, 2*(npes-1), IDX_DATATYPE, ctrl->comm);
+xyzpart.c:  MPI_Alltoall(scounts, 1, IDX_DATATYPE, rcounts, 1, IDX_DATATYPE, ctrl->comm);
+xyzpart.c:    MPI_Irecv((void *)(relmnts+rcounts[i]), 2*(rcounts[i+1]-rcounts[i]), IDX_DATATYPE, i, 1, ctrl->comm, ctrl->rreq+i);
+xyzpart.c:    MPI_Isend((void *)(elmnts+scounts[i]), 2*(scounts[i+1]-scounts[i]), IDX_DATATYPE, i, 1, ctrl->comm, ctrl->sreq+i);
+xyzpart.c:  MPI_Waitall(npes, ctrl->rreq, ctrl->statuses);
+xyzpart.c:  MPI_Waitall(npes, ctrl->sreq, ctrl->statuses);
+xyzpart.c:  MPI_Scan((void *)(&nrecv), (void *)(&lastvtx), 1, MPI_INT, MPI_SUM, ctrl->comm);
+xyzpart.c:    MPI_Irecv((void *)(elmnts+scounts[i]), 2*(scounts[i+1]-scounts[i]), IDX_DATATYPE, i, 1, ctrl->comm, ctrl->rreq+i);
+xyzpart.c:    MPI_Isend((void *)(relmnts+rcounts[i]), 2*(rcounts[i+1]-rcounts[i]), IDX_DATATYPE, i, 1, ctrl->comm, ctrl->sreq+i);
+xyzpart.c:  MPI_Waitall(npes, ctrl->rreq, ctrl->statuses);
+xyzpart.c:  MPI_Waitall(npes, ctrl->sreq, ctrl->statuses);
+Binary file xyzpart.o matches

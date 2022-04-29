@@ -1,0 +1,16 @@
+#!/bin/bash
+
+params=$#
+param=0
+param_eval=
+while [ "$param" -le "$params" ]
+do
+    eval param_eval=\$$param
+    if [[ $param_eval == "-p" ]]
+    then
+        (( param ++ ))
+        eval export EXEC_NAME=\$$param
+    fi
+(( param ++))   
+done
+/home/avo/research/dampi/trunk/scheduler/scheduler.exe $@

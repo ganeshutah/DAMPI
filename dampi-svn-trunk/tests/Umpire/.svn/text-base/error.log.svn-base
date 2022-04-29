@@ -1,0 +1,44 @@
+Piggyback driver enabled with size 4 (set 1, check 1)
+Piggyback driver enabled with size 4 (set 1, check 1)
+Piggyback driver enabled with size 4 (set 1, check 1)
+    0: 
+    0: 		  ---------------------------
+    0: 		 | P^N-MPI Interface         |
+    0: 		 | Martin Schulz, 2005, LLNL |
+    0: 		  ---------------------------
+    0: 
+    0: Number of modules: 4
+    0: Pcontrol Setting:  5
+    0: 
+    0: Module status: registered as status-storage (Pctrl 1)
+    0: 	Service: add-storage (i)
+    0: 	Global: total-status-extension (i)
+    0: Module pb_twomsg2: registered as piggyback (Pctrl 0)
+    0: 	Service: piggyback-size (i)
+    0: 	Service: piggyback (ip)
+    0: 	Global: piggyback-offset (i)
+    0: Module requests: registered as request-storage (Pctrl 0)
+    0: 	Service: map-request (r)
+    0: 	Service: add-storage (i)
+    0: 	Global: status-offset (i)
+    0: Module pbdriver: registered as pbdriver (Pctrl 0)
+    0: 
+(0) is alive on charon
+status module request[0] = -1409286144
+status module request[1] = -1409286142
+status module request[0] = -1409286144
+status module request[1] = -1409286142
+status module request[0] = -1409286144
+status module request[1] = -1409286142
+here in noerror
+status module request[0] = -1409286143
+status module request[1] = -1409286142
+Receiving piggyback 0
+Receiving piggyback -485182528
+(2) is alive on charon
+Receiving piggyback 0
+Receiving piggyback 2059642432
+(1) is alive on charon
+(0) Finished normally
+(1) Finished normally
+(2) Finished normally
